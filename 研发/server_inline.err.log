@@ -1,0 +1,8 @@
+INFO:     Started server process [1804]
+INFO:     Waiting for application startup.
+2026-05-06 18:00:38 | INFO | api.services | System startup completed
+2026-05-06 18:00:38 | INFO | api.services | Knowledge sync scheduler started with 10080-minute interval
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-05-06 18:00:45 | INFO | api.routes.auth | User created: username=codex_44b8e01a
+2026-05-06 18:00:45 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/users/create status_code=200 client_ip=127.0.0.1 duration_ms=54.65
