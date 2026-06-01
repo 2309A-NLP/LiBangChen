@@ -1,0 +1,15 @@
+[Unit]
+Description=Roleplay System API
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/autodl-tmp/roleplay-system
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/root/miniconda3/envs/Python_3_10/bin/python /root/autodl-tmp/roleplay-system/run.py serve
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

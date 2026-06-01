@@ -1,0 +1,2062 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>角色扮演系统</title>
+  <style>
+    /* 中文注释：样式区域说明 */
+    :root {
+      --bg: #FFFFFF; --bg-deep: #F2F8FF;
+      --panel: rgba(255, 255, 255, 0.98); --panel-strong: #FFFFFF;
+      --line: rgba(94, 184, 255, 0.18); --line-strong: rgba(94, 184, 255, 0.3);
+      --text: #1E2F45; --muted: #6E839A;
+      --accent: #8FD1FF; --accent-deep: #4FA6F0; --accent-soft: rgba(94, 184, 255, 0.16);
+      --teal: #5EB8FF; --teal-soft: rgba(94, 184, 255, 0.12);
+      --success: #25643f; --success-soft: rgba(37, 100, 63, 0.12);
+      --danger: #aa3e3e; --danger-soft: rgba(170, 62, 62, 0.12);
+      --shadow: 0 16px 36px rgba(79, 166, 240, 0.08);
+      --radius-xl: 28px; --radius-lg: 20px; --radius-md: 16px; --radius-sm: 12px;
+      --font-ui: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --font-display: "Noto Serif SC", "STZhongsong", "Songti SC", serif;
+    }
+    /* 中文注释：样式区域说明 */
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; min-height: 100%; }
+    body {
+      min-height: 100dvh; font-family: var(--font-ui); color: var(--text);
+      background: var(--bg);
+      overflow: hidden;
+    }
+    body::before, body::after { content: none; }
+    button, input, textarea { font: inherit; }
+    button { cursor: pointer; }
+    button:disabled { opacity: 0.62; cursor: not-allowed; }
+    .hidden { display: none !important; }
+    .screen { position: relative; z-index: 1; width: min(1280px, calc(100vw - 12px)); margin: 6px auto; }
+    .panel { background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); }
+    /* 中文注释：样式区域说明 */
+    .auth-shell { height: calc(100dvh - 12px); min-height: 0; display: grid; place-items: center; }
+    .auth-card { display: grid; grid-template-columns: minmax(320px, 1fr) minmax(340px, 0.94fr); width: min(920px, calc(100vw - 24px)); min-height: min(700px, calc(100dvh - 24px)); border-radius: 28px; overflow: hidden; max-height: 100%; background: var(--panel-strong); }
+    .auth-hero { padding: 34px 30px 30px; background: #F1F8FF; color: var(--text); display: grid; align-content: start; gap: 22px; overflow: auto; border-right: 1px solid var(--line); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 999px; background: rgba(255,255,255,0.88); border: 1px solid var(--line); color: var(--accent-deep); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .auth-hero h1, .chat-head h2 { margin: 0; font-family: var(--font-display); }
+    .auth-hero h1 { margin-top: 6px; font-size: clamp(42px,4vw,56px); line-height: 1.05; letter-spacing: 0.02em; }
+    .auth-hero p { margin: 10px 0 0; line-height: 1.65; color: rgba(30, 47, 69, 0.72); }
+    .hero-copy { display: grid; gap: 22px; align-content: start; min-height: 100%; }
+    .hero-title { display: grid; gap: 0; padding-top: 4px; }
+    .hero-subtitle { margin: 14px 0 0; font-size: 15px; line-height: 1.8; color: rgba(30, 47, 69, 0.78); }
+    .hero-intro { display: grid; gap: 12px; }
+    .intro-card { padding: 18px 18px 16px; border-radius: 20px; border: 1px solid var(--line); background: rgba(255,255,255,0.84); }
+    .intro-label { display: inline-flex; align-items: center; min-height: 24px; padding: 0 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-deep); font-size: 12px; font-weight: 700; }
+    .intro-card strong, .intro-item strong { display: block; }
+    .intro-card strong { margin-top: 12px; font-size: 16px; line-height: 1.5; color: var(--text); }
+    .intro-card p { margin-top: 10px; }
+    .intro-list { display: grid; gap: 8px; margin-top: 14px; }
+    .intro-list-item { display: grid; grid-template-columns: 14px minmax(0,1fr); gap: 10px; align-items: start; font-size: 13px; line-height: 1.7; color: var(--text); }
+    .intro-list-item::before { content: ""; width: 8px; height: 8px; margin-top: 7px; border-radius: 50%; background: var(--accent-deep); box-shadow: 0 0 0 5px rgba(94, 184, 255, 0.12); }
+    .hero-stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; }
+    .hero-stat { padding: 14px 14px 13px; border-radius: 18px; border: 1px solid var(--line); background: rgba(255,255,255,0.82); display: grid; gap: 6px; }
+    .hero-stat strong { font-size: 20px; line-height: 1; color: var(--accent-deep); }
+    .hero-stat span { font-size: 12px; color: var(--muted); }
+    .intro-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+    .intro-item { padding: 14px 14px 13px; border-radius: 18px; border: 1px solid var(--line); background: rgba(255,255,255,0.78); }
+    .intro-item span { display: block; font-size: 12px; color: var(--muted); }
+    .intro-item strong { margin-top: 8px; font-size: 13px; line-height: 1.65; color: var(--text); }
+    .trust-strip { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; }
+    .trust-chip { padding: 12px 10px; border-radius: 16px; border: 1px dashed rgba(94, 184, 255, 0.28); background: rgba(255,255,255,0.72); text-align: center; font-size: 12px; line-height: 1.6; color: var(--text); }
+    .auth-main { padding: 38px 34px 34px; background: var(--panel-strong); display: grid; align-content: center; overflow: auto; }
+    .auth-panel { width: min(100%, 372px); margin: auto; display: grid; gap: 22px; }
+    .auth-header { display: grid; gap: 10px; }
+    .auth-main h2, .section-title, .sidebar-title, .empty-state h3 { margin: 0; }
+    .auth-tabs { display: inline-grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px; padding: 6px; border-radius: 999px; background: var(--bg-deep); margin-top: 2px; }
+    .tab-btn, .primary-btn, .secondary-btn, .ghost-btn, .danger-btn, .role-btn, .icon-btn { border: none; transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease; }
+    .tab-btn:hover, .primary-btn:hover, .secondary-btn:hover, .ghost-btn:hover, .danger-btn:hover, .role-btn:hover, .icon-btn:hover { transform: translateY(-1px); }
+    .tab-btn { border-radius: 999px; padding: 10px 14px; background: transparent; color: var(--muted); font-weight: 600; }
+    .tab-btn.active { background: var(--panel-strong); color: var(--text); box-shadow: 0 8px 20px rgba(79, 166, 240, 0.08); }
+    .auth-form { display: grid; gap: 16px; }
+    .field { display: grid; gap: 10px; }
+    .field label, .helper, .meta, .status-text, .empty-state p, .chat-head p, .hint, .prompt-note, .section-subtitle { color: var(--muted); }
+    .field label { font-size: 14px; font-weight: 600; }
+    input, textarea { width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--line); background: #FFFFFF; padding: 13px 14px; color: var(--text); transition: border-color 160ms ease, box-shadow 160ms ease; }
+    input:focus, textarea:focus { outline: none; border-color: rgba(94, 184, 255, 0.52); box-shadow: 0 0 0 4px rgba(94, 184, 255, 0.14); }
+    textarea { resize: vertical; min-height: 90px; line-height: 1.65; }
+    .button-row { display: flex; gap: 10px; flex-wrap: wrap; padding-top: 2px; }
+    .primary-btn, .secondary-btn, .ghost-btn, .danger-btn { border-radius: 999px; padding: 11px 18px; }
+    .primary-btn { color: #fff; background: var(--teal); box-shadow: 0 12px 24px rgba(94, 184, 255, 0.22); }
+    .secondary-btn { color: var(--accent-deep); background: var(--teal-soft); }
+    .ghost-btn { color: var(--text); background: #FFFFFF; border: 1px solid var(--line); }
+    .danger-btn { color: var(--danger); background: var(--danger-soft); }
+    .ghost-btn.upload-active {
+      color: #fff;
+      background: var(--danger);
+      border: 1px solid var(--danger);
+      box-shadow: 0 12px 24px rgba(170, 62, 62, 0.18);
+    }
+    .auth-note, .status-bar { display: flex; align-items: center; gap: 10px; min-height: 50px; padding: 13px 14px; border-radius: 14px; border: 1px solid var(--line); background: #F7FBFF; }
+    .status-bar.success, .auth-note.success { color: var(--success); background: rgba(237,249,241,0.94); border-color: rgba(37,100,63,0.16); }
+    .status-bar.error, .auth-note.error { color: var(--danger); background: rgba(255,241,241,0.94); border-color: rgba(170,62,62,0.16); }
+    .status-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); flex: none; }
+    .status-bar.success .status-dot, .auth-note.success .status-dot { background: var(--success); }
+    .status-bar.error .status-dot, .auth-note.error .status-dot { background: var(--danger); }
+    /* 中文注释：样式区域说明 */
+    .app-shell { --sidebar-width: 198px; --sidebar-collapsed-width: 72px; height: calc(100dvh - 12px); display: grid; grid-template-columns: var(--sidebar-width) minmax(0,1fr); gap: 8px; transition: grid-template-columns 180ms ease; }
+    .app-shell.sidebar-collapsed { grid-template-columns: var(--sidebar-collapsed-width) minmax(0,1fr); }
+    .sidebar { height: 100%; min-height: 0; border-radius: var(--radius-xl); padding: 8px; display: grid; gap: 8px; grid-template-rows: minmax(0,1fr); overflow: hidden; position: relative; }
+    .sidebar-card, .chat-main { border-radius: var(--radius-xl); }
+    .sidebar-card { border: 1px solid var(--line); background: rgba(255, 255, 255, 0.96); padding: 10px; }
+    .sidebar-block { min-height: 0; display: grid; gap: 8px; grid-template-rows: auto minmax(0,1fr); }
+    .sidebar-history { height: 100%; min-height: 0; display: grid; gap: 10px; grid-template-rows: auto auto minmax(0,1fr); overflow: hidden; }
+    .sidebar-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .sidebar-head-actions { display: flex; align-items: center; gap: 6px; }
+    .sidebar-title { font-size: 16px; }
+    .section-subtitle { margin-top: 4px; font-size: 13px; line-height: 1.5; }
+    .history-search { display: grid; }
+    .history-list { min-height: 0; overflow-y: auto; overflow-x: hidden; display: grid; gap: 6px; align-content: start; padding-right: 2px; }
+    .history-entry { position: relative; }
+    .history-item { width: 100%; text-align: left; border-radius: 16px; padding: 10px; background: #FFFFFF; border: 1px solid var(--line); display: grid; gap: 6px; transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease; overflow: hidden; }
+    .history-item:hover { transform: translateY(-1px); }
+    .history-item.active { background: rgba(94, 184, 255, 0.1); border-color: rgba(94, 184, 255, 0.36); box-shadow: inset 0 0 0 1px rgba(94, 184, 255, 0.08); }
+    .history-item-top { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 8px; min-width: 0; }
+    .history-item-title { font-size: 13px; font-weight: 700; line-height: 1.4; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; display: block; }
+    .history-item-time { font-size: 11px; color: var(--muted); white-space: nowrap; padding-top: 1px; }
+    .history-item-meta { font-size: 11px; line-height: 1.4; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .app-shell.sidebar-collapsed .sidebar-head { min-height: 100%; flex-direction: column; justify-content: center; }
+    .app-shell.sidebar-collapsed .sidebar-head > div,
+    .app-shell.sidebar-collapsed .history-search,
+    .app-shell.sidebar-collapsed .history-list,
+    .app-shell.sidebar-collapsed #refreshHistoryBtn { display: none; }
+    .app-shell.sidebar-collapsed .sidebar-head-actions { width: 100%; justify-content: center; }
+    .app-shell.sidebar-collapsed .sidebar-card { padding: 8px 6px; }
+    .app-shell.sidebar-collapsed .sidebar-history { grid-template-rows: 1fr; gap: 0; }
+    .sidebar-rail-toggle { display: none; width: 100%; height: 100%; border-radius: var(--radius-xl); border: 1px solid var(--line); background: rgba(255, 255, 255, 0.98); color: var(--accent-deep); align-items: center; justify-content: center; font-size: 18px; font-weight: 700; }
+    .sidebar-rail-toggle:hover { background: rgba(94, 184, 255, 0.08); transform: none; }
+    .app-shell.sidebar-collapsed .sidebar-card { display: none; }
+    .app-shell.sidebar-collapsed .sidebar-rail-toggle { display: inline-flex; }
+    .icon-btn { width: 34px; height: 34px; border-radius: 999px; background: #FFFFFF; border: 1px solid var(--line); color: var(--muted); display: inline-flex; align-items: center; justify-content: center; font-size: 16px; }
+    .chat-main { height: 100%; min-height: 0; display: grid; grid-template-rows: auto auto auto minmax(0,1fr) auto; overflow: hidden; }
+    .account-bar { padding: 12px 14px 0; display: flex; justify-content: flex-end; align-items: center; }
+    .profile-mini { display: flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 999px; background: #5EB8FF; color: #FFFFFF; cursor: default; flex: none; border: 1px solid rgba(94, 184, 255, 0.28); }
+    .profile-mini .avatar { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.24); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; }
+    .profile-mini .name { font-size: 13px; font-weight: 600; }
+    .profile-mini .logout-btn { background: rgba(255,255,255,0.16); border: none; color: rgba(255,255,255,0.88); padding: 4px 10px; border-radius: 999px; font-size: 12px; cursor: pointer; transition: background 160ms; }
+    .profile-mini .logout-btn:hover { background: rgba(255,255,255,0.28); }
+    .chat-head { padding: 6px 12px 5px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+    .chat-head h2 { font-size: clamp(17px,2vw,21px); line-height: 1.08; }
+    .chat-head p { margin: 2px 0 0; line-height: 1.4; max-width: 68ch; font-size: 12px; }
+    .chat-summary { display: grid; grid-template-columns: repeat(2,minmax(96px,1fr)); gap: 8px; min-width: 184px; }
+    .summary-card { padding: 7px 8px; border-radius: 14px; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.98); }
+    .summary-card span { display: block; font-size: 11px; color: var(--muted); }
+    .summary-card strong { display: block; margin-top: 3px; font-size: 13px; line-height: 1.3; }
+    .summary-select { width: 100%; margin-top: 6px; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line); background: #FFFFFF; color: var(--text); font-size: 13px; }
+    .summary-select:focus { outline: none; border-color: rgba(94, 184, 255, 0.52); box-shadow: 0 0 0 3px rgba(94, 184, 255, 0.12); }
+    /* 中文注释：样式区域说明 */
+    .toolbar { padding: 5px 12px; border-bottom: 1px solid var(--line); background: #F6FBFF; display: grid; gap: 5px; }
+    .chat-log { padding: 14px 16px; overflow: auto; display: flex; flex-direction: column; gap: 12px; background: #FAFDFF; }
+    .empty-state { margin: auto; max-width: 560px; text-align: center; padding: 20px; border-radius: 18px; border: 1px dashed var(--line-strong); background: rgba(246, 251, 255, 0.86); }
+    .empty-state h3 { font-size: 24px; }
+    .empty-state p { margin: 10px 0 0; line-height: 1.7; }
+    .message-group { display: grid; gap: 6px; max-width: min(78%,780px); }
+    .message-group.user { align-self: end; justify-items: end; }
+    .message-group.assistant, .message-group.typing { align-self: start; justify-items: start; }
+    .chat-note { align-self: stretch; padding: 10px 12px; border-radius: 14px; border: 1px solid rgba(94, 184, 255, 0.22); background: rgba(94, 184, 255, 0.12); color: #426A8E; font-size: 13px; line-height: 1.6; }
+    .chat-note strong { display: block; margin-bottom: 4px; color: var(--accent-deep); font-size: 13px; }
+    .message-meta { font-size: 12px; color: var(--muted); padding: 0 4px; }
+    .bubble { padding: 12px 14px; border-radius: 18px; line-height: 1.7; white-space: pre-wrap; word-break: break-word; }
+    .bubble.user { color: #FFFFFF; background: var(--teal); border-bottom-right-radius: 8px; box-shadow: 0 14px 26px rgba(94, 184, 255, 0.18); }
+    .bubble.assistant, .bubble.typing { background: rgba(255, 255, 255, 0.98); border: 1px solid var(--line); border-bottom-left-radius: 8px; }
+    .assistant-rich { display: grid; gap: 12px; }
+    .assistant-paragraph { margin: 0; line-height: 1.9; }
+    .assistant-title { font-weight: 700; color: #2A6FAF; }
+    .assistant-section-title { font-size: 20px; line-height: 1.35; letter-spacing: 0.01em; }
+    .assistant-body-item { margin: 0; line-height: 1.9; padding-left: 2px; }
+    .assistant-body-item strong { color: var(--accent-deep); font-weight: 800; }
+    .assistant-table { width: 100%; border-collapse: collapse; margin: 2px 0 4px; font-size: 14px; line-height: 1.7; background: rgba(248, 252, 255, 0.96); }
+    .assistant-table th, .assistant-table td { border: 1px solid var(--line); padding: 8px 10px; vertical-align: top; text-align: left; }
+    .assistant-table th { background: rgba(94, 184, 255, 0.12); color: var(--accent-deep); font-weight: 800; }
+    .assistant-inline-title { font-weight: 700; color: var(--accent-deep); }
+    .typing-dots { display: inline-flex; align-items: center; gap: 6px; min-height: 22px; }
+    .typing-dots span { width: 8px; height: 8px; border-radius: 50%; background: rgba(94, 184, 255, 0.62); animation: wave 1s infinite ease-in-out; }
+    .typing-dots span:nth-child(2) { animation-delay: 0.16s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.32s; }
+    /* 中文注释：样式区域说明 */
+    .composer { padding: 8px 12px 10px; border-top: 1px solid var(--line); background: #FFFFFF; display: grid; gap: 8px; }
+    .input-shell { display: grid; gap: 8px; padding: 10px; border-radius: 18px; border: 1px solid var(--line); background: #F9FCFF; transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease; }
+    .input-shell.dragover { border-color: rgba(94, 184, 255, 0.48); box-shadow: 0 0 0 4px rgba(94, 184, 255, 0.14); background: #F5FBFF; }
+    .input-toolbar { display: none; }
+    .input-toolbar-copy { display: grid; gap: 3px; }
+    .input-title { font-size: 14px; font-weight: 700; line-height: 1.4; color: var(--text); }
+    .input-note { font-size: 12px; line-height: 1.5; color: var(--muted); }
+    .file-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .file-list { display: grid; gap: 6px; max-height: 120px; overflow: auto; }
+    .file-item { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 8px; align-items: center; padding: 8px 10px; border-radius: 14px; border: 1px solid var(--line); background: #FFFFFF; }
+    .file-item-main { min-width: 0; display: grid; gap: 4px; }
+    .file-item-title { font-size: 13px; font-weight: 700; line-height: 1.4; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .file-item-meta { font-size: 11px; line-height: 1.5; color: var(--muted); }
+    .file-badge { display: inline-flex; align-items: center; min-height: 22px; padding: 0 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-deep); font-size: 11px; font-weight: 700; }
+    .file-badge.error { background: var(--danger-soft); color: var(--danger); }
+    .file-badge.ready { background: var(--success-soft); color: var(--success); }
+    .composer-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .composer-grid { display: grid; grid-template-columns: minmax(0,1fr) 150px; gap: 10px; align-items: end; }
+    .send-stack { display: grid; gap: 10px; }
+    .send-stack button { min-height: 42px; }
+    #messageInput { min-height: 84px; max-height: 132px; }
+    .kbd { display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 8px; background: var(--bg-deep); border: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+    .loading::after { content: "..."; display: inline-block; margin-left: 4px; animation: blink 1s infinite; }
+    @keyframes wave { 0%,80%,100% { transform: translateY(0); opacity: 0.45; } 40% { transform: translateY(-4px); opacity: 1; } }
+    @keyframes blink { 0%,100% { opacity: 0.35; } 50% { opacity: 1; } }
+    /* 中文注释：样式区域说明 */
+    @media (max-width: 1080px) {
+      body { overflow: auto; }
+      .auth-card, .app-shell { grid-template-columns: 1fr; }
+      .app-shell.sidebar-collapsed { grid-template-columns: 1fr; }
+      .auth-card { width: 100%; min-height: 0; }
+      .app-shell { height: auto; min-height: calc(100dvh - 12px); }
+      .chat-main { min-height: 72vh; }
+      .account-bar { padding-top: 12px; }
+      .chat-head { flex-direction: column; }
+      .chat-summary { width: 100%; }
+      .sidebar { width: 100%; }
+      .app-shell.sidebar-collapsed .sidebar-head { min-height: 0; flex-direction: row; justify-content: space-between; }
+      .app-shell.sidebar-collapsed .sidebar-head > div { display: block; }
+      .app-shell.sidebar-collapsed .history-search,
+      .app-shell.sidebar-collapsed .history-list { display: grid; }
+      .app-shell.sidebar-collapsed #refreshHistoryBtn { display: inline-flex; }
+      .app-shell.sidebar-collapsed .sidebar-head-actions { width: auto; justify-content: flex-end; }
+      .app-shell.sidebar-collapsed .sidebar-card { display: block; padding: 10px; }
+      .app-shell.sidebar-collapsed .sidebar-history { grid-template-rows: auto auto minmax(0,1fr); gap: 10px; }
+      .app-shell.sidebar-collapsed .sidebar-rail-toggle { display: none; }
+    }
+    @media (max-width: 720px) {
+      .screen { width: min(100vw - 12px,1360px); margin: 6px auto; }
+      .auth-hero, .auth-main, .sidebar, .account-bar, .chat-head, .toolbar, .chat-log, .composer { padding-left: 14px; padding-right: 14px; }
+      .chat-summary, .composer-grid, .intro-grid, .hero-stats, .trust-strip { grid-template-columns: 1fr; }
+      .message-group { max-width: 92%; }
+    }
+    @media (max-height: 820px) and (min-width: 1081px) {
+      .auth-hero { padding: 24px 22px 22px; }
+      .auth-main { padding: 26px 24px 24px; }
+      .chat-head, .toolbar, .chat-log, .composer { padding-left: 10px; padding-right: 10px; }
+      #messageInput { min-height: 72px; max-height: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 中文注释：页面结构区域 -->
+  <section class="screen auth-shell" id="authScreen">
+    <div class="auth-card panel">
+      <div class="auth-hero">
+        <div class="hero-copy">
+          <span class="eyebrow">Roleplay Studio</span>
+          <div class="hero-title">
+            <h1>角色扮演系统</h1>
+            <p class="hero-subtitle">面向咨询接待、知识辅助、角色陪练和业务演示的多角色对话工作台，让账号登录、角色切换、文件解析和连续提问在一个界面内完成。</p>
+          </div>
+          <div class="hero-intro">
+            <div class="intro-card">
+              <span class="intro-label">产品介绍</span>
+              <strong>面向多角色服务、知识问答与场景化交流的轻量工作台</strong>
+              <p>系统支持统一账号登录、本地大模型接入、角色快速切换、示例问题引导和会话自动命名，适合做咨询接待、业务讲解、信息辅助和内部演示。</p>
+              <div class="intro-list">
+                <div class="intro-list-item">登录后即可进入统一工作区，按角色切换不同的回答风格和知识边界。</div>
+                <div class="intro-list-item">支持上传文档并直接围绕文件内容发问，适合政策说明、资料解读和内部答疑。</div>
+                <div class="intro-list-item">会话标题可根据首轮问题自动生成，方便回溯历史记录和持续追问。</div>
+              </div>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <strong>6+</strong>
+                <span>预置角色类型，覆盖法律、教师、心理、医生、科研等场景</span>
+              </div>
+              <div class="hero-stat">
+                <strong>7类文件</strong>
+                <span>支持解析 txt、md、csv、json、pdf、docx、xlsx 等文件</span>
+              </div>
+              <div class="hero-stat">
+                <strong>1个界面</strong>
+                <span>完成登录、切换角色、继续历史会话、上传资料与提问</span>
+              </div>
+            </div>
+            <div class="intro-grid">
+              <div class="intro-item">
+                <span>核心能力</span>
+                <strong>角色切换、连续对话、问题总结、回答生成一体完成</strong>
+              </div>
+              <div class="intro-item">
+                <span>适用场景</span>
+                <strong>政策咨询、心理陪伴、业务答疑、培训演练等多类场景</strong>
+              </div>
+              <div class="intro-item">
+                <span>交互方式</span>
+                <strong>支持示例问题填充、回车发送、文档拖入解析和历史会话继续追问</strong>
+              </div>
+              <div class="intro-item">
+                <span>部署形态</span>
+                <strong>适合本地大模型、局域网试用、演示环境和轻量内部系统集成</strong>
+              </div>
+            </div>
+            <div class="trust-strip">
+              <div class="trust-chip">适合课程展示与答辩演示</div>
+              <div class="trust-chip">适合内部试用与局域网协作</div>
+              <div class="trust-chip">适合资料解读与场景化问答</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="auth-main">
+        <div class="auth-panel">
+          <div class="auth-header">
+            <h2 id="authTitle">登录账户</h2>
+          </div>
+          <div class="auth-tabs">
+            <button class="tab-btn active" id="loginTab" type="button">登录</button>
+            <button class="tab-btn" id="registerTab" type="button">注册</button>
+          </div>
+          <form class="auth-form" id="loginForm">
+            <div class="field">
+              <label for="loginUsername">用户名</label>
+              <input id="loginUsername" type="text" placeholder="请输入用户名" autocomplete="username">
+            </div>
+            <div class="field">
+              <label for="loginPassword">密码</label>
+              <input id="loginPassword" type="password" placeholder="请输入密码" autocomplete="current-password">
+            </div>
+            <div class="button-row">
+              <button class="primary-btn" id="loginBtn" type="submit">登录进入</button>
+            </div>
+          </form>
+          <form class="auth-form hidden" id="registerForm">
+            <div class="field">
+              <label for="registerUsername">用户名</label>
+              <input id="registerUsername" type="text" placeholder="建议使用简短用户名" autocomplete="username">
+            </div>
+            <div class="field">
+              <label for="registerPassword">密码</label>
+              <input id="registerPassword" type="password" placeholder="至少输入一个可记住的密码" autocomplete="new-password">
+            </div>
+            <div class="field">
+              <label for="registerEmail">邮箱</label>
+              <input id="registerEmail" type="email" placeholder="可选，用于留存账号信息" autocomplete="email">
+            </div>
+            <div class="button-row">
+              <button class="primary-btn" id="registerBtn" type="submit">注册并进入</button>
+            </div>
+          </form>
+          <div class="auth-note" id="authNote">
+            <span class="status-dot"></span>
+            <span class="status-text">请先登录或注册，然后才能进入角色对话页面。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 中文注释：页面结构区域 -->
+  <section class="screen app-shell hidden" id="appScreen">
+    <!-- 左侧：历史搜索 -->
+    <aside class="panel sidebar">
+      <div class="sidebar-card sidebar-history" id="historyPanel">
+        <div class="sidebar-head">
+          <div>
+            <h3 class="sidebar-title">历史搜索</h3>
+            <p class="section-subtitle">查看并继续你之前的提问记录。</p>
+          </div>
+          <div class="sidebar-head-actions">
+            <button class="icon-btn" id="toggleHistoryBtn" type="button" title="向左收起历史搜索">←</button>
+            <button class="icon-btn" id="refreshHistoryBtn" type="button" title="刷新历史">↻</button>
+          </div>
+        </div>
+        <div class="history-search">
+          <input id="historySearchInput" type="text" placeholder="搜索标题或角色">
+        </div>
+        <div class="history-list" id="historyList"></div>
+      </div>
+      <button class="sidebar-rail-toggle" id="sidebarRailToggleBtn" type="button" title="展开历史搜索" aria-label="展开历史搜索">→</button>
+    </aside>
+
+    <!-- 右侧：主聊天区域 -->
+    <main class="panel chat-main">
+      <div class="account-bar">
+        <div class="profile-mini" id="profileMini">
+          <span class="avatar" id="profileAvatar">U</span>
+          <span class="name" id="profileNameMini">未登录</span>
+          <button class="logout-btn" id="logoutBtn" type="button">退出</button>
+        </div>
+      </div>
+
+      <!-- 中文注释：页面结构区域 -->
+      <header class="chat-head">
+        <div>
+          <h2 id="chatTitle">选择角色后开始对话</h2>
+          <p id="chatDescription">查看当前会话并直接开始提问。</p>
+        </div>
+        <div class="chat-summary">
+          <div class="summary-card">
+            <span>当前角色</span>
+            <strong id="currentRoleLabel">未选择</strong>
+          </div>
+          <div class="summary-card">
+            <span>当前会话</span>
+            <strong id="currentConversationLabel">未开始</strong>
+          </div>
+        </div>
+      </header>
+
+      <!-- 中文注释：页面结构区域 -->
+      <div class="toolbar">
+        <div class="status-bar" id="statusBar">
+          <span class="status-dot"></span>
+          <span class="status-text" id="statusText">等待操作</span>
+        </div>
+      </div>
+
+      <!-- 中文注释：页面结构区域 -->
+      <div class="chat-log" id="chatLog">
+        <div class="empty-state" id="emptyState">
+          <h3>欢迎来到角色扮演系统</h3>
+          <p>选择一个角色，然后发送消息开始对话。</p>
+        </div>
+      </div>
+
+      <!-- 中文注释：页面结构区域 -->
+      <div class="composer" id="composer">
+        <div class="input-shell" id="inputShell">
+          <div class="input-toolbar">
+            <div class="input-toolbar-copy">
+              <span class="input-title">输入问题，或将文件拖入这里后直接解析提问</span>
+              <span class="input-note">支持 txt、md、csv、json、pdf、docx、xlsx，以及 png、jpg、jpeg、bmp、webp；图片会使用 PaddleOCR 识别文字。</span>
+            </div>
+            <input id="fileInput" type="file" class="hidden" accept=".txt,.md,.csv,.json,.pdf,.docx,.xlsx,.png,.jpg,.jpeg,.bmp,.webp" multiple>
+          </div>
+          <div class="file-list" id="conversationFileList"></div>
+          <div class="composer-grid">
+            <textarea id="messageInput" placeholder="输入你的问题，或先添加文件再直接提问。" rows="3"></textarea>
+            <div class="send-stack">
+              <button class="primary-btn" id="sendBtn" type="button">发送</button>
+              <button class="ghost-btn" id="clearInputBtn" type="button">上传文件</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <script>
+    // ===== 中文分区 =====
+    const API_BASE = window.location.protocol === 'file:' ? 'http://127.0.0.1:8000' : window.location.origin;
+    const DEFAULT_ROLE_PROMPTS = {
+      lawyer: [
+        '请帮我梳理劳动合同纠纷的处理步骤。',
+        '如果对方违约不付款，我应该先保留哪些证据？',
+        '请用通俗的话解释一下借款合同里的担保责任。'
+      ],
+      stock_analyst: [
+        '帮我用基本面和估值角度分析一家公司的投资逻辑。',
+        '如果市场波动很大，仓位应该怎么控制更稳妥？',
+        '请解释一下什么是自由现金流，以及它为什么重要。'
+      ],
+      teacher: [
+        '请像老师一样，给我讲清楚二次函数顶点公式。',
+        '帮我设计一个 7 天英语单词复习计划。',
+        '请把牛顿第二定律讲成适合初中生理解的版本。'
+      ],
+      psychological_counselor: [
+        '我最近总是很焦虑，晚上也睡不好，你可以帮我梳理一下吗？',
+        '工作压力特别大，我每天都很烦躁，想要一个具体的调整方案。',
+        '如果一个人连续两周情绪都很低落，应该怎么判断是否需要尽快求助？'
+      ],
+      doctor: [
+        '最近反复低烧和咳嗽，一般应该先观察哪些指标，什么时候需要尽快去医院？',
+        '体检报告里血压和血脂有点高，先从哪些生活方式开始调整更合适？',
+        '孩子发热以后，家庭护理时要重点注意哪些危险信号？'
+      ],
+      scientist: [
+        '请用科研思维解释一下什么是对照实验，以及为什么它重要？',
+        '如果我想判断一条科学新闻靠不靠谱，应该重点看哪些证据？',
+        '请讲讲假设、实验、数据、结论之间是什么关系。'
+      ],
+      default: [
+        '请先介绍一下你可以如何帮助我。',
+        '请给我一个适合当前角色的入门建议。',
+        '请先从基础概念开始讲。'
+      ]
+    };
+    const CUSTOM_PERSONA_ROLE = {
+      type: 'custom_persona',
+      name: '\u5168\u80fd\u578b\u4eba\u683c',
+      description: '\u5168\u80fd\u578b\u5728\u7ebf\u95ee\u7b54\u52a9\u624b\uff0c\u9002\u5408\u65e0\u6cd5\u5339\u914d\u56fa\u5b9a\u89d2\u8272\u7684\u6587\u4ef6\u548c\u95ee\u9898\u3002',
+      style: '\u5728\u7ebf',
+      prompts: DEFAULT_ROLE_PROMPTS.custom_persona || DEFAULT_ROLE_PROMPTS.default
+    };
+    let currentUser = null;
+    let currentUserId = null;
+    let authToken = null;
+    let currentRoleType = null;
+    let currentConversationId = null;
+    let isSending = false;
+    let isUploadingFiles = false;
+    let currentStreamController = null;
+    let currentUploadController = null;
+    let currentStreamingMessage = null;
+    let availableRoles = [];
+    let conversationHistory = [];
+    let conversationFiles = [];
+    let lastSendSignature = '';
+    let lastSendAt = 0;
+    let historyCollapsed = false;
+    const DUPLICATE_SEND_WINDOW_MS = 1500;
+    const AUTH_STORAGE_KEY = 'roleplay_auth_state';
+
+    // ===== 中文分区 =====
+    const $ = id => document.getElementById(id);
+    const authScreen = $('authScreen');
+    const appScreen = $('appScreen');
+    const loginForm = $('loginForm');
+    const registerForm = $('registerForm');
+    const loginTab = $('loginTab');
+    const registerTab = $('registerTab');
+    const authTitle = $('authTitle');
+    const authNote = $('authNote');
+    const historyList = $('historyList');
+    const historySearchInput = $('historySearchInput');
+    const toggleHistoryBtn = $('toggleHistoryBtn');
+    const refreshHistoryBtn = $('refreshHistoryBtn');
+    const composer = $('composer');
+    const roleStrip = $('roleStrip');
+    const roleCollapsedBar = $('roleCollapsedBar');
+    const collapsedRoleName = $('collapsedRoleName');
+    const switchRoleBtn = $('switchRoleBtn');
+    const roleList = $('roleList');
+    const refreshRolesBtn = $('refreshRolesBtn');
+    const chatLog = $('chatLog');
+    const emptyState = $('emptyState');
+    const messageInput = $('messageInput');
+    const sendBtn = $('sendBtn');
+    const clearInputBtn = $('clearInputBtn');
+    const newConversationBtn = $('newConversationBtn');
+    const statusText = $('statusText');
+    const statusBar = $('statusBar');
+    const chatTitle = $('chatTitle');
+    const chatDescription = $('chatDescription');
+    const currentRoleLabel = $('currentRoleLabel');
+    let currentRoleSelect = $('currentRoleSelect');
+    const currentConversationLabel = $('currentConversationLabel');
+    const profileAvatar = $('profileAvatar');
+    const profileNameMini = $('profileNameMini');
+    const logoutBtn = $('logoutBtn');
+    const sidebarRailToggleBtn = $('sidebarRailToggleBtn');
+    const inputShell = $('inputShell');
+    const fileInput = $('fileInput');
+    const pickFilesBtn = $('pickFilesBtn');
+    const conversationFileList = $('conversationFileList');
+
+    // ===== 中文分区 =====
+    function setStatus(msg, type) {
+      // 中文注释：这里说明前端交互逻辑
+      statusText.textContent = msg;
+      statusBar.className = 'status-bar' + (type ? ' ' + type : '');
+    }
+
+    function setAuthNote(msg, type) {
+      // 中文注释：这里说明前端交互逻辑
+      const dot = authNote.querySelector('.status-dot');
+      const text = authNote.querySelector('.status-text');
+      text.textContent = msg;
+      authNote.className = 'auth-note' + (type ? ' ' + type : '');
+    }
+
+    function showError(msg) { setStatus(msg, 'error'); }
+    function showSuccess(msg) { setStatus(msg, 'success'); }
+
+    function updateSendButtonState() {
+      if (!sendBtn) return;
+      if (isSending) {
+        sendBtn.disabled = false;
+        sendBtn.textContent = '停止生成';
+        sendBtn.classList.add('danger');
+        return;
+      }
+      sendBtn.disabled = false;
+      sendBtn.textContent = '发送';
+      sendBtn.classList.remove('danger');
+    }
+
+    function saveAuthState() {
+      if (!authToken || !currentUserId || !currentUser) return;
+      localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify({
+        token: authToken,
+        userId: currentUserId,
+        username: currentUser
+      }));
+    }
+
+    function clearAuthState() {
+      authToken = null;
+      localStorage.removeItem(AUTH_STORAGE_KEY);
+    }
+
+    function restoreAuthState() {
+      try {
+        const raw = localStorage.getItem(AUTH_STORAGE_KEY);
+        if (!raw) return false;
+        const saved = JSON.parse(raw);
+        if (!saved?.token || !saved?.userId || !saved?.username) return false;
+        authToken = saved.token;
+        currentUserId = saved.userId;
+        currentUser = saved.username;
+        return true;
+      } catch (err) {
+        clearAuthState();
+        return false;
+      }
+    }
+
+    function updateUploadButtonState() {
+      if (!clearInputBtn) return;
+      if (isUploadingFiles) {
+        clearInputBtn.textContent = '停止上传';
+        clearInputBtn.classList.add('upload-active');
+        return;
+      }
+      clearInputBtn.textContent = '上传文件';
+      clearInputBtn.classList.remove('upload-active');
+    }
+
+    function getAuthHeaders(includeJson = true) {
+      const headers = {};
+      if (includeJson) headers['Content-Type'] = 'application/json';
+      if (authToken) headers.Authorization = 'Bearer ' + authToken;
+      return headers;
+    }
+
+    function handleUnauthorized(message = '登录状态已失效，请重新登录。') {
+      if (currentStreamController) {
+        currentStreamController.abort();
+      }
+      clearAuthState();
+      currentUser = null;
+      currentUserId = null;
+      setAuthNote('检测到旧登录状态缓存，已清除。请重新注册或登录。', '');
+      setAuthNote('检测到旧登录状态缓存，已清除。请重新注册或登录。', '');
+      currentRoleType = null;
+      currentConversationId = null;
+      availableRoles = [];
+      conversationHistory = [];
+      conversationFiles = [];
+      lastSendSignature = '';
+      lastSendAt = 0;
+      appScreen.classList.add('hidden');
+      authScreen.classList.remove('hidden');
+      setAuthNote(message, 'error');
+      renderEmptyState();
+    }
+
+    function summarizeQuestion(text) {
+      // 中文注释：这里说明前端交互逻辑
+      let summary = (text || '').replace(/\s+/g, ' ').trim();
+      summary = summary.replace(/^(请问|请帮我|帮我|我想咨询|我想了解|我想知道|请你)/, '').trim();
+      summary = summary.replace(/^[，。！？?.!;：]+/, '').trim();
+      if (!summary) return '未开始';
+      return summary.length > 36 ? summary.slice(0, 36) + '...' : summary;
+    }
+
+    function getConversationDisplayTitle(title) {
+      const normalized = (title || '').trim();
+      if (!normalized || normalized === '新对话' || normalized === '未命名对话') {
+        return '未开始';
+      }
+      return normalized;
+    }
+
+    function isDuplicateUsernameMessage(message) {
+      const value = (message || '').toLowerCase();
+      return value.includes('账号重复')
+        || value.includes('用户名已存在')
+        || value.includes('duplicate')
+        || value.includes('already');
+    }
+
+    function shortenDescription(text, limit = 28) {
+      // 中文注释：这里说明前端交互逻辑
+      const value = (text || '').trim();
+      if (!value) return '开始当前角色对话。';
+      return value.length > limit ? value.slice(0, limit) + '...' : value;
+    }
+
+    function formatFileSize(bytes) {
+      // 中文注释：这里说明前端交互逻辑
+      const size = Number(bytes) || 0;
+      if (size < 1024) return size + ' B';
+      if (size < 1024 * 1024) return (size / 1024).toFixed(1) + ' KB';
+      return (size / (1024 * 1024)).toFixed(1) + ' MB';
+    }
+
+    function buildMessageSignature(role, content) {
+      // 中文注释：这里说明前端交互逻辑
+      return `${role}::${(content || '').trim()}`;
+    }
+
+    function generateRequestId() {
+      // 中文注释：这里说明前端交互逻辑
+      if (window.crypto?.randomUUID) {
+        return window.crypto.randomUUID();
+      }
+      return `req_${Date.now()}_${Math.random().toString(16).slice(2)}`;
+    }
+
+    function resetConversationFiles() {
+      // 中文注释：这里说明前端交互逻辑
+      conversationFiles = [];
+      renderConversationFiles();
+    }
+
+    function setHistoryCollapsed(collapsed) {
+      // 中文注释：这里说明前端交互逻辑
+      historyCollapsed = Boolean(collapsed);
+      if (!appScreen || !toggleHistoryBtn || !sidebarRailToggleBtn) return;
+      appScreen.classList.toggle('sidebar-collapsed', historyCollapsed);
+      toggleHistoryBtn.textContent = historyCollapsed ? '→' : '←';
+      toggleHistoryBtn.title = historyCollapsed ? '展开历史搜索' : '向左收起历史搜索';
+      toggleHistoryBtn.setAttribute('aria-label', toggleHistoryBtn.title);
+      sidebarRailToggleBtn.textContent = '→';
+      sidebarRailToggleBtn.title = '展开历史搜索';
+      sidebarRailToggleBtn.setAttribute('aria-label', '展开历史搜索');
+    }
+
+    function renderEmptyState(message = '选择一个角色，然后发送消息开始对话。') {
+      // 中文注释：这里说明前端交互逻辑
+      chatLog.innerHTML = `
+        <div class="empty-state" id="emptyState">
+          <h3>欢迎来到角色扮演系统</h3>
+          <p>${message}</p>
+        </div>
+      `;
+    }
+
+    function ensureCustomPersonaRole(roles) {
+      const normalized = Array.isArray(roles) ? roles.slice() : [];
+      if (!normalized.some(role => role.type === CUSTOM_PERSONA_ROLE.type)) {
+        normalized.push({ ...CUSTOM_PERSONA_ROLE });
+      }
+      return normalized;
+    }
+
+    function normalizeRolesPayload(payload) {
+      // 中文注释：这里说明前端交互逻辑
+      if (Array.isArray(payload)) {
+        return ensureCustomPersonaRole(payload.map(role => ({
+          ...role,
+          type: role.type || role.role_type || '',
+          prompts: role.prompts || DEFAULT_ROLE_PROMPTS[role.type || role.role_type] || DEFAULT_ROLE_PROMPTS.default
+        })).filter(role => role.type));
+      }
+
+      if (payload && typeof payload === 'object') {
+        return ensureCustomPersonaRole(Object.entries(payload).map(([type, role]) => ({
+          ...(role || {}),
+          type,
+          prompts: role?.prompts || DEFAULT_ROLE_PROMPTS[type] || DEFAULT_ROLE_PROMPTS.default
+        })));
+      }
+
+      return ensureCustomPersonaRole([]);
+    }
+
+    function getRoleInfo(roleType) {
+      // 中文注释：这里说明前端交互逻辑
+      return availableRoles.find(role => role.type === roleType) || null;
+    }
+
+    function formatConversationTime(value) {
+      // 中文注释：这里说明前端交互逻辑
+      if (!value) return '';
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return '';
+      return date.toLocaleString('zh-CN', {
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+      }).replace(/\//g, '-');
+    }
+
+    function ensureRoleSelect() {
+      if (currentRoleSelect || !currentRoleLabel || !currentRoleLabel.parentElement) return currentRoleSelect;
+      const select = document.createElement('select');
+      select.id = 'currentRoleSelect';
+      select.className = 'summary-select';
+      select.setAttribute('aria-label', '当前角色');
+      select.innerHTML = '<option value="">请选择角色</option>';
+      currentRoleLabel.classList.add('hidden');
+      currentRoleLabel.parentElement.insertBefore(select, currentRoleLabel);
+      currentRoleSelect = select;
+      currentRoleSelect.addEventListener('change', () => {
+        const role = availableRoles.find((item) => item.type === currentRoleSelect.value);
+        if (role) selectRole(role);
+      });
+      return currentRoleSelect;
+    }
+
+    function updateRoleSelectionUI() {
+      // 中文注释：这里说明前端交互逻辑
+      roleList.querySelectorAll('.role-btn').forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.roleType === currentRoleType);
+      });
+    }
+
+    function setRolePickerCollapsed(collapsed) {
+      void collapsed;
+    }
+
+    function syncCurrentConversationMeta() {
+      // 中文注释：这里说明前端交互逻辑
+      if (!currentConversationId) return;
+      const current = conversationHistory.find(conv => conv.id === currentConversationId);
+      if (!current) return;
+
+      currentRoleType = current.role_type || currentRoleType;
+      if (current.role_name) currentRoleLabel.textContent = current.role_name;
+      if (current.title && current.title !== '新对话') {
+        currentConversationLabel.textContent = current.title;
+      }
+      updateRoleSelectionUI();
+    }
+
+    function renderHistoryList() {
+      // 中文注释：这里说明前端交互逻辑
+      if (!historyList) return;
+
+      const keyword = (historySearchInput?.value || '').trim().toLowerCase();
+      const items = conversationHistory.filter((conv) => {
+        if (!keyword) return true;
+        const title = (conv.title || '').toLowerCase();
+        const roleName = (conv.role_name || '').toLowerCase();
+        return title.includes(keyword) || roleName.includes(keyword);
+      });
+
+      historyList.innerHTML = '';
+
+      if (items.length === 0) {
+        const note = document.createElement('div');
+        note.className = 'chat-note';
+        note.innerHTML = conversationHistory.length === 0
+          ? '<strong>暂无历史搜索</strong>发送过消息后，这里会显示你的历史记录。'
+          : '<strong>没有匹配结果</strong>请尝试更换搜索关键词。';
+        historyList.appendChild(note);
+        return;
+      }
+
+      items.forEach((conv) => {
+        const entry = document.createElement('div');
+        entry.className = 'history-entry';
+
+        const item = document.createElement('button');
+        item.type = 'button';
+        item.className = 'history-item' + (currentConversationId === conv.id ? ' active' : '');
+
+        const top = document.createElement('div');
+        top.className = 'history-item-top';
+
+        const title = document.createElement('strong');
+        title.className = 'history-item-title';
+        title.textContent = conv.title && conv.title !== '新对话' ? conv.title : '未命名搜索';
+
+        const time = document.createElement('span');
+        time.className = 'history-item-time';
+        time.textContent = formatConversationTime(conv.updated_at);
+
+        const meta = document.createElement('div');
+        meta.className = 'history-item-meta';
+        meta.textContent = conv.role_name
+          ? `${conv.role_name}${conv.role_type ? ' · ' + conv.role_type : ''}`
+          : (conv.role_type || '未分类');
+
+        top.appendChild(title);
+        top.appendChild(time);
+        item.appendChild(top);
+        item.appendChild(meta);
+        item.addEventListener('click', () => openConversation(conv));
+
+        entry.appendChild(item);
+        historyList.appendChild(entry);
+      });
+    }
+
+    // ===== 中文分区 =====
+    function getApiErrorMessage(json, fallback) {
+      // 中文注释：FastAPI 和 HTTPException 默认把错误放在 detail 字段。
+      if (!json) return fallback;
+      if (typeof json.detail === 'string') return json.detail;
+      if (Array.isArray(json.detail) && json.detail.length) {
+        return json.detail.map(item => item.msg || item.message || JSON.stringify(item)).join('；');
+      }
+      return json.error || json.message || fallback;
+    }
+
+    async function apiPost(path, data) {
+      // 中文注释：这里说明前端交互逻辑
+      const res = await fetch(API_BASE + path, {
+        method: 'POST',
+        headers: getAuthHeaders(true),
+        body: JSON.stringify(data)
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(getApiErrorMessage(json, '请求失败'));
+      return json;
+    }
+
+    async function apiPost(path, data) {
+      const res = await fetch(API_BASE + path, {
+        method: 'POST',
+        headers: getAuthHeaders(true),
+        body: JSON.stringify(data)
+      });
+      const json = await res.json();
+      if (res.status === 401) {
+        const message = getApiErrorMessage(json, '登录状态已失效，请重新登录。');
+        handleUnauthorized(message);
+        throw new Error(message);
+      }
+      if (!res.ok) throw new Error(getApiErrorMessage(json, '请求失败'));
+      return json;
+    }
+
+    async function apiPostStream(path, data, handlers = {}, signal = undefined) {
+      const res = await fetch(API_BASE + path, {
+        method: 'POST',
+        headers: getAuthHeaders(true),
+        body: JSON.stringify(data),
+        signal
+      });
+
+      if (res.status === 401) {
+        const json = await res.json();
+        const message = getApiErrorMessage(json, '登录状态已失效，请重新登录。');
+        handleUnauthorized(message);
+        throw new Error(message);
+      }
+      if (!res.ok) {
+        const json = await res.json();
+        throw new Error(getApiErrorMessage(json, '请求失败'));
+      }
+      if (!res.body) {
+        throw new Error('当前浏览器不支持流式响应。');
+      }
+
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder('utf-8');
+      let buffer = '';
+
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+
+        let boundary = buffer.indexOf('\n\n');
+        while (boundary !== -1) {
+          const rawEvent = buffer.slice(0, boundary).trim();
+          buffer = buffer.slice(boundary + 2);
+
+          if (rawEvent.startsWith('data:')) {
+            const payloadText = rawEvent.slice(5).trim();
+            if (payloadText) {
+              const payload = JSON.parse(payloadText);
+              if (payload.type === 'delta' || payload.type === 'reused') {
+                handlers.onDelta && handlers.onDelta(payload);
+              } else if (payload.type === 'status') {
+                handlers.onStatus && handlers.onStatus(payload);
+              } else if (payload.type === 'done') {
+                handlers.onDone && handlers.onDone(payload);
+              } else if (payload.type === 'error') {
+                throw new Error(payload.message || '流式响应失败');
+              }
+            }
+          }
+
+          boundary = buffer.indexOf('\n\n');
+        }
+      }
+    }
+
+    async function apiDelete(path) {
+      const res = await fetch(API_BASE + path, {
+        method: 'DELETE',
+        headers: getAuthHeaders(false)
+      });
+      const json = await res.json();
+      if (res.status === 401) {
+        const message = getApiErrorMessage(json, '登录状态已失效，请重新登录。');
+        handleUnauthorized(message);
+        throw new Error(message);
+      }
+      if (!res.ok) throw new Error(getApiErrorMessage(json, '请求失败'));
+      return json;
+    }
+
+    async function apiGet(path) {
+      const res = await fetch(API_BASE + path, {
+        headers: getAuthHeaders(false)
+      });
+      const json = await res.json();
+      if (res.status === 401) {
+        const message = getApiErrorMessage(json, '登录状态已失效，请重新登录。');
+        handleUnauthorized(message);
+        throw new Error(message);
+      }
+      if (!res.ok) throw new Error(getApiErrorMessage(json, '请求失败'));
+      return json;
+    }
+
+    async function apiUploadFile(formData) {
+      const res = await fetch(API_BASE + '/api/files/upload', {
+        method: 'POST',
+        headers: getAuthHeaders(false),
+        body: formData,
+        signal: currentUploadController ? currentUploadController.signal : undefined
+      });
+      const json = await res.json();
+      if (res.status === 401) {
+        const message = getApiErrorMessage(json, '登录状态已失效，请重新登录。');
+        handleUnauthorized(message);
+        throw new Error(message);
+      }
+      if (!res.ok) throw new Error(getApiErrorMessage(json, '上传失败'));
+      return json;
+    }
+
+    async function deleteConversation(conversationId) {
+      // 中文注释：这里说明前端交互逻辑
+      const target = conversationHistory.find((conv) => conv.id === conversationId);
+      const targetTitle = target?.title && target.title !== '新对话' ? target.title : '当前会话';
+      if (!window.confirm(`确认删除“${targetTitle}”吗？删除后消息和上传文件都会一起清除。`)) {
+        return;
+      }
+
+      try {
+        await apiDelete('/api/conversations/' + conversationId);
+        const deletingCurrent = currentConversationId === conversationId;
+
+        if (deletingCurrent) {
+          currentConversationId = null;
+          currentConversationLabel.textContent = '未开始';
+          resetConversationFiles();
+          renderEmptyState('当前会话已删除，请从左侧历史记录中重新打开会话，或重新选择角色开始新的对话。');
+        }
+
+        await loadConversationHistory();
+        showSuccess('会话已删除');
+
+        if (deletingCurrent && conversationHistory.length > 0) {
+          await openConversation(conversationHistory[0]);
+        }
+      } catch (err) {
+        showError('删除会话失败: ' + err.message);
+      }
+    }
+
+    async function loadConversationFiles() {
+      // 中文注释：这里说明前端交互逻辑
+      if (!currentUserId || !currentConversationId) {
+        resetConversationFiles();
+        return;
+      }
+
+      try {
+        const res = await apiGet(`/api/conversations/${currentConversationId}/files`);
+        conversationFiles = Array.isArray(res.data) ? res.data : [];
+        renderConversationFiles();
+      } catch (err) {
+        resetConversationFiles();
+        showError('加载文件失败: ' + err.message);
+      }
+    }
+
+    function renderConversationFiles() {
+      // 中文注释：这里说明前端交互逻辑
+      if (!conversationFileList) return;
+
+      conversationFileList.innerHTML = '';
+      if (!conversationFiles.length) return;
+
+      conversationFiles.forEach((file) => {
+        const item = document.createElement('div');
+        item.className = 'file-item';
+
+        const main = document.createElement('div');
+        main.className = 'file-item-main';
+
+        const title = document.createElement('div');
+        title.className = 'file-item-title';
+        title.textContent = file.original_name || '未命名文件';
+
+        const meta = document.createElement('div');
+        meta.className = 'file-item-meta';
+        const metaParts = [
+          file.file_ext ? file.file_ext.replace('.', '').toUpperCase() : '文件',
+          formatFileSize(file.size_bytes),
+        ];
+        if ((file.file_ext || '').toLowerCase() === '.pdf' && file.page_count) {
+          metaParts.push(`${file.page_count} 页`);
+        } else if (file.chunk_count) {
+          metaParts.push(`${file.chunk_count} 段`);
+        }
+        if (file.text_length) metaParts.push(`${file.text_length} 字`);
+        meta.textContent = metaParts.join(' · ');
+
+        main.appendChild(title);
+        main.appendChild(meta);
+
+        const actions = document.createElement('div');
+        actions.className = 'file-actions';
+
+        const badge = document.createElement('span');
+        badge.className = 'file-badge';
+        if (file.parse_status === 'ready') {
+          badge.classList.add('ready');
+          badge.textContent = '已解析';
+        } else if (file.parse_status === 'error') {
+          badge.classList.add('error');
+          badge.textContent = '解析失败';
+        } else {
+          badge.textContent = '处理中';
+        }
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.type = 'button';
+        deleteBtn.className = 'ghost-btn';
+        deleteBtn.textContent = '删除';
+        deleteBtn.addEventListener('click', () => deleteConversationFile(file.id));
+
+        actions.appendChild(badge);
+        actions.appendChild(deleteBtn);
+
+        item.appendChild(main);
+        item.appendChild(actions);
+
+        if (file.parse_status === 'error' && file.parse_error) {
+          const error = document.createElement('div');
+          error.className = 'file-item-meta';
+          error.textContent = file.parse_error;
+          main.appendChild(error);
+        }
+
+        conversationFileList.appendChild(item);
+      });
+    }
+
+    async function deleteConversationFile(fileId) {
+      // 中文注释：这里说明前端交互逻辑
+      if (!currentUserId) return;
+
+      try {
+        await apiDelete(`/api/files/${fileId}`);
+        conversationFiles = conversationFiles.filter((file) => file.id !== fileId);
+        renderConversationFiles();
+        showSuccess('文件已删除');
+      } catch (err) {
+        showError('删除文件失败: ' + err.message);
+      }
+    }
+
+    async function handleSelectedFiles(fileList) {
+      // 中文注释：这里说明前端交互逻辑
+      const files = Array.from(fileList || []);
+      if (!files.length) return;
+      if (!currentUserId) {
+        showError('请先登录，再添加文件');
+        if (fileInput) fileInput.value = '';
+        return;
+      }
+
+      try {
+        await ensureConversationForFile(files[0]);
+      } catch (err) {
+        showError('准备文件知识库失败: ' + err.message);
+        if (fileInput) fileInput.value = '';
+        return;
+      }
+
+      let uploadedCount = 0;
+      for (const file of files) {
+        if (currentUploadController?.signal?.aborted) {
+          break;
+        }
+        const formData = new FormData();
+        formData.append('conversation_id', String(currentConversationId));
+        formData.append('file', file);
+
+        try {
+          setStatus(`正在解析文件：${file.name}`, '');
+          const res = await apiUploadFile(formData);
+          const uploadedFile = res.data || null;
+          if (uploadedFile) {
+            conversationFiles = [
+              uploadedFile,
+              ...conversationFiles.filter((item) => item.id !== uploadedFile.id),
+            ];
+            renderConversationFiles();
+            uploadedCount += 1;
+          }
+        } catch (err) {
+          if (err.name === 'AbortError') {
+            showError('已停止上传');
+            break;
+          }
+          showError(`文件 ${file.name} 上传失败: ${err.message}`);
+        }
+      }
+
+      if (fileInput) fileInput.value = '';
+      if (uploadedCount > 0) {
+        await loadConversationFiles();
+        showSuccess(`文件已解析，可直接结合内容提问，共 ${uploadedCount} 个`);
+      }
+    }
+
+    async function ensureConversationForFile(file) {
+      // 中文注释：上传文件固定进入“全能型人格”会话；文件会先作为用户知识库参与检索，检索不到再由在线大模型回答。
+      const roleType = 'custom_persona';
+      setStatus(`正在准备文件知识库：${file.name}`, '');
+
+      if (!availableRoles.length) {
+        await loadRoles();
+      }
+
+      const role = getRoleInfo(roleType) || {
+        type: roleType,
+        name: '全能型人格',
+        description: '先检索用户上传文件知识库，未命中时调用在线大模型回答问题。'
+      };
+
+      if (currentConversationId && currentRoleType === role.type) {
+        setRolePickerCollapsed(true);
+        return currentConversationId;
+      }
+
+      currentRoleType = role.type;
+      updateRoleSelectionUI();
+      currentRoleLabel.textContent = role.name;
+      chatTitle.textContent = '与 ' + role.name + ' 对话';
+      chatDescription.textContent = shortenDescription(role.description);
+      setRolePickerCollapsed(true);
+      await createConversation(role.type);
+      showSuccess('已切换到全能型人格，文件将作为知识库使用');
+      return currentConversationId;
+    }
+
+    // ===== 中文分区 =====
+    loginTab.addEventListener('click', () => {
+      loginTab.classList.add('active');
+      registerTab.classList.remove('active');
+      loginForm.classList.remove('hidden');
+      registerForm.classList.add('hidden');
+      authTitle.textContent = '登录账户';
+    });
+
+    registerTab.addEventListener('click', () => {
+      registerTab.classList.add('active');
+      loginTab.classList.remove('active');
+      registerForm.classList.remove('hidden');
+      loginForm.classList.add('hidden');
+      authTitle.textContent = '注册账户';
+    });
+
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = $('loginUsername').value.trim();
+      const password = $('loginPassword').value;
+      if (!username || !password) { setAuthNote('请填写用户名和密码', 'error'); return; }
+      try {
+        const res = await apiPost('/api/users/login', { username, password });
+        currentUser = res.data ? res.data.username : username;
+        currentUserId = res.data ? res.data.user_id : null;
+        authToken = res.data ? res.data.access_token : null;
+        saveAuthState();
+        setAuthNote('登录成功，正在进入系统。', 'success');
+        enterApp(currentUser);
+      } catch (err) {
+        const message = isDuplicateUsernameMessage(err.message)
+          ? '账号重复，请更换用户名。'
+          : err.message;
+        setAuthNote(message, 'error');
+      }
+    });
+
+    registerForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = $('registerUsername').value.trim();
+      const password = $('registerPassword').value;
+      const email = $('registerEmail').value.trim();
+      if (!username || !password) { setAuthNote('请填写用户名和密码', 'error'); return; }
+      try {
+        const res = await apiPost('/api/users/create', { username, password, email: email || undefined });
+        currentUser = res.data ? res.data.username : username;
+        currentUserId = res.data ? res.data.user_id : null;
+        authToken = res.data ? res.data.access_token : null;
+        saveAuthState();
+        setAuthNote('注册成功，正在进入系统。', 'success');
+        enterApp(currentUser);
+      } catch (err) {
+        setAuthNote(err.message, 'error');
+      }
+    });
+
+    function enterApp(username) {
+      // 中文注释：这里说明前端交互逻辑
+      authScreen.classList.add('hidden');
+      appScreen.classList.remove('hidden');
+      profileAvatar.textContent = username.charAt(0).toUpperCase();
+      profileNameMini.textContent = username;
+      lastSendSignature = '';
+      lastSendAt = 0;
+      resetConversationFiles();
+      setHistoryCollapsed(false);
+      loadRoles();
+      loadConversationHistory();
+    }
+
+    logoutBtn.addEventListener('click', () => {
+      if (currentStreamController) {
+        currentStreamController.abort();
+      }
+      if (currentUploadController) {
+        currentUploadController.abort();
+      }
+      clearAuthState();
+      currentUser = null;
+      currentUserId = null;
+      currentRoleType = null;
+      currentConversationId = null;
+      availableRoles = [];
+      conversationHistory = [];
+      lastSendSignature = '';
+      lastSendAt = 0;
+      appScreen.classList.add('hidden');
+      authScreen.classList.remove('hidden');
+      setAuthNote('已退出登录。', '');
+      $('loginUsername').value = '';
+      $('loginPassword').value = '';
+      if (historySearchInput) historySearchInput.value = '';
+      if (historyList) historyList.innerHTML = '';
+      if (roleList) roleList.innerHTML = '';
+      setRolePickerCollapsed(false);
+      currentRoleLabel.textContent = '未选择';
+      if (currentRoleSelect) {
+        currentRoleSelect.value = '';
+        currentRoleSelect.disabled = true;
+      }
+      currentConversationLabel.textContent = '未开始';
+      chatTitle.textContent = '选择角色后开始对话';
+      chatDescription.textContent = '查看当前会话并直接开始提问。';
+      if (messageInput) messageInput.value = '';
+      if (fileInput) fileInput.value = '';
+      isUploadingFiles = false;
+      currentUploadController = null;
+      updateUploadButtonState();
+      resetConversationFiles();
+      renderEmptyState();
+    });
+
+    // ===== 中文分区 =====
+    async function loadRoles() {
+      // 中文注释：这里说明前端交互逻辑
+      try {
+        const res = await apiGet('/api/roles');
+        const roles = normalizeRolesPayload(res.data);
+        availableRoles = roles;
+        roleList.innerHTML = '';
+        roleList.style.setProperty('--role-columns', String(Math.max(1, Math.min(roles.length || 1, 7))));
+        if (roles.length === 0) {
+          roleList.innerHTML = '<div class="chat-note"><strong>暂无角色</strong>请先在后台添加角色数据。</div>';
+          return;
+        }
+        roles.forEach(role => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.dataset.roleType = role.type;
+          btn.className = 'role-btn' + (currentRoleType === role.type ? ' active' : '');
+          btn.innerHTML = '<div class="role-top"><strong>' + role.name + '</strong><span class="role-badge">' + (role.style || '在线') + '</span></div><div class="meta">' + (role.description || '').substring(0, 22) + '</div>';
+          btn.addEventListener('click', () => selectRole(role));
+          roleList.appendChild(btn);
+        });
+        updateRoleSelectionUI();
+      } catch (err) {
+        roleList.innerHTML = '<div class="chat-note"><strong>加载角色失败</strong>' + err.message + '</div>';
+      }
+    }
+
+    if (refreshRolesBtn) refreshRolesBtn.addEventListener('click', loadRoles);
+    if (toggleHistoryBtn) {
+      toggleHistoryBtn.addEventListener('click', () => {
+        setHistoryCollapsed(!historyCollapsed);
+      });
+    }
+    if (sidebarRailToggleBtn) {
+      sidebarRailToggleBtn.addEventListener('click', () => {
+        setHistoryCollapsed(false);
+      });
+    }
+    if (historySearchInput) historySearchInput.addEventListener('input', renderHistoryList);
+    if (refreshHistoryBtn) refreshHistoryBtn.addEventListener('click', loadConversationHistory);
+    if (switchRoleBtn) {
+      switchRoleBtn.addEventListener('click', () => {
+        if (currentRoleSelect) currentRoleSelect.focus();
+      });
+    }
+
+    function selectRole(role) {
+      // 中文注释：这里说明前端交互逻辑
+      currentRoleType = role.type;
+      updateRoleSelectionUI();
+      currentRoleLabel.textContent = role.name;
+      chatTitle.textContent = '与 ' + role.name + ' 对话';
+      chatDescription.textContent = shortenDescription(role.description);
+      setRolePickerCollapsed(true);
+      createConversation(role.type);
+    }
+
+    // ===== 中文分区 =====
+    function updateRoleSelectionUI() {
+      ensureRoleSelect();
+      if (currentRoleSelect) {
+        currentRoleSelect.value = currentRoleType || '';
+      }
+    }
+
+    async function loadRoles() {
+      try {
+        const res = await apiGet('/api/roles');
+        const roles = normalizeRolesPayload(res.data);
+        availableRoles = roles;
+        ensureRoleSelect();
+        if (!currentRoleSelect) return;
+
+        currentRoleSelect.innerHTML = '<option value="">请选择角色</option>';
+        currentRoleSelect.disabled = roles.length === 0;
+
+        roles.forEach((role) => {
+          const option = document.createElement('option');
+          option.value = role.type;
+          option.textContent = role.name;
+          currentRoleSelect.appendChild(option);
+        });
+
+        if (roles.length === 0) {
+          currentRoleLabel.textContent = '未选择';
+          return;
+        }
+
+        updateRoleSelectionUI();
+      } catch (err) {
+        if (currentRoleSelect) {
+          currentRoleSelect.innerHTML = '<option value="">角色加载失败</option>';
+          currentRoleSelect.disabled = true;
+        }
+      }
+    }
+
+    async function loadConversationHistory() {
+      // 中文注释：这里说明前端交互逻辑
+      if (!currentUserId) return;
+      try {
+        const res = await apiGet('/api/users/' + currentUserId + '/conversations');
+        conversationHistory = Array.isArray(res.data) ? res.data : [];
+        syncCurrentConversationMeta();
+        renderHistoryList();
+      } catch (err) {
+        if (historyList) {
+          historyList.innerHTML = '<div class="chat-note"><strong>加载历史失败</strong>' + err.message + '</div>';
+        }
+      }
+    }
+
+    async function loadConversationMessages(conversationId) {
+      // 中文注释：这里说明前端交互逻辑
+      try {
+        const res = await apiGet('/api/conversations/' + conversationId + '/history?limit=50');
+        const messages = Array.isArray(res.data) ? res.data : [];
+        chatLog.innerHTML = '';
+        if (messages.length === 0) {
+          renderEmptyState('这条历史搜索暂无内容，可以继续发送新问题。');
+          return;
+        }
+        messages.forEach((msg) => {
+          addMessage(msg.sender_type === 'assistant' ? 'assistant' : 'user', msg.content || '');
+        });
+      } catch (err) {
+        renderEmptyState('历史搜索加载失败，请稍后重试。');
+        showError('加载历史失败: ' + err.message);
+      }
+    }
+
+    async function openConversation(conversation) {
+      // 中文注释：这里说明前端交互逻辑
+      currentConversationId = conversation.id;
+      currentRoleType = conversation.role_type || null;
+      lastSendSignature = '';
+      lastSendAt = 0;
+
+      const roleInfo = getRoleInfo(currentRoleType);
+      currentRoleLabel.textContent = conversation.role_name || roleInfo?.name || '未选择';
+      currentConversationLabel.textContent = conversation.title && conversation.title !== '新对话' ? conversation.title : '未开始';
+      chatTitle.textContent = '与 ' + currentRoleLabel.textContent + ' 对话';
+      chatDescription.textContent = shortenDescription(roleInfo?.description || '继续当前历史搜索记录。');
+
+      updateRoleSelectionUI();
+      setRolePickerCollapsed(true);
+      renderHistoryList();
+      await loadConversationMessages(conversation.id);
+      await loadConversationFiles();
+      showSuccess('已载入历史搜索');
+    }
+
+    async function createConversation(roleType) {
+      // 中文注释：这里说明前端交互逻辑
+      if (!currentUserId) { showError('请先登录'); return null; }
+      try {
+        const res = await apiPost('/api/conversations/create', { role_type: roleType });
+        currentConversationId = res.data ? res.data.conversation_id : null;
+        lastSendSignature = '';
+        lastSendAt = 0;
+        currentConversationLabel.textContent = '未开始';
+        resetConversationFiles();
+        renderEmptyState('直接输入问题，或上传文件作为知识库后开始提问。');
+        await loadConversationHistory();
+        showSuccess('新会话已创建');
+        return currentConversationId;
+      } catch (err) {
+        showError('创建会话失败: ' + err.message);
+        return null;
+      }
+    }
+
+    if (newConversationBtn) {
+      newConversationBtn.addEventListener('click', () => {
+        if (currentRoleType) createConversation(currentRoleType);
+        else showError('请先选择一个角色');
+      });
+    }
+
+    // ===== 中文分区 =====
+    async function sendMessage() {
+      // 中文注释：这里说明前端交互逻辑
+      if (isSending) {
+        if (currentStreamController) {
+          currentStreamController.abort();
+        }
+        return;
+      }
+
+      const text = messageInput.value.trim();
+      if (!text) return;
+      if (!currentConversationId) { showError('请先选择角色创建会话'); return; }
+      const signature = `${currentConversationId}::${text}`;
+      const now = Date.now();
+      if (signature === lastSendSignature && now - lastSendAt < DUPLICATE_SEND_WINDOW_MS) {
+        showError('相同问题正在发送，请不要重复提交。');
+        return;
+      }
+
+      const clientRequestId = generateRequestId();
+      isSending = true;
+      updateSendButtonState();
+      lastSendSignature = signature;
+      lastSendAt = now;
+      currentStreamController = new AbortController();
+
+      currentConversationLabel.textContent = summarizeQuestion(text);
+      addMessage('user', text);
+      messageInput.value = '';
+
+      const typingGroup = document.createElement('div');
+      typingGroup.className = 'message-group typing';
+      typingGroup.innerHTML = '<div class="bubble typing"><div class="typing-dots"><span></span><span></span><span></span></div></div>';
+      chatLog.appendChild(typingGroup);
+      chatLog.scrollTop = chatLog.scrollHeight;
+
+      try {
+        let reply = '';
+        const streamingMessage = createStreamingAssistantMessage();
+        currentStreamingMessage = streamingMessage;
+        typingGroup.remove();
+        await apiPostStream('/api/chat', {
+          conversation_id: currentConversationId,
+          message: text,
+          client_request_id: clientRequestId,
+          stream: true
+        }, {
+          onDelta(payload) {
+            reply += payload.delta || '';
+            streamingMessage.update(reply);
+          },
+          onStatus(payload) {
+            if (!reply) {
+              streamingMessage.update(payload.message || '处理中...');
+            }
+          },
+          onDone(payload) {
+            reply = payload.reply || reply;
+            streamingMessage.update(reply);
+          }
+        }, currentStreamController.signal);
+        await loadConversationHistory();
+        showSuccess('回复完成');
+      } catch (err) {
+        typingGroup.remove();
+        if (err.name === 'AbortError') {
+          if (!reply && currentStreamingMessage?.group) {
+            currentStreamingMessage.group.remove();
+          }
+          showSuccess('已停止生成');
+        } else {
+          lastSendSignature = '';
+          lastSendAt = 0;
+          showError(err.message);
+        }
+      }
+
+      isSending = false;
+      currentStreamController = null;
+      currentStreamingMessage = null;
+      updateSendButtonState();
+    }
+
+    function addMessage(role, content) {
+      // 中文注释：这里说明前端交互逻辑
+      const currentEmptyState = chatLog.querySelector('.empty-state');
+      if (currentEmptyState) {
+        currentEmptyState.remove();
+      }
+
+      const normalizedContent = (content || '').trim();
+      const signature = buildMessageSignature(role, normalizedContent);
+      const previousMessage = Array.from(chatLog.querySelectorAll('.message-group'))
+        .filter((item) => !item.classList.contains('typing'))
+        .pop();
+
+      if (previousMessage && previousMessage.dataset.signature === signature) {
+        return;
+      }
+
+      const group = document.createElement('div');
+      group.className = 'message-group ' + role;
+      group.dataset.signature = signature;
+      const meta = document.createElement('div');
+      meta.className = 'message-meta';
+      meta.textContent = role === 'user' ? '你' : (currentRoleLabel.textContent || '助手');
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble ' + role;
+      if (role === 'assistant') {
+        bubble.appendChild(createAssistantContent(normalizedContent));
+      } else {
+        bubble.textContent = normalizedContent;
+      }
+      group.appendChild(meta);
+      group.appendChild(bubble);
+      chatLog.appendChild(group);
+      chatLog.scrollTop = chatLog.scrollHeight;
+    }
+
+    function createStreamingAssistantMessage() {
+      const currentEmptyState = chatLog.querySelector('.empty-state');
+      if (currentEmptyState) {
+        currentEmptyState.remove();
+      }
+
+      const group = document.createElement('div');
+      group.className = 'message-group assistant';
+      const meta = document.createElement('div');
+      meta.className = 'message-meta';
+      meta.textContent = currentRoleLabel.textContent || '助手';
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble assistant';
+      group.appendChild(meta);
+      group.appendChild(bubble);
+      chatLog.appendChild(group);
+
+      return {
+        group,
+        update(content) {
+          bubble.innerHTML = '';
+          bubble.appendChild(createAssistantContent(content || ''));
+          group.dataset.signature = buildMessageSignature('assistant', (content || '').trim());
+          chatLog.scrollTop = chatLog.scrollHeight;
+        }
+      };
+    }
+
+    function normalizeAssistantText(content) {
+      if (!content) return '';
+      return content
+        .replace(/\r/g, '')
+        .replace(/`([^`]+)`/g, '$1')
+        .split('\n')
+        .map((line) => line
+          .replace(/^\s{0,3}#{1,6}\s*/, '')
+          .replace(/^\s*[-*_]+\s+/, '')
+          .replace(/\s{2,}/g, ' ')
+          .trimEnd()
+        )
+        .join('\n')
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
+    }
+
+    function escapeHtml(value) {
+      return (value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function renderInlineAssistantMarkup(text) {
+      let html = escapeHtml(text || '');
+      html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      return html;
+    }
+
+    function isMarkdownTableSeparator(line) {
+      return /^\s*\|?(?:\s*:?-{3,}:?\s*\|)+\s*:?-{3,}:?\s*\|?\s*$/.test(line || '');
+    }
+
+    function isMarkdownTableRow(line) {
+      return /\|/.test(line || '') && /^\s*\|?.+\|.+\|?\s*$/.test(line || '');
+    }
+
+    function splitMarkdownTableCells(line) {
+      const trimmed = (line || '').trim().replace(/^\|/, '').replace(/\|$/, '');
+      return trimmed.split('|').map((cell) => cell.trim());
+    }
+
+    function appendMarkdownTable(wrapper, tableLines) {
+      if (!tableLines.length) return;
+      const headerLine = tableLines[0];
+      const bodyLines = tableLines.slice(1).filter((line) => !isMarkdownTableSeparator(line));
+      const headers = splitMarkdownTableCells(headerLine);
+
+      const table = document.createElement('table');
+      table.className = 'assistant-table';
+
+      const thead = document.createElement('thead');
+      const headRow = document.createElement('tr');
+      headers.forEach((header) => {
+        const th = document.createElement('th');
+        th.innerHTML = renderInlineAssistantMarkup(header);
+        headRow.appendChild(th);
+      });
+      thead.appendChild(headRow);
+      table.appendChild(thead);
+
+      if (bodyLines.length) {
+        const tbody = document.createElement('tbody');
+        bodyLines.forEach((line) => {
+          const row = document.createElement('tr');
+          splitMarkdownTableCells(line).forEach((cell) => {
+            const td = document.createElement('td');
+            td.innerHTML = renderInlineAssistantMarkup(cell);
+            row.appendChild(td);
+          });
+          tbody.appendChild(row);
+        });
+        table.appendChild(tbody);
+      }
+
+      wrapper.appendChild(table);
+    }
+
+    function isPrimaryAssistantTitle(title) {
+      const normalized = (title || '').replace(/\s+/g, '');
+      return [
+        '\u7ed3\u8bba',
+        '\u5206\u6790',
+        '\u5177\u4f53\u505a\u6cd5',
+        '\u5904\u7406\u5efa\u8bae',
+        '\u5efa\u8bae',
+        '\u6ce8\u610f\u4e8b\u9879',
+        '\u98ce\u9669\u63d0\u793a',
+        '\u6838\u5fc3\u5224\u65ad',
+        '\u89e3\u51b3\u601d\u8def',
+        '\u5e94\u5bf9\u6b65\u9aa4',
+        '\u603b\u7ed3'
+      ].includes(normalized);
+    }
+
+    function parseAssistantLine(line) {
+      const match = line.match(/^(\d+[.\u3001]\s*)?([^\n\uff1a:]{1,24})[\uff1a:]\s*(.*)$/);
+      if (!match) {
+        return { type: 'body', text: line.trim() };
+      }
+
+      const index = (match[1] || '').trim();
+      const title = (match[2] || '').trim();
+      const body = (match[3] || '').trim();
+      const isPrimary = Boolean(index) || isPrimaryAssistantTitle(title);
+
+      return {
+        type: isPrimary ? 'section' : 'item',
+        index,
+        title,
+        body
+      };
+    }
+
+    function splitAssistantSentences(text) {
+      const normalized = (text || '')
+        .replace(/\s+/g, ' ')
+        .trim();
+      if (!normalized) return [];
+
+      const sentences = normalized
+        .split(/(?<=[\u3002\uff01\uff1f\uff1b!?;])/)
+        .map((item) => item.trim())
+        .filter(Boolean);
+
+      if (sentences.length > 1) {
+        return sentences;
+      }
+
+      return [normalized];
+    }
+
+    function isReportStyleAssistantContent(text) {
+      const lines = (text || '')
+        .split('\n')
+        .map((line) => line.trim())
+        .filter(Boolean);
+      if (!lines.length) return false;
+
+      const headingCount = lines.filter((line) => /^[\u4e00\u4e8c\u4e09\u56db\u4e94\u516d\u4e03\u516b\u4e5d\u5341]+\u3001/.test(line)).length;
+      const hasReportMeta = lines.some((line) =>
+        /\u8bc1\u5238\u7814\u7a76\u62a5\u544a|\u8bc4\u7ea7[:\uff1a]|\u6838\u5fc3\u4e1a\u7ee9\u6982\u89c8|\u5206\u677f\u5757\u76c8\u5229|\u53d1\u7535\u91cf\u7ed3\u6784|\u76c8\u5229\u4e0e\u6210\u672c|\u88c5\u673a\u4e0e\u9879\u76ee\u5efa\u8bbe|\u5206\u7ea2\u89c4\u5212|\u76c8\u5229\u9884\u6d4b\u4e0e\u4f30\u503c|\u53ef\u6bd4\u516c\u53f8\u4f30\u503c|\u56fe\u7247\u4e0e\u56fe\u8868\u89e3\u8bfb|\u6838\u5fc3\u6570\u636e\u6c47\u603b\u8868/.test(line)
+      );
+      const hasTableLike = lines.some((line) => /\|/.test(line) || /\t/.test(line));
+      const firstLineLooksLikeTitle =
+        lines[0].length <= 80 && /\u70b9\u8bc4|\u534a\u5e74\u62a5|\u5e74\u62a5|\u5b63\u62a5|\u8d22\u62a5|\u7814\u62a5|\u8bc1\u5238\u7814\u7a76\u62a5\u544a/.test(lines[0]);
+
+      return headingCount >= 2 || hasReportMeta || (firstLineLooksLikeTitle && (headingCount >= 1 || hasTableLike));
+    }
+
+    function appendAssistantSentence(wrapper, text) {
+      const paragraph = document.createElement('p');
+      paragraph.className = 'assistant-body-item';
+      const normalizedText = String(text || '').replace(/^\s*[•·]\s+/, '').trim();
+      paragraph.innerHTML = `\u00b7 ${renderInlineAssistantMarkup(normalizedText)}`;
+      wrapper.appendChild(paragraph);
+    }
+
+    function createAssistantContent(content) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'assistant-rich';
+
+      const normalized = normalizeAssistantText(content);
+      if (!normalized) {
+        const empty = document.createElement('p');
+        empty.className = 'assistant-body-item';
+        empty.textContent = '\u00b7 \u6682\u65e0\u5185\u5bb9';
+        wrapper.appendChild(empty);
+        return wrapper;
+      }
+
+      const lines = normalized
+        .split('\n')
+        .map((line) => line.trim())
+        .filter(Boolean);
+
+      if (isReportStyleAssistantContent(normalized)) {
+        for (let i = 0; i < lines.length; i += 1) {
+          if (isMarkdownTableRow(lines[i])) {
+            const tableLines = [];
+            while (i < lines.length && isMarkdownTableRow(lines[i])) {
+              tableLines.push(lines[i]);
+              i += 1;
+            }
+            appendMarkdownTable(wrapper, tableLines);
+            i -= 1;
+            continue;
+          }
+          const paragraph = document.createElement('p');
+          paragraph.className = 'assistant-body-item';
+          paragraph.innerHTML = renderInlineAssistantMarkup(lines[i]);
+          wrapper.appendChild(paragraph);
+        }
+        return wrapper;
+      }
+
+      lines.forEach((line) => {
+        const parsed = parseAssistantLine(line);
+
+        if (parsed.type === 'section') {
+          appendAssistantSentence(
+            wrapper,
+            `${parsed.index ? parsed.index + ' ' : ''}${parsed.title}`
+          );
+          splitAssistantSentences(parsed.body).forEach((sentence) => appendAssistantSentence(wrapper, sentence));
+          return;
+        }
+
+        if (parsed.type === 'item') {
+          const sentences = splitAssistantSentences(parsed.body);
+          if (sentences.length) {
+            sentences.forEach((sentence, index) => {
+              appendAssistantSentence(
+                wrapper,
+                index === 0 ? `${parsed.title}\uff1a${sentence}` : sentence
+              );
+            });
+          } else {
+            appendAssistantSentence(wrapper, parsed.title);
+          }
+          return;
+        }
+
+        splitAssistantSentences(parsed.text).forEach((sentence) => appendAssistantSentence(wrapper, sentence));
+      });
+
+      return wrapper;
+    }
+
+    function simplifyAuthHeroCopy() {
+      const subtitle = document.querySelector('.hero-subtitle');
+      if (subtitle) {
+        subtitle.textContent = '支持账号登录、角色切换、文件问答和历史续聊，保持一个更轻量的对话工作台。';
+      }
+
+      const introLabel = document.querySelector('.intro-card .intro-label');
+      if (introLabel) introLabel.textContent = '快速上手';
+
+      const introTitle = document.querySelector('.intro-card strong');
+      if (introTitle) introTitle.textContent = '登录后直接选择角色，上传资料或输入问题即可开始。';
+
+      const introParagraph = document.querySelector('.intro-card p');
+      if (introParagraph) {
+        introParagraph.textContent = '页面只保留最常用的注册、登录、角色对话和文件检索能力，减少说明堆叠。';
+      }
+
+      const introListItems = document.querySelectorAll('.intro-card .intro-list-item');
+      if (introListItems[0]) introListItems[0].textContent = '支持注册登录，并按用户名唯一校验账号。';
+      if (introListItems[1]) introListItems[1].textContent = '支持上传文件后直接围绕内容检索和提问。';
+      if (introListItems[2]) introListItems[2].textContent = '支持历史会话续聊，标题会根据问题自动生成。';
+
+      const heroStats = document.querySelector('.hero-stats');
+      if (heroStats) heroStats.style.display = 'none';
+
+      const trustStrip = document.querySelector('.trust-strip');
+      if (trustStrip) trustStrip.style.display = 'none';
+
+      const introItems = document.querySelectorAll('.intro-grid .intro-item');
+      const introItemContent = [
+        ['角色对话', '右上角即可切换角色，进入新的回答视角。'],
+        ['文件检索', '上传资料后可直接问文件内容或继续深入追问。'],
+      ];
+      introItems.forEach((item, index) => {
+        if (index >= introItemContent.length) {
+          item.style.display = 'none';
+          return;
+        }
+        const label = item.querySelector('span');
+        const content = item.querySelector('strong');
+        if (label) label.textContent = introItemContent[index][0];
+        if (content) content.textContent = introItemContent[index][1];
+      });
+    }
+
+    function openFilePicker() {
+      // 中文注释：统一处理所有上传文件入口
+      if (!currentUserId) {
+        showError('请先登录，再添加文件');
+        return;
+      }
+      if (isUploadingFiles) {
+        if (currentUploadController) currentUploadController.abort();
+        return;
+      }
+      fileInput?.click();
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    clearInputBtn.addEventListener('click', openFilePicker);
+    if (pickFilesBtn) {
+      pickFilesBtn.addEventListener('click', () => {
+        if (!currentUserId) {
+          showError('请先登录，再添加文件');
+          return;
+        }
+        openFilePicker();
+      });
+    }
+    if (fileInput) {
+      fileInput.addEventListener('change', async (event) => {
+        isUploadingFiles = true;
+        currentUploadController = new AbortController();
+        updateUploadButtonState();
+        try {
+          await handleSelectedFiles(event.target.files);
+        } finally {
+          isUploadingFiles = false;
+          currentUploadController = null;
+          updateUploadButtonState();
+        }
+      });
+    }
+    messageInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+    });
+
+    if (inputShell) {
+      ['dragenter', 'dragover'].forEach((eventName) => {
+        inputShell.addEventListener(eventName, (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          inputShell.classList.add('dragover');
+        });
+      });
+
+      ['dragleave', 'dragend'].forEach((eventName) => {
+        inputShell.addEventListener(eventName, (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          const nextTarget = event.relatedTarget;
+          if (!nextTarget || !inputShell.contains(nextTarget)) {
+            inputShell.classList.remove('dragover');
+          }
+        });
+      });
+
+      inputShell.addEventListener('drop', async (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        inputShell.classList.remove('dragover');
+        const files = event.dataTransfer?.files;
+        if (files?.length) {
+          isUploadingFiles = true;
+          currentUploadController = new AbortController();
+          updateUploadButtonState();
+          try {
+            await handleSelectedFiles(files);
+          } finally {
+            isUploadingFiles = false;
+            currentUploadController = null;
+            updateUploadButtonState();
+          }
+        }
+      });
+    }
+
+    // ===== 中文分区 =====
+    simplifyAuthHeroCopy();
+    setHistoryCollapsed(false);
+    updateUploadButtonState();
+    if (restoreAuthState()) {
+      setAuthNote('已恢复登录状态。', 'success');
+      clearAuthState();
+      currentUser = null;
+      currentUserId = null;
+      setAuthNote('检测到旧登录状态缓存，已清除。请重新注册或登录。', '');
+    }
+    console.log('角色扮演系统前端已加载');
+  </script>
+</body>
+</html>
+

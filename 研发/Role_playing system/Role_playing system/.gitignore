@@ -1,0 +1,35 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Local environment
+.env
+.venv/
+venv/
+
+# IDE files
+.idea/
+.vscode/
+
+# Runtime data
+logs/
+uploads/
+*.db
+*.sqlite
+*.sqlite3
+server*.log
+*.err.log
+*.out.log
+
+# Large local assets
+models/
+generated/
+*.pdf
+*.bin
+*.onnx
+*.safetensors
+*.pt
+
+# Test artifacts
+components/jmeter/reports/
+components/jmeter/results/

@@ -1,0 +1,26 @@
+INFO:     Started server process [16652]
+INFO:     Waiting for application startup.
+2026-05-06 18:47:52 | INFO | api.services | System startup completed
+2026-05-06 18:47:52 | INFO | api.services | Knowledge sync scheduler started with 10080-minute interval
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2026-05-06 18:48:01 | INFO | api.routes.auth | User created: username=codex_a2c74c4e
+2026-05-06 18:48:01 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/users/create status_code=200 client_ip=127.0.0.1 duration_ms=44.93
+2026-05-06 18:48:01 | INFO | api.routes.conversations | Conversation created: conversation_id=159 user_id=57 role_type=lawyer
+2026-05-06 18:48:01 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/conversations/create status_code=200 client_ip=127.0.0.1 duration_ms=13.26
+2026-05-06 18:48:04 | INFO | datasets | PyTorch version 2.4.1 available.
+Building prefix dict from the default dictionary ...
+2026-05-06 18:48:06 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+Loading model from cache C:\Users\26332\AppData\Local\Temp\jieba.cache
+2026-05-06 18:48:06 | DEBUG | jieba | Loading model from cache C:\Users\26332\AppData\Local\Temp\jieba.cache
+Loading model cost 0.358 seconds.
+2026-05-06 18:48:07 | DEBUG | jieba | Loading model cost 0.358 seconds.
+Prefix dict has been built successfully.
+2026-05-06 18:48:07 | DEBUG | jieba | Prefix dict has been built successfully.
+2026-05-06 18:48:14 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-06 18:48:14 | INFO | api.routes.conversations | Chat completed: conversation_id=159 user_id=57 client_request_id=None
+2026-05-06 18:48:14 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/chat status_code=200 client_ip=127.0.0.1 duration_ms=13220.31
+2026-05-06 18:48:16 | INFO | api.routes.conversations | Chat completed: conversation_id=159 user_id=57 client_request_id=None
+2026-05-06 18:48:16 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/chat status_code=200 client_ip=127.0.0.1 duration_ms=2053.53
+2026-05-06 18:48:18 | INFO | api.routes.conversations | Chat completed: conversation_id=159 user_id=57 client_request_id=None
+2026-05-06 18:48:18 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/chat status_code=200 client_ip=127.0.0.1 duration_ms=2049.41
