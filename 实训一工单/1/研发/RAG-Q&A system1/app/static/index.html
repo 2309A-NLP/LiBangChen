@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF文档问答系统</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="title-panel panel">
+        <a href="/kb" class="kb-entry">知识库管理</a>
+        <h2>PDF文档问答系统</h2>
+      </section>
+
+      <section class="answer-panel panel">
+        <div id="streamOutput" class="conversation-board"></div>
+        <pre id="debugOutput" class="debug-box hidden"></pre>
+      </section>
+
+      <section class="input-panel panel">
+        <div class="input-wrap">
+          <textarea id="questionInput" placeholder="请输入问题"></textarea>
+        </div>
+
+        <div class="button-column">
+          <label class="upload-trigger" for="uploadInput">
+            <input id="uploadInput" type="file" accept=".pdf,application/pdf" />
+            <span id="uploadFileLabel">上传</span>
+          </label>
+          <button id="uploadButton" type="button" class="action-button secondary-action">上传</button>
+          <button id="askButton" type="button" class="action-button">发送</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
