@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "entries": {
+    "cached.pdf": {
+      "signature": "77ad921e7255292d04a3059c78f4a36a",
+      "warnings": [],
+      "chunks": [
+        {
+          "chunk_id": "cached-page-1-chunk-1",
+          "source_id": "cached.pdf",
+          "page_number": 1,
+          "text": "缓存测试文本。"
+        }
+      ]
+    }
+  }
+}

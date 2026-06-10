@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "entries": {
+    "auto.pdf": {
+      "signature": "2ccbcd159077edd95714118042e99801",
+      "warnings": [],
+      "chunks": [
+        {
+          "chunk_id": "auto-page-1-chunk-1",
+          "source_id": "auto.pdf",
+          "page_number": 1,
+          "text": "这是一段正常的文本内容，长度足够长，不需要视觉升级。"
+        },
+        {
+          "chunk_id": "auto-page-2-vision-chunk-1",
+          "source_id": "auto.pdf",
+          "page_number": 2,
+          "text": "## 组织架构图\n公司下设研发中心、制造中心、营销中心。"
+        }
+      ]
+    }
+  }
+}
