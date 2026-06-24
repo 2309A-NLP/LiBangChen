@@ -1,0 +1,981 @@
+2026-06-10 13:35:54,536 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-10 13:35:54,954 - lightrag - INFO - Embedding config: binding=openai model=bge-m3 embedding_dim=1024 max_token_size=8192
+2026-06-10 13:35:54,954 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=openai)
+2026-06-10 13:35:54,954 - lightrag - INFO - Embedding max_token_size: 8192 (from openai provider default)
+2026-06-10 13:35:54,954 - lightrag - INFO - Reranking is disabled
+2026-06-10 13:35:55,698 - lightrag - INFO - [] Loaded graph from C:\Users\26332\Desktop\工单\RAG工单\RAG-Q&A system12\data\lightrag\graph_chunk_entity_relation.graphml with 6 nodes, 2 edges
+2026-06-10 13:35:55,717 - lightrag - INFO - Role LLM Configuration (initialized):
+2026-06-10 13:35:55,717 - lightrag - INFO -  - extract: ollama/qwen2.5:7b, host=http://localhost:11434, max_async=4, timeout=180
+2026-06-10 13:35:55,717 - lightrag - INFO -  - keyword: ollama/qwen2.5:7b, host=http://localhost:11434, max_async=4, timeout=180
+2026-06-10 13:35:55,717 - lightrag - INFO -  - query: ollama/qwen2.5:7b, host=http://localhost:11434, max_async=4, timeout=180
+2026-06-10 13:35:55,717 - lightrag - INFO -  - vlm: ollama/qwen2.5:7b, host=http://localhost:11434, max_async=4, timeout=180
+2026-06-10 13:35:55,717 - lightrag - INFO - Role LLM Option:
+2026-06-10 13:35:55,717 - lightrag - INFO -  - extract: Ollama {}
+2026-06-10 13:35:55,717 - lightrag - INFO -  - keyword: Ollama {}
+2026-06-10 13:35:55,717 - lightrag - INFO -  - query: Ollama {}
+2026-06-10 13:35:55,717 - lightrag - INFO -  - vlm: Ollama {}
+2026-06-10 13:35:55,778 - lightrag - INFO - WebUI assets mounted at /webui
+2026-06-10 13:35:55,808 - uvicorn.error - INFO - Started server process [35424]
+2026-06-10 13:35:55,808 - uvicorn.error - INFO - Waiting for application startup.
+2026-06-10 13:35:55,818 - lightrag - INFO - [] Process 35424 KV load full_docs with 2 records
+2026-06-10 13:35:55,826 - lightrag - INFO - [] Process 35424 KV load text_chunks with 2 records
+2026-06-10 13:35:55,837 - lightrag - INFO - [] Process 35424 KV load full_entities with 2 records
+2026-06-10 13:35:55,847 - lightrag - INFO - [] Process 35424 KV load full_relations with 1 records
+2026-06-10 13:35:55,852 - lightrag - INFO - [] Process 35424 KV load entity_chunks with 6 records
+2026-06-10 13:35:55,869 - lightrag - INFO - [] Process 35424 KV load relation_chunks with 2 records
+2026-06-10 13:35:55,875 - lightrag - INFO - [] Process 35424 KV load llm_response_cache with 6 records
+2026-06-10 13:35:55,879 - lightrag - INFO - [] Process 35424 doc status load doc_status with 2 records
+2026-06-10 13:35:55,879 - uvicorn.error - INFO - Application startup complete.
+2026-06-10 13:35:55,880 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
+2026-06-10 13:36:14,791 - lightrag - WARNING - low_level_keywords is empty
+2026-06-10 13:36:14,792 - lightrag - INFO - Embedding func: 8 new workers initialized (Timeouts: Func: 30s, Worker: 60s, Health Check: 75s)
+2026-06-10 13:36:15,566 - lightrag - INFO - Query edges: actual controller (top_k:40, cosine:0.2)
+2026-06-10 13:36:15,566 - lightrag - INFO - Global query: 3 entites, 2 relations
+2026-06-10 13:36:15,566 - lightrag - INFO - Naive query: 2 chunks (chunk_top_k:20 cosine:0.2)
+2026-06-10 13:36:15,566 - lightrag - INFO - Raw search results: 3 entities, 2 relations, 2 vector chunks
+2026-06-10 13:36:15,567 - lightrag - INFO - After truncation: 3 entities, 2 relations
+2026-06-10 13:36:15,567 - lightrag - INFO - Selecting 1 from 1 entity-related chunks by vector similarity
+2026-06-10 13:36:15,567 - lightrag - INFO - Find no additional relations-related chunks from 2 relations
+2026-06-10 13:36:15,567 - lightrag - INFO - Round-robin merged chunks: 3 -> 2 (deduplicated 1)
+2026-06-10 13:36:15,568 - lightrag - WARNING - Rerank is enabled but no rerank model is configured. Please set up a rerank model or set enable_rerank=False in query parameters.
+2026-06-10 13:36:15,568 - lightrag - INFO - Final context: 3 entities, 2 relations, 2 chunks
+2026-06-10 13:36:15,568 - lightrag - INFO - Final chunks S+F/O: E3/1 C1/2
+2026-06-10 13:36:15,568 - uvicorn.access - INFO - 127.0.0.1:61276 - "POST /query/data HTTP/1.1" 200
+2026-06-10 13:53:41,087 - lightrag - INFO - keyword LLM func: 4 new workers initialized (Timeouts: Func: 180s, Worker: 360s, Health Check: 375s)
+2026-06-10 13:53:48,200 - lightrag - INFO -  == LLM cache == saving: local:keywords:a99d7c38247630de245dc7641c69fbb0
+2026-06-10 13:53:50,032 - lightrag - INFO - Query nodes: wuhan liyuan information technology co., ltd., sales department composition, large customer sales office (top_k:40, cosine:0.2)
+2026-06-10 13:53:50,052 - lightrag - INFO - Local query: 6 entites, 2 relations
+2026-06-10 13:53:50,052 - lightrag - INFO - Raw search results: 6 entities, 2 relations, 0 vector chunks
+2026-06-10 13:53:50,068 - lightrag - INFO - After truncation: 6 entities, 2 relations
+2026-06-10 13:53:50,078 - lightrag - INFO - Selecting 2 from 2 entity-related chunks by vector similarity
+2026-06-10 13:53:50,079 - lightrag - INFO - Find no additional relations-related chunks from 2 relations
+2026-06-10 13:53:50,080 - lightrag - INFO - Round-robin merged chunks: 2 -> 2 (deduplicated 0)
+2026-06-10 13:53:50,117 - lightrag - WARNING - Rerank is enabled but no rerank model is configured. Please set up a rerank model or set enable_rerank=False in query parameters.
+2026-06-10 13:53:50,123 - lightrag - INFO - Final context: 6 entities, 2 relations, 2 chunks
+2026-06-10 13:53:50,123 - lightrag - INFO - Final chunks S+F/O: E5/1 E1/2
+2026-06-10 13:53:50,138 - uvicorn.access - INFO - 127.0.0.1:53898 - "POST /query/data HTTP/1.1" 200
+2026-06-10 13:53:52,644 - lightrag - INFO -  == LLM cache == saving: local:keywords:7230e180e34b914f3f4c61d3c49b2e84
+2026-06-10 13:53:53,750 - lightrag - INFO - Query nodes: wuhan liyuan information technology co., ltd, customers, sales department, sales section, departments (top_k:40, cosine:0.2)
+2026-06-10 13:53:53,752 - lightrag - INFO - Local query: 6 entites, 2 relations
+2026-06-10 13:53:53,752 - lightrag - INFO - Raw search results: 6 entities, 2 relations, 0 vector chunks
+2026-06-10 13:53:53,752 - lightrag - INFO - After truncation: 6 entities, 2 relations
+2026-06-10 13:53:53,753 - lightrag - INFO - Selecting 2 from 2 entity-related chunks by vector similarity
+2026-06-10 13:53:53,754 - lightrag - INFO - Find no additional relations-related chunks from 2 relations
+2026-06-10 13:53:53,754 - lightrag - INFO - Round-robin merged chunks: 2 -> 2 (deduplicated 0)
+2026-06-10 13:53:53,755 - lightrag - WARNING - Rerank is enabled but no rerank model is configured. Please set up a rerank model or set enable_rerank=False in query parameters.
+2026-06-10 13:53:53,755 - lightrag - INFO - Final context: 6 entities, 2 relations, 2 chunks
+2026-06-10 13:53:53,755 - lightrag - INFO - Final chunks S+F/O: E5/1 E1/2
+2026-06-10 13:53:53,761 - uvicorn.access - INFO - 127.0.0.1:54548 - "POST /query/data HTTP/1.1" 200
+2026-06-10 13:53:56,410 - lightrag - INFO -  == LLM cache == saving: local:keywords:f3bf4211f5b625133206f86183eb21c1
+2026-06-10 13:53:57,427 - lightrag - INFO - Query nodes: wuhan liyuan information technology co., ltd., sales departments, large customer sales section (top_k:40, cosine:0.2)
+2026-06-10 13:53:57,429 - lightrag - INFO - Local query: 6 entites, 2 relations
+2026-06-10 13:53:57,429 - lightrag - INFO - Raw search results: 6 entities, 2 relations, 0 vector chunks
+2026-06-10 13:53:57,429 - lightrag - INFO - After truncation: 6 entities, 2 relations
+2026-06-10 13:53:57,430 - lightrag - INFO - Selecting 2 from 2 entity-related chunks by vector similarity
+2026-06-10 13:53:57,430 - lightrag - INFO - Find no additional relations-related chunks from 2 relations
+2026-06-10 13:53:57,430 - lightrag - INFO - Round-robin merged chunks: 2 -> 2 (deduplicated 0)
+2026-06-10 13:53:57,430 - lightrag - WARNING - Rerank is enabled but no rerank model is configured. Please set up a rerank model or set enable_rerank=False in query parameters.
+2026-06-10 13:53:57,431 - lightrag - INFO - Final context: 6 entities, 2 relations, 2 chunks
+2026-06-10 13:53:57,431 - lightrag - INFO - Final chunks S+F/O: E5/1 E1/2
+2026-06-10 13:53:57,438 - uvicorn.access - INFO - 127.0.0.1:54561 - "POST /query/data HTTP/1.1" 200
+2026-06-10 13:59:24,831 - lightrag - INFO -  == LLM cache == saving: hybrid:keywords:6e1ed7d9d6ff29a3b4242832c82694eb
+2026-06-10 13:59:26,949 - lightrag - INFO - Query nodes: wuhan liyuan information technology co., Ltd, sales departments, large customer sales offices (top_k:40, cosine:0.2)
+2026-06-10 13:59:26,956 - lightrag - INFO - Local query: 6 entites, 2 relations
+2026-06-10 13:59:26,957 - lightrag - INFO - Query edges: organization structure, sales department, large customer sales department (top_k:40, cosine:0.2)
+2026-06-10 13:59:26,960 - lightrag - INFO - Global query: 3 entites, 2 relations
+2026-06-10 13:59:26,960 - lightrag - INFO - Raw search results: 6 entities, 2 relations, 0 vector chunks
+2026-06-10 13:59:26,962 - lightrag - INFO - After truncation: 6 entities, 2 relations
+2026-06-10 13:59:26,965 - lightrag - INFO - Selecting 2 from 2 entity-related chunks by vector similarity
+2026-06-10 13:59:26,965 - lightrag - INFO - Find no additional relations-related chunks from 2 relations
+2026-06-10 13:59:26,965 - lightrag - INFO - Round-robin merged chunks: 2 -> 2 (deduplicated 0)
+2026-06-10 13:59:26,969 - lightrag - WARNING - Rerank is enabled but no rerank model is configured. Please set up a rerank model or set enable_rerank=False in query parameters.
+2026-06-10 13:59:26,970 - lightrag - INFO - Final context: 6 entities, 2 relations, 2 chunks
+2026-06-10 13:59:26,970 - lightrag - INFO - Final chunks S+F/O: E5/1 E1/2
+2026-06-10 13:59:26,977 - uvicorn.access - INFO - 127.0.0.1:59304 - "POST /query/data HTTP/1.1" 200
+2026-06-10 13:59:29,707 - lightrag - INFO -  == LLM cache == saving: hybrid:keywords:ee9a402f5496fdef815b4b5b5ad7bd15
+2026-06-10 13:59:30,977 - lightrag - INFO - Query nodes: wuhan liyuan information technology co., ltd, customer, sales department, sales section, department (top_k:40, cosine:0.2)
+2026-06-10 13:59:30,979 - lightrag - INFO - Local query: 6 entites, 2 relations
+2026-06-10 13:59:30,979 - lightrag - INFO - Query edges: organization structure (top_k:40, cosine:0.2)
+2026-06-10 13:59:30,980 - lightrag - INFO - Global query: 3 entites, 2 relations
+2026-06-10 13:59:30,980 - lightrag - INFO - Raw search results: 6 entities, 2 relations, 0 vector chunks
+2026-06-10 13:59:30,980 - lightrag - INFO - After truncation: 6 entities, 2 relations
+2026-06-10 13:59:30,981 - lightrag - INFO - Selecting 2 from 2 entity-related chunks by vector similarity
+2026-06-10 13:59:30,982 - lightrag - INFO - Find no additional relations-related chunks from 2 relations
+2026-06-10 13:59:30,982 - lightrag - INFO - Round-robin merged chunks: 2 -> 2 (deduplicated 0)
+2026-06-10 13:59:30,983 - lightrag - WARNING - Rerank is enabled but no rerank model is configured. Please set up a rerank model or set enable_rerank=False in query parameters.
+2026-06-10 13:59:30,983 - lightrag - INFO - Final context: 6 entities, 2 relations, 2 chunks
+2026-06-10 13:59:30,983 - lightrag - INFO - Final chunks S+F/O: E5/1 E1/2
+2026-06-10 13:59:30,987 - uvicorn.access - INFO - 127.0.0.1:55411 - "POST /query/data HTTP/1.1" 200
+2026-06-10 13:59:33,600 - lightrag - INFO -  == LLM cache == saving: hybrid:keywords:782a8cee846192b5262e545bfbb4bce6
+2026-06-10 13:59:34,673 - lightrag - INFO - Query nodes: wuhan liyuan information technology co., ltd., sales department, large customer sales department, sales section (top_k:40, cosine:0.2)
+2026-06-10 13:59:34,675 - lightrag - INFO - Local query: 6 entites, 2 relations
+2026-06-10 13:59:34,675 - lightrag - INFO - Query edges: organization structure, sales department (top_k:40, cosine:0.2)
+2026-06-10 13:59:34,675 - lightrag - INFO - Global query: 3 entites, 2 relations
+2026-06-10 13:59:34,676 - lightrag - INFO - Raw search results: 6 entities, 2 relations, 0 vector chunks
+2026-06-10 13:59:34,676 - lightrag - INFO - After truncation: 6 entities, 2 relations
+2026-06-10 13:59:34,677 - lightrag - INFO - Selecting 2 from 2 entity-related chunks by vector similarity
+2026-06-10 13:59:34,677 - lightrag - INFO - Find no additional relations-related chunks from 2 relations
+2026-06-10 13:59:34,677 - lightrag - INFO - Round-robin merged chunks: 2 -> 2 (deduplicated 0)
+2026-06-10 13:59:34,678 - lightrag - WARNING - Rerank is enabled but no rerank model is configured. Please set up a rerank model or set enable_rerank=False in query parameters.
+2026-06-10 13:59:34,678 - lightrag - INFO - Final context: 6 entities, 2 relations, 2 chunks
+2026-06-10 13:59:34,678 - lightrag - INFO - Final chunks S+F/O: E5/1 E1/2
+2026-06-10 13:59:34,683 - uvicorn.access - INFO - 127.0.0.1:55427 - "POST /query/data HTTP/1.1" 200
+2026-06-10 14:44:24,602 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-10 14:44:25,392 - lightrag - INFO - Embedding config: binding=openai model=bge-m3 embedding_dim=1024 max_token_size=8192
+2026-06-10 14:44:25,393 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=openai)
+2026-06-10 14:44:25,393 - lightrag - INFO - Embedding max_token_size: 8192 (from openai provider default)
+2026-06-10 14:44:25,393 - lightrag - INFO - Reranking is disabled
+2026-06-10 14:44:26,248 - lightrag - INFO - [] Loaded graph from C:\Users\26332\Desktop\工单\RAG工单\RAG-Q&A system12\data\lightrag\graph_chunk_entity_relation.graphml with 6 nodes, 2 edges
+2026-06-10 14:44:26,280 - lightrag - INFO - Role LLM Configuration (initialized):
+2026-06-10 14:44:26,280 - lightrag - INFO -  - extract: ollama/qwen2.5:7b, host=http://localhost:11434, max_async=4, timeout=180
+2026-06-10 14:44:26,280 - lightrag - INFO -  - keyword: ollama/qwen2.5:7b, host=http://localhost:11434, max_async=4, timeout=180
+2026-06-10 14:44:26,280 - lightrag - INFO -  - query: ollama/qwen2.5:7b, host=http://localhost:11434, max_async=4, timeout=180
+2026-06-10 14:44:26,280 - lightrag - INFO -  - vlm: ollama/qwen2.5:7b, host=http://localhost:11434, max_async=4, timeout=180
+2026-06-10 14:44:26,280 - lightrag - INFO - Role LLM Option:
+2026-06-10 14:44:26,280 - lightrag - INFO -  - extract: Ollama {}
+2026-06-10 14:44:26,280 - lightrag - INFO -  - keyword: Ollama {}
+2026-06-10 14:44:26,280 - lightrag - INFO -  - query: Ollama {}
+2026-06-10 14:44:26,280 - lightrag - INFO -  - vlm: Ollama {}
+2026-06-10 14:44:26,340 - lightrag - INFO - WebUI assets mounted at /webui
+2026-06-10 14:44:26,372 - uvicorn.error - INFO - Started server process [15056]
+2026-06-10 14:44:26,372 - uvicorn.error - INFO - Waiting for application startup.
+2026-06-10 14:44:26,378 - lightrag - INFO - [] Process 15056 KV load full_docs with 2 records
+2026-06-10 14:44:26,384 - lightrag - INFO - [] Process 15056 KV load text_chunks with 2 records
+2026-06-10 14:44:26,389 - lightrag - INFO - [] Process 15056 KV load full_entities with 2 records
+2026-06-10 14:44:26,394 - lightrag - INFO - [] Process 15056 KV load full_relations with 1 records
+2026-06-10 14:44:26,399 - lightrag - INFO - [] Process 15056 KV load entity_chunks with 6 records
+2026-06-10 14:44:26,404 - lightrag - INFO - [] Process 15056 KV load relation_chunks with 2 records
+2026-06-10 14:44:26,405 - lightrag - INFO - [] Process 15056 KV load llm_response_cache with 12 records
+2026-06-10 14:44:26,411 - lightrag - INFO - [] Process 15056 doc status load doc_status with 2 records
+2026-06-10 14:44:26,411 - uvicorn.error - INFO - Application startup complete.
+2026-06-10 14:44:26,411 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
+2026-06-10 14:57:50,186 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-10 14:57:50,896 - lightrag - INFO - Embedding config: binding=openai model=bge-m3 embedding_dim=1024 max_token_size=8192
+2026-06-10 14:57:50,896 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=openai)
+2026-06-10 14:57:50,896 - lightrag - INFO - Embedding max_token_size: 8192 (from openai provider default)
+2026-06-10 14:57:50,896 - lightrag - INFO - Reranking is disabled
+2026-06-10 14:57:51,948 - lightrag - INFO - [] Loaded graph from C:\Users\26332\Desktop\工单\RAG工单\RAG-Q&A system12\data\lightrag\graph_chunk_entity_relation.graphml with 6 nodes, 2 edges
+2026-06-10 14:57:51,953 - lightrag - INFO - Role LLM Configuration (initialized):
+2026-06-10 14:57:51,953 - lightrag - INFO -  - extract: ollama/qwen2.5:7b, host=http://localhost:11434, max_async=4, timeout=180
+2026-06-10 14:57:51,953 - lightrag - INFO -  - keyword: ollama/qwen2.5:7b, host=http://localhost:11434, max_async=4, timeout=180
+2026-06-10 14:57:51,954 - lightrag - INFO -  - query: ollama/qwen2.5:7b, host=http://localhost:11434, max_async=4, timeout=180
+2026-06-10 14:57:51,954 - lightrag - INFO -  - vlm: ollama/qwen2.5:7b, host=http://localhost:11434, max_async=4, timeout=180
+2026-06-10 14:57:51,954 - lightrag - INFO - Role LLM Option:
+2026-06-10 14:57:51,954 - lightrag - INFO -  - extract: Ollama {}
+2026-06-10 14:57:51,954 - lightrag - INFO -  - keyword: Ollama {}
+2026-06-10 14:57:51,954 - lightrag - INFO -  - query: Ollama {}
+2026-06-10 14:57:51,954 - lightrag - INFO -  - vlm: Ollama {}
+2026-06-10 14:57:52,029 - lightrag - INFO - WebUI assets mounted at /webui
+2026-06-10 14:57:52,071 - uvicorn.error - INFO - Started server process [28980]
+2026-06-10 14:57:52,071 - uvicorn.error - INFO - Waiting for application startup.
+2026-06-10 14:57:52,072 - lightrag - INFO - [] Process 28980 KV load full_docs with 2 records
+2026-06-10 14:57:52,072 - lightrag - INFO - [] Process 28980 KV load text_chunks with 2 records
+2026-06-10 14:57:52,073 - lightrag - INFO - [] Process 28980 KV load full_entities with 2 records
+2026-06-10 14:57:52,073 - lightrag - INFO - [] Process 28980 KV load full_relations with 1 records
+2026-06-10 14:57:52,074 - lightrag - INFO - [] Process 28980 KV load entity_chunks with 6 records
+2026-06-10 14:57:52,074 - lightrag - INFO - [] Process 28980 KV load relation_chunks with 2 records
+2026-06-10 14:57:52,075 - lightrag - INFO - [] Process 28980 KV load llm_response_cache with 12 records
+2026-06-10 14:57:52,076 - lightrag - INFO - [] Process 28980 doc status load doc_status with 2 records
+2026-06-10 14:57:52,076 - uvicorn.error - INFO - Application startup complete.
+2026-06-10 14:57:52,077 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
+2026-06-10 18:49:58,848 - uvicorn.access - INFO - 127.0.0.1:62206 - "GET /openapi.json HTTP/1.1" 200
+2026-06-11 08:31:38,597 - uvicorn.access - INFO - 127.0.0.1:63372 - "GET /webui HTTP/1.1" 307
+2026-06-11 08:31:39,064 - uvicorn.access - INFO - 127.0.0.1:63372 - "GET /webui/assets/index-DKzRZS2c.js HTTP/1.1" 200
+2026-06-11 08:31:39,073 - uvicorn.access - INFO - 127.0.0.1:50451 - "GET /webui/assets/chunk-QTnfLwEv.js HTTP/1.1" 200
+2026-06-11 08:31:39,077 - uvicorn.access - INFO - 127.0.0.1:55183 - "GET /webui/assets/src-DWlNNfc5.js HTTP/1.1" 200
+2026-06-11 08:31:39,139 - uvicorn.access - INFO - 127.0.0.1:50451 - "GET /webui/assets/index-BbeTmlYc.css HTTP/1.1" 200
+2026-06-11 08:31:39,155 - uvicorn.access - INFO - 127.0.0.1:50451 - "GET /webui/assets/chunk-CSCIHK7Q-D4pmMObY.js HTTP/1.1" 200
+2026-06-11 08:31:39,356 - uvicorn.access - INFO - 127.0.0.1:55183 - "GET /webui/assets/dist-BExdoQxQ.js HTTP/1.1" 200
+2026-06-11 08:31:39,357 - uvicorn.access - INFO - 127.0.0.1:50451 - "GET /webui/assets/chunk-5ZQYHXKU-z1eBXp9I.js HTTP/1.1" 200
+2026-06-11 08:31:39,397 - uvicorn.access - INFO - 127.0.0.1:52645 - "GET /webui/assets/chunk-O5CBEL6O-PwA5d-Wj.js HTTP/1.1" 200
+2026-06-11 08:31:39,397 - uvicorn.access - INFO - 127.0.0.1:56280 - "GET /webui/assets/path-BWPyau1x.js HTTP/1.1" 200
+2026-06-11 08:31:39,401 - uvicorn.access - INFO - 127.0.0.1:62604 - "GET /webui/assets/array-BifhSqXX.js HTTP/1.1" 200
+2026-06-11 08:31:39,404 - uvicorn.access - INFO - 127.0.0.1:55183 - "GET /webui/assets/line-D_bXt-bd.js HTTP/1.1" 200
+2026-06-11 08:31:39,411 - uvicorn.access - INFO - 127.0.0.1:50451 - "GET /webui/assets/chunk-L5ZTLDWV-C1JGftLi.js HTTP/1.1" 200
+2026-06-11 08:31:39,423 - uvicorn.access - INFO - 127.0.0.1:62604 - "GET /webui/assets/chunk-NZK2D7GU-Djf4ATKP.js HTTP/1.1" 200
+2026-06-11 08:31:39,437 - uvicorn.access - INFO - 127.0.0.1:55183 - "GET /webui/assets/rough.esm-CSKSodPl.js HTTP/1.1" 200
+2026-06-11 08:31:39,451 - uvicorn.access - INFO - 127.0.0.1:56280 - "GET /webui/assets/chunk-3OPIFGDE-BDCfViD0.js HTTP/1.1" 200
+2026-06-11 08:31:39,466 - uvicorn.access - INFO - 127.0.0.1:55183 - "GET /webui/assets/chunk-BSJP7CBP-D8Ua6mpo.js HTTP/1.1" 200
+2026-06-11 08:31:40,279 - uvicorn.access - INFO - 127.0.0.1:63372 - "GET /auth-status HTTP/1.1" 200
+2026-06-11 08:31:40,282 - uvicorn.access - INFO - 127.0.0.1:52645 - "GET /webui/favicon.png HTTP/1.1" 200
+2026-06-11 08:31:40,780 - uvicorn.access - INFO - 127.0.0.1:62604 - "GET /docs?theme=light HTTP/1.1" 200
+2026-06-11 08:31:40,787 - uvicorn.access - INFO - 127.0.0.1:56280 - "GET /graph/label/popular?limit=300 HTTP/1.1" 200
+2026-06-11 08:31:40,805 - lightrag - INFO - [] Subgraph query successful | Node count: 6 | Edge count: 2
+2026-06-11 08:31:40,811 - uvicorn.access - INFO - 127.0.0.1:55183 - "GET /graphs?label=*&max_depth=3&max_nodes=1000 HTTP/1.1" 200
+2026-06-11 08:31:40,829 - uvicorn.access - INFO - 127.0.0.1:62604 - "GET /static/swagger-ui/swagger-ui-bundle.js HTTP/1.1" 200
+2026-06-11 08:31:40,830 - uvicorn.access - INFO - 127.0.0.1:56280 - "GET /static/swagger-ui/swagger-ui.css HTTP/1.1" 200
+2026-06-11 08:31:41,226 - uvicorn.access - INFO - 127.0.0.1:62604 - "GET /openapi.json HTTP/1.1" 200
+2026-06-11 08:32:44,888 - uvicorn.access - INFO - 127.0.0.1:57740 - "GET /webui HTTP/1.1" 307
+2026-06-11 08:32:45,330 - uvicorn.access - INFO - 127.0.0.1:64961 - "GET /auth-status HTTP/1.1" 200
+2026-06-11 08:32:45,570 - lightrag - INFO - [] Subgraph query successful | Node count: 6 | Edge count: 2
+2026-06-11 08:32:45,571 - uvicorn.access - INFO - 127.0.0.1:57740 - "GET /graphs?label=*&max_depth=3&max_nodes=1000 HTTP/1.1" 200
+2026-06-11 08:32:45,596 - uvicorn.access - INFO - 127.0.0.1:64961 - "GET /docs?theme=light HTTP/1.1" 200
+2026-06-11 08:32:45,754 - uvicorn.access - INFO - 127.0.0.1:64961 - "GET /openapi.json HTTP/1.1" 200
+2026-06-11 08:32:53,258 - uvicorn.access - INFO - 127.0.0.1:53815 - "POST /documents/scan HTTP/1.1" 200
+2026-06-11 08:32:53,289 - lightrag - INFO - Found 0 files to index.
+2026-06-11 08:32:53,289 - lightrag - INFO - No upload file found, check if there are any documents in the queue...
+2026-06-11 08:32:53,290 - lightrag - INFO - No documents to process
+2026-06-11 08:33:30,614 - lightrag - INFO - [] Subgraph query successful | Node count: 6 | Edge count: 2
+2026-06-11 08:33:30,615 - uvicorn.access - INFO - 127.0.0.1:55561 - "GET /graphs?label=*&max_depth=3&max_nodes=1000 HTTP/1.1" 200
+2026-06-11 08:33:30,637 - uvicorn.access - INFO - 127.0.0.1:60215 - "GET /docs?theme=light HTTP/1.1" 200
+2026-06-11 08:33:30,711 - uvicorn.access - INFO - 127.0.0.1:60215 - "GET /openapi.json HTTP/1.1" 200
+2026-06-11 08:33:31,922 - lightrag - INFO - [] Subgraph query successful | Node count: 6 | Edge count: 2
+2026-06-11 08:33:31,923 - uvicorn.access - INFO - 127.0.0.1:55561 - "GET /graphs?label=*&max_depth=3&max_nodes=1000 HTTP/1.1" 200
+2026-06-11 08:33:31,936 - uvicorn.access - INFO - 127.0.0.1:60215 - "GET /docs?theme=light HTTP/1.1" 200
+2026-06-11 08:33:32,011 - uvicorn.access - INFO - 127.0.0.1:60215 - "GET /openapi.json HTTP/1.1" 200
+2026-06-11 08:33:38,936 - uvicorn.access - INFO - 127.0.0.1:62847 - "POST /documents/upload HTTP/1.1" 200
+2026-06-11 08:33:39,059 - uvicorn.access - INFO - 127.0.0.1:62847 - "POST /documents/upload HTTP/1.1" 200
+2026-06-11 08:33:44,968 - lightrag - WARNING - Scan request skipped: 2 pending enqueue(s) reserved by upload/insert endpoints
+2026-06-11 08:33:44,969 - uvicorn.access - INFO - 127.0.0.1:62847 - "POST /documents/scan HTTP/1.1" 200
+2026-06-11 08:33:47,772 - lightrag - INFO - [] Subgraph query successful | Node count: 6 | Edge count: 2
+2026-06-11 08:33:47,774 - uvicorn.access - INFO - 127.0.0.1:63908 - "GET /graphs?label=*&max_depth=3&max_nodes=1000 HTTP/1.1" 200
+2026-06-11 08:33:47,891 - uvicorn.access - INFO - 127.0.0.1:62883 - "GET /docs?theme=light HTTP/1.1" 200
+2026-06-11 08:33:48,096 - uvicorn.access - INFO - 127.0.0.1:62883 - "GET /openapi.json HTTP/1.1" 200
+2026-06-11 08:34:54,842 - lightrag - INFO - Successfully extracted and enqueued file: 招股说明书2.pdf
+2026-06-11 08:34:55,013 - lightrag - INFO - Processing 1 document(s)
+2026-06-11 08:34:55,137 - lightrag - INFO - Parsing (native): doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 08:34:55,478 - lightrag - INFO - Extracting stage 1/1: 招股说明书2.pdf
+2026-06-11 08:34:55,508 - lightrag - INFO - Processing d-id: doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 08:34:55,524 - lightrag - INFO - Chunking F: size=1200, split_only=False, overlap=100, doc_id: doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 08:35:04,910 - lightrag - INFO - extract LLM func: 4 new workers initialized (Timeouts: Func: 180s, Worker: 360s, Health Check: 375s)
+2026-06-11 08:35:09,079 - lightrag - INFO - Successfully extracted and enqueued file: 招股说明书1-无水印.pdf
+2026-06-11 08:35:09,084 - lightrag - INFO - Another process is already processing the document queue. Request queued.
+2026-06-11 08:35:11,084 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475136794160_251226.2860949: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:35:11,086 - lightrag - ERROR - Failed to extract entities and relationships: C[1/185]: doc-ac0846f1b131fcfb9f8ccdcc22a26384-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:35:11,137 - lightrag - ERROR - Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3706, in _process_with_semaphore
+    result = await _process_single_content(chunk)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3462, in _process_single_content
+    final_result, timestamp = await use_llm_func_with_cache(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 2736, in use_llm_func_with_cache
+    res: str = await use_llm_func(
+               ^^^^^^^^^^^^^^^^^^^
+        safe_user_prompt, system_prompt=safe_system_prompt, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 1331, in wait_func
+    result = await future
+             ^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 967, in worker
+    result = await asyncio.wait_for(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+        func(*args, **kwargs), timeout=max_execution_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Anaconda\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\api\lightrag_server.py", line 1310, in role_ollama_complete
+    return await _ollama_model_if_cache(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+  File "D:\Anaconda\Lib\site-packages\tenacity\__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\llm\ollama.py", line 209, in _ollama_model_if_cache
+    raise e
+  File "D:\Anaconda\Lib\site-packages\lightrag\llm\ollama.py", line 172, in _ollama_model_if_cache
+    response = await ollama_client.chat(model=model, messages=messages, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 1020, in chat
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<16 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 792, in _request
+    return cls(**(await self._request_raw(*args, **kwargs)).json())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 738, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3714, in _process_with_semaphore
+    raise prefixed_exception from e
+ConnectionError: doc-ac0846f1b131fcfb9f8ccdcc22a26384-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\pipeline.py", line 2451, in process_single_document
+    chunk_results = await entity_relation_task
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\lightrag.py", line 1471, in _process_extract_entities
+    raise e
+  File "D:\Anaconda\Lib\site-packages\lightrag\lightrag.py", line 1456, in _process_extract_entities
+    chunk_results = await extract_entities(
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3756, in extract_entities
+    raise prefixed_exception from first_exception
+ConnectionError: C[1/185]: doc-ac0846f1b131fcfb9f8ccdcc22a26384-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+2026-06-11 08:35:11,137 - lightrag - ERROR - Failed to extract document 1/1: 招股说明书2.pdf
+2026-06-11 08:35:11,143 - lightrag - INFO - Processing additional documents due to pending request
+2026-06-11 08:35:11,145 - lightrag - INFO - Reset 1 documents from PARSING/ANALYZING/PROCESSING/FAILED to PENDING status
+2026-06-11 08:35:11,145 - lightrag - INFO - Processing 2 document(s)
+2026-06-11 08:35:11,148 - lightrag - INFO - Parsing (native): doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 08:35:11,150 - lightrag - INFO - Parsing (native): doc-7686ae08aba812e25c95b73a5ba2cbf5
+2026-06-11 08:35:11,159 - lightrag - INFO - Extracting stage 1/2: 招股说明书2.pdf
+2026-06-11 08:35:11,159 - lightrag - INFO - Processing d-id: doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 08:35:11,159 - lightrag - INFO - [resume] doc-ac0846f1b131fcfb9f8ccdcc22a26384: purging 185 chunk(s) and associated KG entries from a previous run before rebuilding under current process_options
+2026-06-11 08:35:11,159 - lightrag - INFO - Extracting stage 2/2: 招股说明书1-无水印.pdf
+2026-06-11 08:35:11,159 - lightrag - INFO - Processing d-id: doc-7686ae08aba812e25c95b73a5ba2cbf5
+2026-06-11 08:35:11,160 - lightrag - INFO - Chunking F: size=1200, split_only=False, overlap=100, doc_id: doc-7686ae08aba812e25c95b73a5ba2cbf5
+2026-06-11 08:35:11,889 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475136793280_251227.3932497: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:35:11,890 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475285430352_251228.3949919: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:35:11,891 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475285430528_251229.3722788: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:35:11,893 - lightrag - INFO - [purge] doc-ac0846f1b131fcfb9f8ccdcc22a26384: 0 entity(ies) to rebuild, 0 to delete
+2026-06-11 08:35:11,900 - lightrag - INFO - [purge] doc-ac0846f1b131fcfb9f8ccdcc22a26384: 0 relation(s) to rebuild, 0 to delete
+2026-06-11 08:35:11,907 - lightrag - INFO - [purge] doc-ac0846f1b131fcfb9f8ccdcc22a26384: deleted 185 chunk(s) from storage
+2026-06-11 08:35:11,944 - lightrag - INFO - [] chunks flush: embedding 172 vectors in 18 batch(es) (batch_num=10)
+2026-06-11 08:35:11,945 - lightrag - INFO - Embedding func: 8 new workers initialized (Timeouts: Func: 30s, Worker: 60s, Health Check: 75s)
+2026-06-11 08:35:20,186 - lightrag - INFO - [] Writing graph with 6 nodes, 2 edges
+2026-06-11 08:35:25,328 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475136791872_251241.5700509: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:35:25,331 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475282264528_251242.3207916: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:35:25,334 - lightrag - ERROR - Failed to extract entities and relationships: C[1/172]: doc-7686ae08aba812e25c95b73a5ba2cbf5-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:35:25,344 - lightrag - ERROR - Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3706, in _process_with_semaphore
+    result = await _process_single_content(chunk)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3462, in _process_single_content
+    final_result, timestamp = await use_llm_func_with_cache(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 2736, in use_llm_func_with_cache
+    res: str = await use_llm_func(
+               ^^^^^^^^^^^^^^^^^^^
+        safe_user_prompt, system_prompt=safe_system_prompt, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 1331, in wait_func
+    result = await future
+             ^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 967, in worker
+    result = await asyncio.wait_for(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+        func(*args, **kwargs), timeout=max_execution_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Anaconda\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\api\lightrag_server.py", line 1310, in role_ollama_complete
+    return await _ollama_model_if_cache(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+  File "D:\Anaconda\Lib\site-packages\tenacity\__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\llm\ollama.py", line 209, in _ollama_model_if_cache
+    raise e
+  File "D:\Anaconda\Lib\site-packages\lightrag\llm\ollama.py", line 172, in _ollama_model_if_cache
+    response = await ollama_client.chat(model=model, messages=messages, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 1020, in chat
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<16 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 792, in _request
+    return cls(**(await self._request_raw(*args, **kwargs)).json())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 738, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3714, in _process_with_semaphore
+    raise prefixed_exception from e
+ConnectionError: doc-7686ae08aba812e25c95b73a5ba2cbf5-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\pipeline.py", line 2451, in process_single_document
+    chunk_results = await entity_relation_task
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\lightrag.py", line 1471, in _process_extract_entities
+    raise e
+  File "D:\Anaconda\Lib\site-packages\lightrag\lightrag.py", line 1456, in _process_extract_entities
+    chunk_results = await extract_entities(
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3756, in extract_entities
+    raise prefixed_exception from first_exception
+ConnectionError: C[1/172]: doc-7686ae08aba812e25c95b73a5ba2cbf5-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+2026-06-11 08:35:25,344 - lightrag - ERROR - Failed to extract document 2/2: 招股说明书1-无水印.pdf
+2026-06-11 08:35:25,577 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475282264352_251242.9857294: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:35:25,579 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475282264880_251243.7172814: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:35:54,721 - lightrag - INFO - In memory DB persist to disk
+2026-06-11 08:35:54,722 - lightrag - INFO - Chunking F: size=1200, split_only=False, overlap=100, doc_id: doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 08:36:00,840 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475307549280_251276.853916: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:36:00,842 - lightrag - ERROR - Failed to extract entities and relationships: C[1/185]: doc-ac0846f1b131fcfb9f8ccdcc22a26384-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:36:00,846 - lightrag - ERROR - Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3706, in _process_with_semaphore
+    result = await _process_single_content(chunk)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3462, in _process_single_content
+    final_result, timestamp = await use_llm_func_with_cache(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 2736, in use_llm_func_with_cache
+    res: str = await use_llm_func(
+               ^^^^^^^^^^^^^^^^^^^
+        safe_user_prompt, system_prompt=safe_system_prompt, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 1331, in wait_func
+    result = await future
+             ^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 967, in worker
+    result = await asyncio.wait_for(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+        func(*args, **kwargs), timeout=max_execution_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Anaconda\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\api\lightrag_server.py", line 1310, in role_ollama_complete
+    return await _ollama_model_if_cache(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+  File "D:\Anaconda\Lib\site-packages\tenacity\__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\llm\ollama.py", line 209, in _ollama_model_if_cache
+    raise e
+  File "D:\Anaconda\Lib\site-packages\lightrag\llm\ollama.py", line 172, in _ollama_model_if_cache
+    response = await ollama_client.chat(model=model, messages=messages, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 1020, in chat
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<16 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 792, in _request
+    return cls(**(await self._request_raw(*args, **kwargs)).json())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 738, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3714, in _process_with_semaphore
+    raise prefixed_exception from e
+ConnectionError: doc-ac0846f1b131fcfb9f8ccdcc22a26384-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\pipeline.py", line 2451, in process_single_document
+    chunk_results = await entity_relation_task
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\lightrag.py", line 1471, in _process_extract_entities
+    raise e
+  File "D:\Anaconda\Lib\site-packages\lightrag\lightrag.py", line 1456, in _process_extract_entities
+    chunk_results = await extract_entities(
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3756, in extract_entities
+    raise prefixed_exception from first_exception
+ConnectionError: C[1/185]: doc-ac0846f1b131fcfb9f8ccdcc22a26384-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+2026-06-11 08:36:00,846 - lightrag - ERROR - Failed to extract document 1/2: 招股说明书2.pdf
+2026-06-11 08:36:00,853 - lightrag - INFO - Enqueued document processing pipeline stopped
+2026-06-11 08:36:01,106 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475307549104_251277.7635957: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:36:01,106 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475307549456_251278.718155: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:36:01,106 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475307549632_251279.4769617: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 08:36:28,328 - uvicorn.access - INFO - 127.0.0.1:65164 - "DELETE /documents/delete_document HTTP/1.1" 200
+2026-06-11 08:36:28,328 - lightrag - INFO - Deleting document 1/2: doc-7686ae08aba812e25c95b73a5ba2cbf5
+2026-06-11 08:36:28,328 - lightrag - INFO - Starting deletion process for document doc-7686ae08aba812e25c95b73a5ba2cbf5
+2026-06-11 08:36:28,329 - lightrag - INFO - Deleting doc-7686ae08aba812e25c95b73a5ba2cbf5 招股说明书1-无水印.pdf(previous status: FAILED)
+2026-06-11 08:36:28,330 - lightrag - INFO - No LLM cache entries found for document doc-7686ae08aba812e25c95b73a5ba2cbf5
+2026-06-11 08:36:28,330 - lightrag - INFO - Found 0 affected entities
+2026-06-11 08:36:28,331 - lightrag - INFO - Found 0 affected relations
+2026-06-11 08:36:28,331 - lightrag - INFO - Successfully deleted 172 chunks from storage
+2026-06-11 08:36:28,355 - lightrag - INFO - [] chunks flush: embedding 185 vectors in 19 batch(es) (batch_num=10)
+2026-06-11 08:36:35,825 - lightrag - INFO - [] Writing graph with 6 nodes, 2 edges
+2026-06-11 08:36:36,501 - lightrag - INFO - [] Subgraph query successful | Node count: 6 | Edge count: 2
+2026-06-11 08:36:36,501 - uvicorn.access - INFO - 127.0.0.1:50645 - "GET /graphs?label=*&max_depth=3&max_nodes=1000 HTTP/1.1" 200
+2026-06-11 08:36:36,523 - uvicorn.access - INFO - 127.0.0.1:61667 - "GET /docs?theme=light HTTP/1.1" 200
+2026-06-11 08:36:36,640 - uvicorn.access - INFO - 127.0.0.1:61667 - "GET /openapi.json HTTP/1.1" 200
+2026-06-11 08:36:40,088 - lightrag - WARNING - Scan request skipped: pipeline is busy processing documents
+2026-06-11 08:36:40,088 - uvicorn.access - INFO - 127.0.0.1:61667 - "POST /documents/scan HTTP/1.1" 200
+2026-06-11 08:36:52,460 - uvicorn.access - INFO - 127.0.0.1:54344 - "DELETE /documents HTTP/1.1" 200
+2026-06-11 08:37:01,769 - lightrag - INFO - In memory DB persist to disk
+2026-06-11 08:37:01,770 - uvicorn.access - INFO - 127.0.0.1:50211 - "DELETE /documents/delete_document HTTP/1.1" 200
+2026-06-11 08:37:01,892 - lightrag - INFO - [] Writing graph with 6 nodes, 2 edges
+2026-06-11 08:37:01,902 - lightrag - INFO - In memory DB persist to disk
+2026-06-11 08:37:01,902 - lightrag - INFO - Document deleted 1/2: doc-7686ae08aba812e25c95b73a5ba2cbf5[招股说明书1-无水印.pdf]
+2026-06-11 08:37:01,906 - lightrag - INFO - Successfully deleted source files: __parsed__\招股说明书1-无水印.pdf
+2026-06-11 08:37:01,907 - lightrag - INFO - Deleting document 2/2: doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 08:37:01,908 - lightrag - INFO - Starting deletion process for document doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 08:37:01,909 - lightrag - INFO - Deleting doc-ac0846f1b131fcfb9f8ccdcc22a26384 招股说明书2.pdf(previous status: FAILED)
+2026-06-11 08:37:01,910 - lightrag - INFO - No LLM cache entries found for document doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 08:37:01,910 - lightrag - INFO - Found 0 affected entities
+2026-06-11 08:37:01,911 - lightrag - INFO - Found 0 affected relations
+2026-06-11 08:37:01,912 - lightrag - INFO - Successfully deleted 185 chunks from storage
+2026-06-11 08:37:01,938 - lightrag - INFO - [] Writing graph with 6 nodes, 2 edges
+2026-06-11 08:37:01,945 - lightrag - INFO - In memory DB persist to disk
+2026-06-11 08:37:01,978 - lightrag - INFO - [] Writing graph with 6 nodes, 2 edges
+2026-06-11 08:37:01,985 - lightrag - INFO - In memory DB persist to disk
+2026-06-11 08:37:01,986 - lightrag - INFO - Document deleted 2/2: doc-ac0846f1b131fcfb9f8ccdcc22a26384[招股说明书2.pdf]
+2026-06-11 08:37:02,016 - lightrag - INFO - Successfully deleted source files: __parsed__\招股说明书2.pdf
+2026-06-11 09:01:45,175 - uvicorn.access - INFO - 127.0.0.1:51537 - "POST /documents/texts HTTP/1.1" 400
+2026-06-11 09:01:45,192 - uvicorn.access - INFO - 127.0.0.1:51537 - "GET /index/status HTTP/1.1" 404
+2026-06-11 09:06:03,436 - uvicorn.access - INFO - 127.0.0.1:65254 - "GET /webui HTTP/1.1" 307
+2026-06-11 09:06:03,846 - uvicorn.access - INFO - 127.0.0.1:53319 - "GET /auth-status HTTP/1.1" 200
+2026-06-11 09:06:04,152 - lightrag - INFO - [] Subgraph query successful | Node count: 6 | Edge count: 2
+2026-06-11 09:06:04,154 - uvicorn.access - INFO - 127.0.0.1:65254 - "GET /graphs?label=*&max_depth=3&max_nodes=1000 HTTP/1.1" 200
+2026-06-11 09:06:04,160 - uvicorn.access - INFO - 127.0.0.1:57740 - "GET /docs?theme=light HTTP/1.1" 200
+2026-06-11 09:06:04,306 - uvicorn.access - INFO - 127.0.0.1:53319 - "GET /openapi.json HTTP/1.1" 200
+2026-06-11 09:06:31,785 - uvicorn.access - INFO - 127.0.0.1:53695 - "POST /documents/upload HTTP/1.1" 200
+2026-06-11 09:06:33,560 - uvicorn.access - INFO - 127.0.0.1:53695 - "POST /documents/upload HTTP/1.1" 200
+2026-06-11 09:06:44,022 - lightrag - INFO - [] Subgraph query successful | Node count: 6 | Edge count: 2
+2026-06-11 09:06:44,052 - uvicorn.access - INFO - 127.0.0.1:64546 - "GET /graphs?label=*&max_depth=3&max_nodes=1000 HTTP/1.1" 200
+2026-06-11 09:06:44,157 - uvicorn.access - INFO - 127.0.0.1:64546 - "GET /docs?theme=light HTTP/1.1" 200
+2026-06-11 09:06:44,385 - uvicorn.access - INFO - 127.0.0.1:64546 - "GET /openapi.json HTTP/1.1" 200
+2026-06-11 09:07:51,942 - lightrag - INFO - Successfully extracted and enqueued file: 招股说明书2.pdf
+2026-06-11 09:07:52,091 - lightrag - INFO - Processing 1 document(s)
+2026-06-11 09:07:52,223 - lightrag - INFO - Parsing (native): doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 09:07:52,456 - lightrag - INFO - Extracting stage 1/1: 招股说明书2.pdf
+2026-06-11 09:07:52,457 - lightrag - INFO - Processing d-id: doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 09:07:52,457 - lightrag - INFO - Chunking F: size=1200, split_only=False, overlap=100, doc_id: doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 09:08:04,449 - lightrag - INFO - Successfully extracted and enqueued file: 招股说明书1-无水印.pdf
+2026-06-11 09:08:04,453 - lightrag - INFO - Another process is already processing the document queue. Request queued.
+2026-06-11 09:08:06,380 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475281348432_253201.8888794: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:06,386 - lightrag - ERROR - Failed to extract entities and relationships: C[1/185]: doc-ac0846f1b131fcfb9f8ccdcc22a26384-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:06,411 - lightrag - ERROR - Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3706, in _process_with_semaphore
+    result = await _process_single_content(chunk)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3462, in _process_single_content
+    final_result, timestamp = await use_llm_func_with_cache(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 2736, in use_llm_func_with_cache
+    res: str = await use_llm_func(
+               ^^^^^^^^^^^^^^^^^^^
+        safe_user_prompt, system_prompt=safe_system_prompt, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 1331, in wait_func
+    result = await future
+             ^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 967, in worker
+    result = await asyncio.wait_for(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+        func(*args, **kwargs), timeout=max_execution_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Anaconda\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\api\lightrag_server.py", line 1310, in role_ollama_complete
+    return await _ollama_model_if_cache(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+  File "D:\Anaconda\Lib\site-packages\tenacity\__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\llm\ollama.py", line 209, in _ollama_model_if_cache
+    raise e
+  File "D:\Anaconda\Lib\site-packages\lightrag\llm\ollama.py", line 172, in _ollama_model_if_cache
+    response = await ollama_client.chat(model=model, messages=messages, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 1020, in chat
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<16 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 792, in _request
+    return cls(**(await self._request_raw(*args, **kwargs)).json())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 738, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3714, in _process_with_semaphore
+    raise prefixed_exception from e
+ConnectionError: doc-ac0846f1b131fcfb9f8ccdcc22a26384-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\pipeline.py", line 2451, in process_single_document
+    chunk_results = await entity_relation_task
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\lightrag.py", line 1471, in _process_extract_entities
+    raise e
+  File "D:\Anaconda\Lib\site-packages\lightrag\lightrag.py", line 1456, in _process_extract_entities
+    chunk_results = await extract_entities(
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3756, in extract_entities
+    raise prefixed_exception from first_exception
+ConnectionError: C[1/185]: doc-ac0846f1b131fcfb9f8ccdcc22a26384-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+2026-06-11 09:08:06,412 - lightrag - ERROR - Failed to extract document 1/1: 招股说明书2.pdf
+2026-06-11 09:08:06,435 - lightrag - INFO - Processing additional documents due to pending request
+2026-06-11 09:08:06,447 - lightrag - INFO - Reset 1 documents from PARSING/ANALYZING/PROCESSING/FAILED to PENDING status
+2026-06-11 09:08:06,448 - lightrag - INFO - Processing 2 document(s)
+2026-06-11 09:08:06,460 - lightrag - INFO - Parsing (native): doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 09:08:06,469 - lightrag - INFO - Parsing (native): doc-7686ae08aba812e25c95b73a5ba2cbf5
+2026-06-11 09:08:06,513 - lightrag - INFO - Extracting stage 1/2: 招股说明书2.pdf
+2026-06-11 09:08:06,513 - lightrag - INFO - Processing d-id: doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 09:08:06,514 - lightrag - INFO - [resume] doc-ac0846f1b131fcfb9f8ccdcc22a26384: purging 185 chunk(s) and associated KG entries from a previous run before rebuilding under current process_options
+2026-06-11 09:08:06,515 - lightrag - INFO - Extracting stage 2/2: 招股说明书1-无水印.pdf
+2026-06-11 09:08:06,515 - lightrag - INFO - Processing d-id: doc-7686ae08aba812e25c95b73a5ba2cbf5
+2026-06-11 09:08:06,516 - lightrag - INFO - Chunking F: size=1200, split_only=False, overlap=100, doc_id: doc-7686ae08aba812e25c95b73a5ba2cbf5
+2026-06-11 09:08:07,176 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475281339280_253202.8959726: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:07,177 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475281347376_253203.7975854: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:07,177 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475281339456_253204.7401961: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:07,178 - lightrag - INFO - [purge] doc-ac0846f1b131fcfb9f8ccdcc22a26384: 0 entity(ies) to rebuild, 0 to delete
+2026-06-11 09:08:07,182 - lightrag - INFO - [purge] doc-ac0846f1b131fcfb9f8ccdcc22a26384: 0 relation(s) to rebuild, 0 to delete
+2026-06-11 09:08:07,186 - lightrag - INFO - [purge] doc-ac0846f1b131fcfb9f8ccdcc22a26384: deleted 185 chunk(s) from storage
+2026-06-11 09:08:07,231 - lightrag - INFO - [] chunks flush: embedding 172 vectors in 18 batch(es) (batch_num=10)
+2026-06-11 09:08:14,032 - lightrag - INFO - [] Writing graph with 6 nodes, 2 edges
+2026-06-11 09:08:19,599 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475303183200_253215.4116102: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:19,602 - lightrag - ERROR - Failed to extract entities and relationships: C[1/172]: doc-7686ae08aba812e25c95b73a5ba2cbf5-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:19,607 - lightrag - ERROR - Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3706, in _process_with_semaphore
+    result = await _process_single_content(chunk)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3462, in _process_single_content
+    final_result, timestamp = await use_llm_func_with_cache(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 2736, in use_llm_func_with_cache
+    res: str = await use_llm_func(
+               ^^^^^^^^^^^^^^^^^^^
+        safe_user_prompt, system_prompt=safe_system_prompt, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 1331, in wait_func
+    result = await future
+             ^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 967, in worker
+    result = await asyncio.wait_for(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+        func(*args, **kwargs), timeout=max_execution_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Anaconda\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\api\lightrag_server.py", line 1310, in role_ollama_complete
+    return await _ollama_model_if_cache(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+  File "D:\Anaconda\Lib\site-packages\tenacity\__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\llm\ollama.py", line 209, in _ollama_model_if_cache
+    raise e
+  File "D:\Anaconda\Lib\site-packages\lightrag\llm\ollama.py", line 172, in _ollama_model_if_cache
+    response = await ollama_client.chat(model=model, messages=messages, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 1020, in chat
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<16 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 792, in _request
+    return cls(**(await self._request_raw(*args, **kwargs)).json())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 738, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3714, in _process_with_semaphore
+    raise prefixed_exception from e
+ConnectionError: doc-7686ae08aba812e25c95b73a5ba2cbf5-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\pipeline.py", line 2451, in process_single_document
+    chunk_results = await entity_relation_task
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\lightrag.py", line 1471, in _process_extract_entities
+    raise e
+  File "D:\Anaconda\Lib\site-packages\lightrag\lightrag.py", line 1456, in _process_extract_entities
+    chunk_results = await extract_entities(
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3756, in extract_entities
+    raise prefixed_exception from first_exception
+ConnectionError: C[1/172]: doc-7686ae08aba812e25c95b73a5ba2cbf5-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+2026-06-11 09:08:19,608 - lightrag - ERROR - Failed to extract document 2/2: 招股说明书1-无水印.pdf
+2026-06-11 09:08:19,830 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475303182848_253216.0549043: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:19,842 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475282263120_253217.9575174: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:19,842 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475282262944_253216.9977872: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:38,872 - lightrag - INFO - In memory DB persist to disk
+2026-06-11 09:08:38,873 - lightrag - INFO - Chunking F: size=1200, split_only=False, overlap=100, doc_id: doc-ac0846f1b131fcfb9f8ccdcc22a26384
+2026-06-11 09:08:45,418 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475136794336_253241.0550394: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:45,420 - lightrag - ERROR - Failed to extract entities and relationships: C[1/185]: doc-ac0846f1b131fcfb9f8ccdcc22a26384-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:45,436 - lightrag - ERROR - Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3706, in _process_with_semaphore
+    result = await _process_single_content(chunk)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3462, in _process_single_content
+    final_result, timestamp = await use_llm_func_with_cache(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 2736, in use_llm_func_with_cache
+    res: str = await use_llm_func(
+               ^^^^^^^^^^^^^^^^^^^
+        safe_user_prompt, system_prompt=safe_system_prompt, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 1331, in wait_func
+    result = await future
+             ^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\utils.py", line 967, in worker
+    result = await asyncio.wait_for(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+        func(*args, **kwargs), timeout=max_execution_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Anaconda\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\api\lightrag_server.py", line 1310, in role_ollama_complete
+    return await _ollama_model_if_cache(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+  File "D:\Anaconda\Lib\site-packages\tenacity\__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "D:\Anaconda\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\Anaconda\Lib\site-packages\tenacity\asyncio\__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\llm\ollama.py", line 209, in _ollama_model_if_cache
+    raise e
+  File "D:\Anaconda\Lib\site-packages\lightrag\llm\ollama.py", line 172, in _ollama_model_if_cache
+    response = await ollama_client.chat(model=model, messages=messages, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 1020, in chat
+    return await self._request(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<16 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 792, in _request
+    return cls(**(await self._request_raw(*args, **kwargs)).json())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\ollama\_client.py", line 738, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3714, in _process_with_semaphore
+    raise prefixed_exception from e
+ConnectionError: doc-ac0846f1b131fcfb9f8ccdcc22a26384-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Anaconda\Lib\site-packages\lightrag\pipeline.py", line 2451, in process_single_document
+    chunk_results = await entity_relation_task
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Anaconda\Lib\site-packages\lightrag\lightrag.py", line 1471, in _process_extract_entities
+    raise e
+  File "D:\Anaconda\Lib\site-packages\lightrag\lightrag.py", line 1456, in _process_extract_entities
+    chunk_results = await extract_entities(
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "D:\Anaconda\Lib\site-packages\lightrag\operate.py", line 3756, in extract_entities
+    raise prefixed_exception from first_exception
+ConnectionError: C[1/185]: doc-ac0846f1b131fcfb9f8ccdcc22a26384-chunk-000: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+
+2026-06-11 09:08:45,437 - lightrag - ERROR - Failed to extract document 1/2: 招股说明书2.pdf
+2026-06-11 09:08:45,463 - lightrag - INFO - Enqueued document processing pipeline stopped
+2026-06-11 09:08:45,668 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475282266288_253242.9344305: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:45,669 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475282264880_253243.8276351: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+2026-06-11 09:08:45,683 - lightrag - ERROR - extract LLM func: Error in decorated function for task 2475136793456_253242.0010359: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download

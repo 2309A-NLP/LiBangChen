@@ -1,0 +1,3734 @@
+{
+  "陈胜": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-012"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "陈胜"
+  },
+  "马闪亮": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-012"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "马闪亮"
+  },
+  "陈升亮": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-029"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "陈升亮"
+  },
+  "GovernmentSubsidy": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-107"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "GovernmentSubsidy"
+  },
+  "武汉兴图新科电子股份有限公司": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-110",
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-166"
+    ],
+    "count": 2,
+    "update_time": 1781161237,
+    "_id": "武汉兴图新科电子股份有限公司"
+  },
+  "A": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-130"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "A"
+  },
+  "硬件购置": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-144"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "硬件购置"
+  },
+  "软件购置": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-144"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "软件购置"
+  },
+  "开发人员工资": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-144"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "开发人员工资"
+  },
+  "关联交易": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-093"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "关联交易"
+  },
+  "公司": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-037",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-076",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-165"
+    ],
+    "count": 3,
+    "update_time": 1781161251,
+    "_id": "公司"
+  },
+  "社保": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-037"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "社保"
+  },
+  "公积金": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-037"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "公积金"
+  },
+  "员工": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-037"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "员工"
+  },
+  "武汉市人力资源和社会保障局": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-037"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "武汉市人力资源和社会保障局"
+  },
+  "天门市人力资源和社会保障局": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-037"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "天门市人力资源和社会保障局"
+  },
+  "武汉住房公积金管理中心高校分中心": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-037"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "武汉住房公积金管理中心高校分中心"
+  },
+  "部": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-146"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "部"
+  },
+  "云调度终端软件": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-041"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "云调度终端软件"
+  },
+  "音视频转发服务设备": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-041"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "音视频转发服务设备"
+  },
+  "录像存储管理服务设备": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-041"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "录像存储管理服务设备"
+  },
+  "流媒体管理服务设备": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-041"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "流媒体管理服务设备"
+  },
+  "视频预警控制类产品": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-041"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "视频预警控制类产品"
+  },
+  "监狱安防集成应急指挥系统": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-041"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "监狱安防集成应急指挥系统"
+  },
+  "应急指挥系统软件": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-041"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "应急指挥系统软件"
+  },
+  "应急指挥系统硬件": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-041"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "应急指挥系统硬件"
+  },
+  "系统运维管理软件": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-041"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "系统运维管理软件"
+  },
+  "图像调度管理席位": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-041"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "图像调度管理席位"
+  },
+  "综合信息管理席位": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-041"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "综合信息管理席位"
+  },
+  "<陈爱民": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-031",
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-035"
+    ],
+    "count": 2,
+    "update_time": 1781161237,
+    "_id": "<陈爱民"
+  },
+  "姚小华": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-031"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "姚小华"
+  },
+  "名称:净利润": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-139"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "名称:净利润"
+  },
+  "名称:含税营业收入": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-139"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "名称:含税营业收入"
+  },
+  "程家明": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-157",
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-018",
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-029",
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-027"
+    ],
+    "count": 4,
+    "update_time": 1781161237,
+    "_id": "程家明"
+  },
+  "马超": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-170"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "马超"
+  },
+  "孔繁东": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-170"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "孔繁东"
+  },
+  "<Other": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-087"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Other"
+  },
+  "entity<": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-085"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "entity<"
+  },
+  "融资方式": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-064"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "融资方式"
+  },
+  "公司客户": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-064"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "公司客户"
+  },
+  "Mintick": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-143"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Mintick"
+  },
+  "<Entity_Type": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-143"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Entity_Type"
+  },
+  "<#|#|Mintick": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-143"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<#|#|Mintick"
+  },
+  "唐应军": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-171"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "唐应军"
+  },
+  "General_Ability": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-081"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "General_Ability"
+  },
+  "wen_han_tung_fincompeteannnn<#|#|financial_service_center": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-169"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "wen_han_tung_fincompeteannnn<#|#|financial_service_center"
+  },
+  "<<华汇创投>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-158"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<<华汇创投>"
+  },
+  "<<权益分派>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-158"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<<权益分派>"
+  },
+  "<<减资缩股>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-158"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<<减资缩股>"
+  },
+  "<<稳定股价的措施>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-158"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<<稳定股价的措施>"
+  },
+  "<<公司股票上市后的三年内>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-158"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<<公司股票上市后的三年内>"
+  },
+  "Funding": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-147"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Funding"
+  },
+  "BusinessScaleExpansion": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-147"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "BusinessScaleExpansion"
+  },
+  "武汉兴图新科": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-079"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "武汉兴图新科"
+  },
+  "视频指挥控制类": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-079"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "视频指挥控制类"
+  },
+  "视频预警控制类": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-079"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "视频预警控制类"
+  },
+  "研发费用": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-079"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "研发费用"
+  },
+  "营业收入": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-079"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "营业收入"
+  },
+  "股东": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "股东"
+  },
+  "武汉共青团人才创新投资合伙企业(有限合伙": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "武汉共青团人才创新投资合伙企业(有限合伙"
+  },
+  "公司名称": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-017"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "公司名称"
+  },
+  "保密办主任": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-025"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "保密办主任"
+  },
+  "#|InvestmentAssetDisposal": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-099"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "#|InvestmentAssetDisposal"
+  },
+  "#<Credit Risk Feature Combination\\nAccounts Receivable": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-101"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "#<Credit Risk Feature Combination\\nAccounts Receivable"
+  },
+  "liability": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-104"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "liability"
+  },
+  "InvestmenteCashFlowNetAmount": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-099"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "InvestmenteCashFlowNetAmount"
+  },
+  "北京观韬中茂律师事务所": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-012"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "北京观韬中茂律师事务所"
+  },
+  "ne<|# |entity|": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-101"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "ne<|# |entity|"
+  },
+  "<entity_type|": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-029"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<entity_type|"
+  },
+  "source_entity|**service_cost": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-104"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "source_entity|**service_cost"
+  },
+  "王静": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-012"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "王静"
+  },
+  "<wisdomvision(Beijing>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-088"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<wisdomvision(Beijing>"
+  },
+  "<pany_name": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-109"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<pany_name"
+  },
+  ",pany_name": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-109"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": ",pany_name"
+  },
+  "<wisdomvision>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-088"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<wisdomvision>"
+  },
+  "vat_diit_tax": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-109"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "vat_diit_tax"
+  },
+  "high-tech_certificate": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-109"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "high-tech_certificate"
+  },
+  "<C>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-111"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<C>"
+  },
+  "程解珍": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-029"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "程解珍"
+  },
+  "<Data>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-111"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Data>"
+  },
+  "<姚小华": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-035"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<姚小华"
+  },
+  "<程家明": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-035",
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-031",
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-027"
+    ],
+    "count": 3,
+    "update_time": 1781161237,
+    "_id": "<程家明"
+  },
+  "pany_name": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-109"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "pany_name"
+  },
+  "<Total_cash_inflows_from_investment_activities<": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-098"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Total_cash_inflows_from_investment_activities<"
+  },
+  "任青": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-029"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "任青"
+  },
+  "*\\\\<cash_outflows_investment_activity\\": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-098"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "*\\\\<cash_outflows_investment_activity\\"
+  },
+  "<cash_inflows_from_disposal_of_non_current_assets><": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-098"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<cash_inflows_from_disposal_of_non_current_assets><"
+  },
+  "<Total_cash_outflows_for_investment_activities\\:": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-098"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Total_cash_outflows_for_investment_activities\\:"
+  },
+  "<person": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-035"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<person"
+  },
+  "*Total_cash_inflows_from_investment_activities*": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-098"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "*Total_cash_inflows_from_investment_activities*"
+  },
+  "person": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-035"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "person"
+  },
+  "Cash_flow_from_disposal_of_fixed_assets_investment_activities<": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-098"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Cash_flow_from_disposal_of_fixed_assets_investment_activities<"
+  },
+  "*cash_outflows_from_investment_activities_fund_acquiring_fixed_assets\\:": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-098"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "*cash_outflows_from_investment_activities_fund_acquiring_fixed_assets\\:"
+  },
+  "Organization<": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-098"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Organization<"
+  },
+  "#|武汉玉航科技有限公司": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-067"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "#|武汉玉航科技有限公司"
+  },
+  "场场建设购置费": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-144"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "场场建设购置费"
+  },
+  "轻资产技术型公司": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-067"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "轻资产技术型公司"
+  },
+  "Net_cash_flow_from_investment_activities<": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-098"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Net_cash_flow_from_investment_activities<"
+  },
+  "工程建设费用": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-144"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "工程建设费用"
+  },
+  "办公场所购置费": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-144"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "办公场所购置费"
+  },
+  "2216年度": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-124"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "2216年度"
+  },
+  "#轻资产技术型公司": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-067"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "#轻资产技术型公司"
+  },
+  "场场场场装修费": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-144"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "场场场场装修费"
+  },
+  "场场装修费": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-144"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "场场装修费"
+  },
+  "Total_cash_inflows_from_investment_activities<": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-098"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Total_cash_inflows_from_investment_activities<"
+  },
+  "年度": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-124"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "年度"
+  },
+  "<任职>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-152"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<任职>"
+  },
+  "武汉东湖高新开发区大学园路": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-146"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "武汉东湖高新开发区大学园路"
+  },
+  "监事会": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-152"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "监事会"
+  },
+  "Total_cash_outflows_for_investment_activities<": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-098"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Total_cash_outflows_for_investment_activities<"
+  },
+  "2217年度": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-124"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "2217年度"
+  },
+  "<#|硬件": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-041"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<#|硬件"
+  },
+  "Entity": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-015",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-070"
+    ],
+    "count": 2,
+    "update_time": 1781161251,
+    "_id": "Entity"
+  },
+  "<兴图投资": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-031"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<兴图投资"
+  },
+  "项目": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-146"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "项目"
+  },
+  "<#|资源调度管理服务设备": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-041"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<#|资源调度管理服务设备"
+  },
+  "应收账款": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-015"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "应收账款"
+  },
+  "t2218年度": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-124"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "t2218年度"
+  },
+  "兴图兴图": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-031"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "兴图兴图"
+  },
+  "兴图投资": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-031",
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-027"
+    ],
+    "count": 2,
+    "update_time": 1781161237,
+    "_id": "兴图投资"
+  },
+  "陈爱民": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-031",
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-027"
+    ],
+    "count": 2,
+    "update_time": 1781161237,
+    "_id": "陈爱民"
+  },
+  "<武汉启目": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-031",
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-022"
+    ],
+    "count": 2,
+    "update_time": 1781161237,
+    "_id": "<武汉启目"
+  },
+  "兴图新科": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-031"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "兴图新科"
+  },
+  "兴图天建": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-031"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "兴图天建"
+  },
+  "<entity<|entity<currency_funds": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-127"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<entity<|entity<currency_funds"
+  },
+  "黄敏": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-031"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "黄敏"
+  },
+  "武汉启目": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-031",
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-023"
+    ],
+    "count": 2,
+    "update_time": 1781161237,
+    "_id": "武汉启目"
+  },
+  "<Organization": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-023",
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-007"
+    ],
+    "count": 2,
+    "update_time": 1781161237,
+    "_id": "<Organization"
+  },
+  "<financial_assets": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-127"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<financial_assets"
+  },
+  "<北京启目科技有限公司": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<北京启目科技有限公司"
+  },
+  "北京启目科技有限公司": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "北京启目科技有限公司"
+  },
+  "北京启目": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-031"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "北京启目"
+  },
+  "<SOURCE_ENTITY<武汉市兴图新科电子股份有限公司>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-069"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<SOURCE_ENTITY<武汉市兴图新科电子股份有限公司>"
+  },
+  "TARGET_ENTITY别利员工宿舍>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-069"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "TARGET_ENTITY别利员工宿舍>"
+  },
+  "谢永兴": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-166"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "谢永兴"
+  },
+  "<企业产品": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-087"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<企业产品"
+  },
+  "Wuhan Qigu": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Wuhan Qigu"
+  },
+  "<SOURCE_ENTITY>库尔勒石化大道领航科技馆3-4层>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-069"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<SOURCE_ENTITY>库尔勒石化大道领航科技馆3-4层>"
+  },
+  "#|<Company": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-150"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "#|<Company"
+  },
+  "<视频指挥控制": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-087"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<视频指挥控制"
+  },
+  "Company": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-150",
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-147",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-072",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-138",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-058",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-042"
+    ],
+    "count": 6,
+    "update_time": 1781161251,
+    "_id": "Company"
+  },
+  "#<Company": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-150"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "#<Company"
+  },
+  "<Compan": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-150"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Compan"
+  },
+  "<SOURCE_ENTITY>武汉市兴图新科电子股份有限公司>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-069"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<SOURCE_ENTITY>武汉市兴图新科电子股份有限公司>"
+  },
+  "<source_source_entity>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-065"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<source_source_entity>"
+  },
+  "<relationship|<SpecialInvestmentCommittee": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-085"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<relationship|<SpecialInvestmentCommittee"
+  },
+  "应付票据及应付账款": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-135"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "应付票据及应付账款"
+  },
+  "<target_entity>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-065",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-084"
+    ],
+    "count": 2,
+    "update_time": 1781161251,
+    "_id": "<target_entity>"
+  },
+  "<Company": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-150",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-153"
+    ],
+    "count": 2,
+    "update_time": 1781161251,
+    "_id": "<Company"
+  },
+  "AuditCommittee": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-085"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "AuditCommittee"
+  },
+  "应付账款": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-135"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "应付账款"
+  },
+  "增值税": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-135"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "增值税"
+  },
+  "<兴图天建": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<兴图天建"
+  },
+  "应交税费": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-135"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "应交税费"
+  },
+  "<source_entity>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-065"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<source_entity>"
+  },
+  "#<|Company": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-150"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "#<|Company"
+  },
+  "<兴图新科": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<兴图新科"
+  },
+  "<兴图天建武汉分公司": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<兴图天建武汉分公司"
+  },
+  "Person<|##|陈文生": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-171"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Person<|##|陈文生"
+  },
+  "Person": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-171",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-184",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091"
+    ],
+    "count": 3,
+    "update_time": 1781161251,
+    "_id": "Person"
+  },
+  "曹国强": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-171"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "曹国强"
+  },
+  "<Product Scheme Design": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-045"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Product Scheme Design"
+  },
+  "<供应商": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-068"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<供应商"
+  },
+  "Core_Technology_Person.Team_member": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-081"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Core_Technology_Person.Team_member"
+  },
+  "<Software R&D Department": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-045"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Software R&D Department"
+  },
+  "<公司": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-068"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<公司"
+  },
+  "<北京启目": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-022"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<北京启目"
+  },
+  "Core_Technology_Team": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-081"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Core_Technology_Team"
+  },
+  "<Organization|": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-153"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Organization|"
+  },
+  "<Wuhan X-futu New Electronic Co., Ltd.|": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-153"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Wuhan X-futu New Electronic Co., Ltd.|"
+  },
+  "<Entity|": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-153"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Entity|"
+  },
+  "程v家明": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-081"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "程v家明"
+  },
+  "<Person|": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-153"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Person|"
+  },
+  "<董事会会议>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-083"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<董事会会议>"
+  },
+  "<lock-up_period|": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-153"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<lock-up_period|"
+  },
+  "<股东会议>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-083"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<股东会议>"
+  },
+  "<lock-up_period>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-153"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<lock-up_period>"
+  },
+  "<规矩管理制度>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-083"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<规矩管理制度>"
+  },
+  "规矩管理制度": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-083"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "规矩管理制度"
+  },
+  "<第一届董事会第十七次会议": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-083"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<第一届董事会第十七次会议"
+  },
+  "<Natural|": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-153"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Natural|"
+  },
+  "<规矩管理制度": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-083"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<规矩管理制度"
+  },
+  "<第一届董事会第十八次会议>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-083"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<第一届董事会第十八次会议>"
+  },
+  "技术研发|": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-013"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "技术研发|"
+  },
+  "武汉兴图新科电子股份有限公司|": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-013"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "武汉兴图新科电子股份有限公司|"
+  },
+  "<第一届董事会第十九次会议>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-083"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<第一届董事会第十九次会议>"
+  },
+  "fin_com": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-169"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "fin_com"
+  },
+  "wu_han_tung||#|financial_service_center": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-169"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "wu_han_tung||#|financial_service_center"
+  },
+  "fin_com<|wu_han_tung_fang\\'a_nn": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-169"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "fin_com<|wu_han_tung_fang\\'a_nn"
+  },
+  "技术创新|": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-013"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "技术创新|"
+  },
+  "financial_service_center": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-169"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "financial_service_center"
+  },
+  "<第一届董事会第二十次会议>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-083"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<第一届董事会第二十次会议>"
+  },
+  "#|financial_service_center": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-169"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "#|financial_service_center"
+  },
+  "pene_han_tung_fang\\'an'nn'|#|financial_service_center": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-169"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "pene_han_tung_fang\\'an'nn'|#|financial_service_center"
+  },
+  "<Person>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Person>"
+  },
+  "<Organization>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Organization>"
+  },
+  "wen_han_tung_fanga_competnnnnn": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-169"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "wen_han_tung_fanga_competnnnnn"
+  },
+  "<第一届董事会第二十一会议>": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-083"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<第一届董事会第二十一会议>"
+  },
+  "wen_han_tung_fanga_incompet'nnnn('|#|financial_service_center": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-169"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "wen_han_tung_fanga_incompet'nnnn('|#|financial_service_center"
+  },
+  "陈爱明": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "陈爱明"
+  },
+  "宽谷人才创投普通合伙": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "宽谷人才创投普通合伙"
+  },
+  "wen_han_tung_fan'nannn<#|#|financial_service_center": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-169"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "wen_han_tung_fan'nannn<#|#|financial_service_center"
+  },
+  "BusinessExpansion": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-147"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "BusinessExpansion"
+  },
+  "广垦太证普通合伙": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "广垦太证普通合伙"
+  },
+  "#|Company": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-147"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "#|Company"
+  },
+  "Other": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-147"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Other"
+  },
+  "Financing": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-147"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Financing"
+  },
+  "<entity_company": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-007"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<entity_company"
+  },
+  "杜成城": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "杜成城"
+  },
+  "<Person": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-007"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Person"
+  },
+  "<entity_name": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-007"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<entity_name"
+  },
+  "<程家家家文": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-007"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<程家家家文"
+  },
+  "<武汉兴图新科电子股份有限公司": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-007"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<武汉兴图新科电子股份有限公司"
+  },
+  "<Box": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-132"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Box"
+  },
+  "<Entity": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-132"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Entity"
+  },
+  "<程家沃": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-007"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<程家沃"
+  },
+  "武汉光谷人才创新投资合伙企业(有限合伙": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "武汉光谷人才创新投资合伙企业(有限合伙"
+  },
+  "程日明": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "程日明"
+  },
+  "程-shirts明": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-027"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "程-shirts明"
+  },
+  "<Assembly Board": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-132"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "<Assembly Board"
+  },
+  "华汇创投": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "华汇创投"
+  },
+  "兴日投资": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "兴日投资"
+  },
+  "兴日新科有限": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-018"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "兴日新科有限"
+  },
+  "Wuhan Xingtu Xinke Electronics Co., Ltd.": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-017"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "Wuhan Xingtu Xinke Electronics Co., Ltd."
+  },
+  "方梦兰": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "方梦兰"
+  },
+  "张伟": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "张伟"
+  },
+  "王智慧勇": {
+    "chunk_ids": [
+      "doc-a36830f7472d58ddca67b1971f57c0d2-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161237,
+    "update_time": 1781161237,
+    "_id": "王智慧勇"
+  },
+  "Sales Platform": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-072"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Sales Platform"
+  },
+  "S Solution Design": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-072"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "S Solution Design"
+  },
+  "<Sales Platform": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-072"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<Sales Platform"
+  },
+  "赵马克": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-076",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091"
+    ],
+    "count": 2,
+    "update_time": 1781161251,
+    "_id": "赵马克"
+  },
+  "力源贸易": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-076"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "力源贸易"
+  },
+  "Board Meeting": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-097"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Board Meeting"
+  },
+  "entity": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-063"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "entity"
+  },
+  "profit": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-130"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "profit"
+  },
+  "<武汉": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-169"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<武汉"
+  },
+  "充电器器": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-070"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "充电器器"
+  },
+  "<珠江三角洲地区电子产业": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-034"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<珠江三角洲地区电子产业"
+  },
+  "<深圳赛格电子市场": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-034"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<深圳赛格电子市场"
+  },
+  "武汉力源信息技术股份有限公司": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-164",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-010",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-085",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-129"
+    ],
+    "count": 5,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "武汉力源信息技术股份有限公司"
+  },
+  "流动资产": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-164"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "流动资产"
+  },
+  "SalesDepartment": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-122"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "SalesDepartment"
+  },
+  "LogisticsCompany": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-122"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "LogisticsCompany"
+  },
+  "FxedDngreementByRetailCustomerOrder": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-122"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "FxedDngreementByRetailCustomerOrder"
+  },
+  "FiscalDepartment": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-122"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "FiscalDepartment"
+  },
+  "王志勇": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "王志勇"
+  },
+  "organizational_structure": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "organizational_structure"
+  },
+  "holding_subsidiaries": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "holding_subsidiaries"
+  },
+  "stockholdoinom_structure": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "stockholdoinom_structure"
+  },
+  "senitioner_business_context": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "senitioner_business_context"
+  },
+  "business_competition_analysis": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "business_competition_analysis"
+  },
+  "major_shareholdero analysed_controlled": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "major_shareholdero analysed_controlled"
+  },
+  "board_of_management_promises_and_performance": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "board_of_management_promises_and_performance"
+  },
+  "board_of_management_trustees_and_consious_person_people_of_k": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "board_of_management_trustees_and_consious_person_people_of_k"
+  },
+  "board_of_directorsr_cience_mobility_roust trustees_and_consuggesterious_people_of_v": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "board_of_directorsr_cience_mobility_roust trustees_and_consuggesterious_people_of_v"
+  },
+  "目录销售": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-007"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "目录销售"
+  },
+  "力源信息技术股份有限公司": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-007"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "力源信息技术股份有限公司"
+  },
+  "盈余公积": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-112"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "盈余公积"
+  },
+  "提取盈余公积": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-112"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "提取盈余公积"
+  },
+  "盈余公积转增股本": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-112"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "盈余公积转增股本"
+  },
+  "IC_product": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-011"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "IC_product"
+  },
+  "#|entity,|#|MarketRisks": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-011"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "#|entity,|#|MarketRisks"
+  },
+  "#|entity": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-011"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "#|entity"
+  },
+  "source_entity不同研发方案": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-121"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "source_entity不同研发方案"
+  },
+  "Entity武汉力源信息技术股份有限公司": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-121"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Entity武汉力源信息技术股份有限公司"
+  },
+  "channel_sales_dept": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "channel_sales_dept"
+  },
+  "Investment Entity Interaction": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-118"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Investment Entity Interaction"
+  },
+  "Wuhan Liyuan Information Technology Co., Ltd": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-118",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-017"
+    ],
+    "count": 2,
+    "update_time": 1781161251,
+    "_id": "Wuhan Liyuan Information Technology Co., Ltd"
+  },
+  "Sales Fees": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-149"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Sales Fees"
+  },
+  "实体<|<entity_name": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-018"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "实体<|<entity_name"
+  },
+  "<技术总监": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<技术总监"
+  },
+  "副总经理": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "副总经理"
+  },
+  "董事会秘书": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "董事会秘书"
+  },
+  "王晓东": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "王晓东"
+  },
+  "戴大盛": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "戴大盛"
+  },
+  "听音投资": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-024"
+    ],
+    "count": 2,
+    "update_time": 1781161251,
+    "_id": "听音投资"
+  },
+  "普芯达": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-082",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-076"
+    ],
+    "count": 3,
+    "update_time": 1781161251,
+    "_id": "普芯达"
+  },
+  "张小莉": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "张小莉"
+  },
+  "江涛": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "江涛"
+  },
+  "联众聚力": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "联众聚力"
+  },
+  "注册资本": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-132"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "注册资本"
+  },
+  "667.66万元": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-082"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "667.66万元"
+  },
+  "7306.747.4元": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-082"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "7306.747.4元"
+  },
+  "本公司": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-082"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "本公司"
+  },
+  "房租费": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-150"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "房租费"
+  },
+  "差旅费": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-150"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "差旅费"
+  },
+  "财务部门": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-124"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "财务部门"
+  },
+  "仓库": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-124"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "仓库"
+  },
+  "客户": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-124"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "客户"
+  },
+  "company": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-176"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "company"
+  },
+  "warehouse_logistics_center": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-176"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "warehouse_logistics_center"
+  },
+  "research_center": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-176"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "research_center"
+  },
+  "<IC products|IC components<|IC modules|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-177"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<IC products|IC components<|IC modules|"
+  },
+  "净利润": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-129"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "净利润"
+  },
+  "流动比率(倍)": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-129"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "流动比率(倍)"
+  },
+  "速动比率(倍)": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-129"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "速动比率(倍)"
+  },
+  "应收账款周转率(次/年，次/期)": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-129"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "应收账款周转率(次/年，次/期)"
+  },
+  "息税折旧摊销前利润(万元)": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-129"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "息税折旧摊销前利润(万元)"
+  },
+  "归属于公司发行人股东的每股净资产(元/股)": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-129"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "归属于公司发行人股东的每股净资产(元/股)"
+  },
+  "Cash flow from investment activities": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-105"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Cash flow from investment activities"
+  },
+  "<辛签署协议": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-078"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<辛签署协议"
+  },
+  "\\辛签署协议": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-078"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "\\辛签署协议"
+  },
+  "力源服务": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-131"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "力源服务"
+  },
+  "湖北力源信息技术服务有限公司": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-131"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "湖北力源信息技术服务有限公司"
+  },
+  "验资报告": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-131"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "验资报告"
+  },
+  "赵依东": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-131"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "赵依东"
+  },
+  "李庆堂": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-131"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "李庆堂"
+  },
+  "易国平": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-131"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "易国平"
+  },
+  "吴伟钢": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-131"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "吴伟钢"
+  },
+  "朱华": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-131"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "朱华"
+  },
+  "陈新": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-131"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "陈新"
+  },
+  "Concept<": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-060"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Concept<"
+  },
+  "Microcontroller Device": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-155"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Microcontroller Device"
+  },
+  "source_entity": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-024"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "source_entity"
+  },
+  "Concept沟通便利终端<": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-060"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Concept沟通便利终端<"
+  },
+  "Power Management Device": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-155"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Power Management Device"
+  },
+  "Category of Accounts Receivable": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-116"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Category of Accounts Receivable"
+  },
+  "<力源信息": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-069"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<力源信息"
+  },
+  "risk-characteristic combination": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-116"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "risk-characteristic combination"
+  },
+  "tablets, 'relationship_keywords>": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-099"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "tablets, 'relationship_keywords>"
+  },
+  "<力源服务": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-069"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<力源服务"
+  },
+  "联众聚聚": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-024"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "联众聚聚"
+  },
+  "力源信息": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-070"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "力源信息"
+  },
+  "董事会审计委员会, 'target_entity>": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-099"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "董事会审计委员会, 'target_entity>"
+  },
+  "董事会提名委员会, 'target_entity>": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-099"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "董事会提名委员会, 'target_entity>"
+  },
+  "上海博润": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-024",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-023"
+    ],
+    "count": 2,
+    "update_time": 1781161251,
+    "_id": "上海博润"
+  },
+  "董事会薪酬与考核委员会, 'relationship_keywords>": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-099"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "董事会薪酬与考核委员会, 'relationship_keywords>"
+  },
+  "董事提名委员会, 'relationship_keywords>": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-099"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "董事提名委员会, 'relationship_keywords>"
+  },
+  "上海博丰": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-024"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "上海博丰"
+  },
+  "预案, 'relationship_keywords>": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-099"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "预案, 'relationship_keywords>"
+  },
+  "武汉博润": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "武汉博润"
+  },
+  "工作细则, 'relationship_keywords>": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-099"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "工作细则, 'relationship_keywords>"
+  },
+  "博润投资": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "博润投资"
+  },
+  "王志斌": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "王志斌"
+  },
+  "宁波博润": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "宁波博润"
+  },
+  "董事会, 'relationship_keywords>": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-099"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "董事会, 'relationship_keywords>"
+  },
+  "<Content": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-040"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<Content"
+  },
+  "公司董事会": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-165"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "公司董事会"
+  },
+  "<Product Types": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-040"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<Product Types"
+  },
+  "江通动画股份有限公司": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "江通动画股份有限公司"
+  },
+  "股东大会": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-165"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "股东大会"
+  },
+  "major_shareholder_controlling": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "major_shareholder_controlling"
+  },
+  "天津博润": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "天津博润"
+  },
+  "company_main_operation": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "company_main_operation"
+  },
+  "major_shareholders_controlyng": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "major_shareholders_controlyng"
+  },
+  "main_fixed_and_intangible_assets": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "main_fixed_and_intangible_assets"
+  },
+  "special_business_right": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "special_business_right"
+  },
+  "main_business_operation": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "main_business_operation"
+  },
+  "main_fixed_intangible_assets": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "main_fixed_intangible_assets"
+  },
+  "special_operatien_right": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "special_operatien_right"
+  },
+  "company_research_development": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "company_research_development"
+  },
+  "key_staff_research_and_development": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "key_staff_research_and_development"
+  },
+  "company_technological_research_and_development": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "company_technological_research_and_development"
+  },
+  "board_of_directctrine_and_corporate_governancece": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "board_of_directctrine_and_corporate_governancece"
+  },
+  "cadidates_and_corporate_characteristics": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "cadidates_and_corporate_characteristics"
+  },
+  "key_technology_personnel_and_r_and_d personnel|staff_teicalnology": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "key_technology_personnel_and_r_and_d personnel|staff_teicalnology"
+  },
+  "Organization": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-075",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-017",
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-146"
+    ],
+    "count": 3,
+    "update_time": 1781161251,
+    "_id": "Organization"
+  },
+  "board_of_directctrine_corporate_governornceence": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "board_of_directctrine_corporate_governornceence"
+  },
+  "cadidates_corporate_characteristics": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-002"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "cadidates_corporate_characteristics"
+  },
+  "刘正清": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-023"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "刘正清"
+  },
+  "武汉雷达学院": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-075"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "武汉雷达学院"
+  },
+  "彭建华": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-184"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "彭建华"
+  },
+  "#|Entity": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-011"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "#|Entity"
+  },
+  "IC产品": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-011"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "IC产品"
+  },
+  "盈余公积弥补亏损": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-112"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "盈余公积弥补亏损"
+  },
+  "MarketRisks": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-011"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "MarketRisks"
+  },
+  "#System|Company": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-042"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "#System|Company"
+  },
+  "<channel_sales_dept": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<channel_sales_dept"
+  },
+  "InventoryRisk": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-011"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "InventoryRisk"
+  },
+  "<trade_department": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<trade_department"
+  },
+  "The_company": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-011"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "The_company"
+  },
+  "call_and_network_sales_dept": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "call_and_network_sales_dept"
+  },
+  "<call_and_network_sales_dept": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<call_and_network_sales_dept"
+  },
+  "trade_department": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-016"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "trade_department"
+  },
+  "<source_entity:本公司董事会": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-125"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<source_entity:本公司董事会"
+  },
+  "<source_entity:标准制定原则": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-125"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<source_entity:标准制定原则"
+  },
+  "<source_entity:政策变更于年前情况和今年情况相同": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-125"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<source_entity:政策变更于年前情况和今年情况相同"
+  },
+  "<target_entity:执行新企业会计准则": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-125"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<target_entity:执行新企业会计准则"
+  },
+  "target_entity:资产负债表期初数": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-125"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "target_entity:资产负债表期初数"
+  },
+  "<target_entity:没有影响到今年初所有者权益": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-125"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<target_entity:没有影响到今年初所有者权益"
+  },
+  "Investe entityId|1|#|Company_A||#|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-118"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Investe entityId|1|#|Company_A||#|"
+  },
+  "relationship=\"": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-118"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "relationship=\""
+  },
+  "<Annual Consolidated Statement of Changes in Owners权益\\|#|,The entity": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-107"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<Annual Consolidated Statement of Changes in Owners权益\\|#|,The entity"
+  },
+  "胡戎": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-091"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "胡戎"
+  },
+  "Wuhan Lilean Information Technology Co., Ltd.": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-107"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Wuhan Lilean Information Technology Co., Ltd."
+  },
+  "Person|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Person|"
+  },
+  "赵马克|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "赵马克|"
+  },
+  "Entity|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Entity|"
+  },
+  "Wuhan Liyuan (Hong Kong) Information Technology Limited": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-017"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Wuhan Liyuan (Hong Kong) Information Technology Limited"
+  },
+  "力源有限|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "力源有限|"
+  },
+  "赵依东|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "赵依东|"
+  },
+  "Location|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Location|"
+  },
+  "武汉|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "武汉|"
+  },
+  "武汉力源信息技术股份有限公司|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "武汉力源信息技术股份有限公司|"
+  },
+  "Concept|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Concept|"
+  },
+  "中华人民共和国国籍法|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "中华人民共和国国籍法|"
+  },
+  "|胡斌|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-089"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "|胡斌|"
+  },
+  "湖北省|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "湖北省|"
+  },
+  "<Association>": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-084"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<Association>"
+  },
+  "力源贸易|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "力源贸易|"
+  },
+  "关系": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-089"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "关系"
+  },
+  "邹明春": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-085"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "邹明春"
+  },
+  "中华人民共和国合同法|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "中华人民共和国合同法|"
+  },
+  "<Entity_name": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-120"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<Entity_name"
+  },
+  "<使用寿命不确定的无形资产": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-120"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<使用寿命不确定的无形资产"
+  },
+  "销售代表": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-124"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "销售代表"
+  },
+  "<force武汉力源信息技术股份有限公司": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-177"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<force武汉力源信息技术股份有限公司"
+  },
+  "中华人民共和国外汇管理条例|": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-019"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "中华人民共和国外汇管理条例|"
+  },
+  "This entity refers to a high technology shareholding company company information|Wuhan Le Yuan Information Technology Co., Ltd, a Chinese corporation focused on electronic components distribution business operations operations and e-commerce sales manageme": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-177"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "This entity refers to a high technology shareholding company company information|Wuhan Le Yuan Information Technology Co., Ltd, a Chinese corporation focused on electronic components distribution business operations operations and e-commerce sales manageme"
+  },
+  "<OEM": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-153"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "<OEM"
+  },
+  "Customer Service Center": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-146"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "Customer Service Center"
+  },
+  "$Company": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-153"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "$Company"
+  },
+  "$OEM": {
+    "chunk_ids": [
+      "doc-bfaf744ac408f85bc3ee2143f0c68493-chunk-153"
+    ],
+    "count": 1,
+    "create_time": 1781161251,
+    "update_time": 1781161251,
+    "_id": "$OEM"
+  }
+}
