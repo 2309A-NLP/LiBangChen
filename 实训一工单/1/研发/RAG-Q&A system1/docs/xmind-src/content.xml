@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xmap-content xmlns="urn:xmind:xmap:xmlns:content:2.0" timestamp="1780627200000">
+  <sheet id="sheet-root">
+    <title>项目导图</title>
+    <topic id="topic-root">
+      <title>RAG Q&amp;A System</title>
+      <children>
+        <topics type="attached">
+          <topic id="goal">
+            <title>项目目标</title>
+            <children>
+              <topics type="attached">
+                <topic id="goal-1"><title>PDF 文档问答</title></topic>
+                <topic id="goal-2"><title>引用溯源回答</title></topic>
+                <topic id="goal-3"><title>知识库管理</title></topic>
+                <topic id="goal-4"><title>多轮会话</title></topic>
+                <topic id="goal-5"><title>反馈闭环</title></topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="arch">
+            <title>系统结构</title>
+            <children>
+              <topics type="attached">
+                <topic id="arch-frontend">
+                  <title>前端</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="arch-frontend-1"><title>index.html</title></topic>
+                      <topic id="arch-frontend-2"><title>kb.html</title></topic>
+                      <topic id="arch-frontend-3"><title>app.js</title></topic>
+                      <topic id="arch-frontend-4"><title>styles.css</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="arch-backend">
+                  <title>后端</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="arch-backend-1"><title>FastAPI</title></topic>
+                      <topic id="arch-backend-2"><title>app.main</title></topic>
+                      <topic id="arch-backend-3"><title>api.routes</title></topic>
+                      <topic id="arch-backend-4"><title>core.container</title></topic>
+                      <topic id="arch-backend-5"><title>core.config</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="arch-data">
+                  <title>数据层</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="arch-data-1"><title>data/source</title></topic>
+                      <topic id="arch-data-2"><title>data/processed</title></topic>
+                      <topic id="arch-data-3"><title>Milvus</title></topic>
+                      <topic id="arch-data-4"><title>Redis 可选</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="services">
+            <title>核心服务</title>
+            <children>
+              <topics type="attached">
+                <topic id="services-doc">
+                  <title>文档处理</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="services-doc-1"><title>document_ingestion</title></topic>
+                      <topic id="services-doc-2"><title>PDF 解析</title></topic>
+                      <topic id="services-doc-3"><title>分块策略</title></topic>
+                      <topic id="services-doc-4"><title>文档选择与重载</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="services-query">
+                  <title>问题理解</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="services-query-1"><title>query_understanding</title></topic>
+                      <topic id="services-query-2"><title>规则模式</title></topic>
+                      <topic id="services-query-3"><title>local-first</title></topic>
+                      <topic id="services-query-4"><title>online fallback</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="services-rag">
+                  <title>检索生成</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="services-rag-1"><title>retrieval_generation</title></topic>
+                      <topic id="services-rag-2"><title>本地抽取</title></topic>
+                      <topic id="services-rag-3"><title>LLM 生成</title></topic>
+                      <topic id="services-rag-4"><title>引用拼装</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="services-pipeline">
+                  <title>流程编排</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="services-pipeline-1"><title>pipeline</title></topic>
+                      <topic id="services-pipeline-2"><title>会话上下文</title></topic>
+                      <topic id="services-pipeline-3"><title>SSE 流式响应</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="services-support">
+                  <title>配套能力</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="services-support-1"><title>embeddings</title></topic>
+                      <topic id="services-support-2"><title>reranker</title></topic>
+                      <topic id="services-support-3"><title>feedback</title></topic>
+                      <topic id="services-support-4"><title>session_service</title></topic>
+                      <topic id="services-support-5"><title>warmup_status</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="retrieval">
+            <title>检索体系</title>
+            <children>
+              <topics type="attached">
+                <topic id="retrieval-keyword">
+                  <title>keyword</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="retrieval-keyword-1"><title>BM25</title></topic>
+                      <topic id="retrieval-keyword-2"><title>同义词扩展</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="retrieval-milvus">
+                  <title>milvus</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="retrieval-milvus-1"><title>向量检索</title></topic>
+                      <topic id="retrieval-milvus-2"><title>embedding 模型</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="retrieval-hybrid">
+                  <title>hybrid_rrf</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="retrieval-hybrid-1"><title>关键词检索</title></topic>
+                      <topic id="retrieval-hybrid-2"><title>向量检索</title></topic>
+                      <topic id="retrieval-hybrid-3"><title>RRF 融合</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="models">
+            <title>LLM 与模型</title>
+            <children>
+              <topics type="attached">
+                <topic id="models-1"><title>llm.factory</title></topic>
+                <topic id="models-2"><title>openai_compatible</title></topic>
+                <topic id="models-3"><title>mock</title></topic>
+                <topic id="models-4"><title>bge-m3</title></topic>
+                <topic id="models-5"><title>bge-reranker-base 可选</title></topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="api">
+            <title>API 能力</title>
+            <children>
+              <topics type="attached">
+                <topic id="api-health">
+                  <title>健康检查</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="api-health-1"><title>GET /api/health</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="api-docs">
+                  <title>文档管理</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="api-docs-1"><title>GET /api/document/status</title></topic>
+                      <topic id="api-docs-2"><title>GET /api/document/warmup</title></topic>
+                      <topic id="api-docs-3"><title>POST /api/document/upload</title></topic>
+                      <topic id="api-docs-4"><title>POST /api/document/reload</title></topic>
+                      <topic id="api-docs-5"><title>POST /api/document/select</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="api-kb">
+                  <title>知识库</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="api-kb-1"><title>GET /api/kb/documents</title></topic>
+                      <topic id="api-kb-2"><title>GET /api/kb/documents/{id}/chunks</title></topic>
+                      <topic id="api-kb-3"><title>DELETE /api/kb/documents/{id}</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="api-qa">
+                  <title>问答与反馈</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="api-qa-1"><title>POST /api/query</title></topic>
+                      <topic id="api-qa-2"><title>POST /api/query/stream</title></topic>
+                      <topic id="api-qa-3"><title>POST /api/feedback</title></topic>
+                      <topic id="api-qa-4"><title>GET /api/session/{id}</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="startup">
+            <title>启动流程</title>
+            <children>
+              <topics type="attached">
+                <topic id="startup-1"><title>run.py</title></topic>
+                <topic id="startup-2"><title>构建容器</title></topic>
+                <topic id="startup-3"><title>加载 PDF</title></topic>
+                <topic id="startup-4"><title>后台预热检索</title></topic>
+                <topic id="startup-5"><title>前端轮询预热状态</title></topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="config">
+            <title>配置项</title>
+            <children>
+              <topics type="attached">
+                <topic id="config-llm">
+                  <title>LLM</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="config-llm-1"><title>LLM_PROVIDER</title></topic>
+                      <topic id="config-llm-2"><title>LLM_API_KEY</title></topic>
+                      <topic id="config-llm-3"><title>LLM_BASE_URL</title></topic>
+                      <topic id="config-llm-4"><title>LLM_MODEL</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="config-query">
+                  <title>Query Understanding</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="config-query-1"><title>QUERY_UNDERSTANDING_MODE</title></topic>
+                      <topic id="config-query-2"><title>QUERY_UNDERSTANDING_LOCAL_FIRST_ENABLED</title></topic>
+                      <topic id="config-query-3"><title>QUERY_UNDERSTANDING_FALLBACK_ENABLED</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="config-retrieval">
+                  <title>Retrieval</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="config-retrieval-1"><title>RETRIEVER_TYPE</title></topic>
+                      <topic id="config-retrieval-2"><title>DEFAULT_TOP_K</title></topic>
+                      <topic id="config-retrieval-3"><title>MAX_CHUNK_LENGTH</title></topic>
+                      <topic id="config-retrieval-4"><title>TABLE_CHUNK_LENGTH</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+                <topic id="config-storage">
+                  <title>Storage</title>
+                  <children>
+                    <topics type="attached">
+                      <topic id="config-storage-1"><title>SESSION_STORE_BACKEND</title></topic>
+                      <topic id="config-storage-2"><title>REDIS_URL</title></topic>
+                      <topic id="config-storage-3"><title>FEEDBACK_STORE_PATH</title></topic>
+                    </topics>
+                  </children>
+                </topic>
+              </topics>
+            </children>
+          </topic>
+          <topic id="tests">
+            <title>测试覆盖</title>
+            <children>
+              <topics type="attached">
+                <topic id="tests-1"><title>test_api_routes</title></topic>
+                <topic id="tests-2"><title>test_document_ingestion</title></topic>
+                <topic id="tests-3"><title>test_embeddings</title></topic>
+                <topic id="tests-4"><title>test_llm_integration</title></topic>
+                <topic id="tests-5"><title>test_query_understanding</title></topic>
+                <topic id="tests-6"><title>test_retrieval_generation</title></topic>
+                <topic id="tests-7"><title>test_retriever</title></topic>
+              </topics>
+            </children>
+          </topic>
+        </topics>
+      </children>
+    </topic>
+  </sheet>
+</xmap-content>

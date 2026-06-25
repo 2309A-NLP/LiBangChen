@@ -1,0 +1,14 @@
+{
+  "title": "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI",
+  "role_type": "doctor",
+  "source": "pdf://doctor/explainable-artificial-intelligence-xai-concepts-taxonomies-opportunities-and-ch-825af17331.pdf",
+  "pdf_url": "https://arxiv.org/pdf/1910.10045",
+  "landing_page_url": "http://arxiv.org/abs/1910.10045",
+  "work_id": "https://openalex.org/W2981731882",
+  "doi": "https://doi.org/10.1016/j.inffus.2019.12.012",
+  "publication_year": 2019,
+  "query": "internal medicine surgery diagnosis prognosis public health",
+  "sha256": "02482b1fd9666ce16e6f488d7f0419307c795037e8d3e546082735b48b0c17ed",
+  "saved_at": 1777985125,
+  "local_pdf": "E:\\角色扮演系统\\knowledge_sources\\doctor\\explainable-artificial-intelligence-xai-concepts-taxonomies-opportunities-and-ch-825af17331.pdf"
+}

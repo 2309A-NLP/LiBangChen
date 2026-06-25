@@ -1,0 +1,14 @@
+{
+  "title": "QUANTUM ESPRESSO: a modular and open-source software project for quantum simulations of materials",
+  "role_type": "scientist",
+  "source": "pdf://scientist/quantum-espresso-a-modular-and-open-source-software-project-for-quantum-simulati-cd1066ab23.pdf",
+  "pdf_url": "https://arxiv.org/pdf/0906.2569",
+  "landing_page_url": "http://arxiv.org/abs/0906.2569",
+  "work_id": "https://openalex.org/W2120145199",
+  "doi": "https://doi.org/10.1088/0953-8984/21/39/395502",
+  "publication_year": 2009,
+  "query": "machine learning scientific research methods",
+  "sha256": "ef4d58088ab681af8f9342102ed5462486dcd5bc98232f666651b3aa35d746d9",
+  "saved_at": 1777985189,
+  "local_pdf": "E:\\角色扮演系统\\knowledge_sources\\scientist\\quantum-espresso-a-modular-and-open-source-software-project-for-quantum-simulati-cd1066ab23.pdf"
+}

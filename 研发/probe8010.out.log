@@ -1,0 +1,6 @@
+系统启动完成
+知识库定时同步已开启，每 10080 分钟执行一次
+INFO:     127.0.0.1:60112 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60114 - "POST /api/users/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60115 - "POST /api/conversations/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60116 - "POST /api/chat HTTP/1.1" 200 OK

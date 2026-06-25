@@ -1,0 +1,14 @@
+{
+  "title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock: 2016",
+  "role_type": "doctor",
+  "source": "pdf://doctor/surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and--4bfc8458c6.pdf",
+  "pdf_url": "https://link.springer.com/content/pdf/10.1007%2Fs00134-017-4683-6.pdf",
+  "landing_page_url": "https://doi.org/10.1007/s00134-017-4683-6",
+  "work_id": "https://openalex.org/W3016555942",
+  "doi": "https://doi.org/10.1007/s00134-017-4683-6",
+  "publication_year": 2017,
+  "query": "internal medicine surgery diagnosis prognosis public health",
+  "sha256": "f755fbba816c009540acdb61d1872fed0f1a04af607c468b14ef8b9d98758f00",
+  "saved_at": 1777985142,
+  "local_pdf": "E:\\角色扮演系统\\knowledge_sources\\doctor\\surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and--4bfc8458c6.pdf"
+}

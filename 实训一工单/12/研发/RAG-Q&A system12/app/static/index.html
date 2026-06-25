@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF 文档问答系统</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="title-panel panel">
+        <a href="/kb" class="kb-entry">知识库管理</a>
+        <h2>PDF 文档问答系统</h2>
+      </section>
+
+      <section class="answer-panel panel">
+        <div id="streamOutput" class="conversation-board"></div>
+        <pre id="debugOutput" class="debug-box hidden"></pre>
+      </section>
+
+      <section class="input-panel panel">
+        <div class="input-main">
+          <section class="retrieval-panel">
+            <div class="retrieval-panel-head">
+              <div>
+                <p class="retrieval-eyebrow">检索策略</p>
+                <h3>选择本次提问使用的检索方式</h3>
+              </div>
+            </div>
+            <div id="retrievalModeGroup" class="retrieval-mode-group">
+              <button type="button" class="retrieval-card" data-mode="keyword">
+                <div class="retrieval-card-top">
+                  <span class="retrieval-icon">⌕</span>
+                  <span class="retrieval-radio" aria-hidden="true"></span>
+                </div>
+                <strong>关键词检索</strong>
+                <p>直接按问题里的关键词匹配文档内容，不依赖 Milvus，适合当前本地单机使用。</p>
+              </button>
+
+              <button type="button" class="retrieval-card is-active" data-mode="hybrid">
+                <div class="retrieval-card-top">
+                  <span class="retrieval-icon">◎</span>
+                  <span class="retrieval-radio" aria-hidden="true"></span>
+                </div>
+                <strong>混合检索</strong>
+                <p>同时执行全文检索和向量检索，综合两路结果后再回答，更适合大多数问题。</p>
+              </button>
+
+              <button type="button" class="retrieval-card" data-mode="vector">
+                <div class="retrieval-card-top">
+                  <span class="retrieval-icon">◈</span>
+                  <span class="retrieval-radio" aria-hidden="true"></span>
+                </div>
+                <strong>向量检索</strong>
+                <p>通过语义向量召回相关片段，适合用户问题表述和原文措辞差异较大的场景。</p>
+              </button>
+
+              <button type="button" class="retrieval-card" data-mode="fulltext">
+                <span class="retrieval-badge">默认</span>
+                <div class="retrieval-card-top">
+                  <span class="retrieval-icon">▣</span>
+                  <span class="retrieval-radio" aria-hidden="true"></span>
+                </div>
+                <strong>全文检索</strong>
+                <p>按关键词、短语和字段内容查找文本，适合术语明确、需要精确定位的提问。</p>
+              </button>
+
+              <button type="button" class="retrieval-card" data-mode="lightrag_mix">
+                <span class="retrieval-badge">LightRAG</span>
+                <div class="retrieval-card-top">
+                  <span class="retrieval-icon">KG</span>
+                  <span class="retrieval-radio" aria-hidden="true"></span>
+                </div>
+                <strong>知识图谱 Mix</strong>
+                <p>通过 LightRAG sidecar 执行 local + global 图谱检索，适合股权、关联方、任职等关系类问题。</p>
+              </button>
+
+              <button type="button" class="retrieval-card" data-mode="lightrag_local">
+                <div class="retrieval-card-top">
+                  <span class="retrieval-icon">L</span>
+                  <span class="retrieval-radio" aria-hidden="true"></span>
+                </div>
+                <strong>知识图谱 Local</strong>
+                <p>围绕相关实体邻域检索子图，适合定位公司、人员、项目之间的精确关系。</p>
+              </button>
+
+              <button type="button" class="retrieval-card" data-mode="lightrag_global">
+                <div class="retrieval-card-top">
+                  <span class="retrieval-icon">G</span>
+                  <span class="retrieval-radio" aria-hidden="true"></span>
+                </div>
+                <strong>知识图谱 Global</strong>
+                <p>基于全局图谱摘要检索，适合跨章节、跨文档的综合性招股书问题。</p>
+              </button>
+
+              <button type="button" class="retrieval-card" data-mode="lightrag_hybrid">
+                <div class="retrieval-card-top">
+                  <span class="retrieval-icon">H</span>
+                  <span class="retrieval-radio" aria-hidden="true"></span>
+                </div>
+                <strong>知识图谱 Hybrid</strong>
+                <p>使用 LightRAG 的完整混合模式，覆盖面更大，适合需要尽量召回更多证据的问题。</p>
+              </button>
+            </div>
+
+            <div class="retrieval-controls">
+              <div class="control-card">
+                <div class="control-title-row">
+                  <label for="topKRange">Top K</label>
+                  <span id="topKValue" class="control-value">4</span>
+                </div>
+                <input id="topKRange" type="range" min="1" max="10" step="1" value="4" />
+              </div>
+
+              <div class="control-card">
+                <div class="control-title-row">
+                  <label for="scoreThresholdRange">Score 阈值</label>
+                  <span id="scoreThresholdValue" class="control-value">0.00</span>
+                </div>
+                <input id="scoreThresholdRange" type="range" min="0" max="1" step="0.05" value="0" />
+              </div>
+            </div>
+
+            <div class="rerank-panel">
+              <div class="rerank-head">
+                <div>
+                  <strong>Rerank 模型</strong>
+                  <p>可选用一个或多个重排策略，对召回结果进行二次排序。</p>
+                </div>
+                <label class="switch">
+                  <input id="rerankerEnabledToggle" type="checkbox" />
+                  <span class="switch-track"></span>
+                </label>
+              </div>
+
+              <div id="rerankerStrategyGroup" class="reranker-strategy-group">
+                <label class="strategy-chip">
+                  <input type="checkbox" value="cross_encoder" />
+                  <span>Cross Encoder</span>
+                </label>
+                <label class="strategy-chip">
+                  <input type="checkbox" value="tfidf" />
+                  <span>TF-IDF</span>
+                </label>
+                <label class="strategy-chip">
+                  <input type="checkbox" value="feedback" />
+                  <span>反馈自适应</span>
+                </label>
+                <label class="strategy-chip">
+                  <input type="checkbox" value="llm" />
+                  <span>LLM 重排</span>
+                </label>
+              </div>
+            </div>
+          </section>
+
+          <div class="input-wrap">
+            <textarea id="questionInput" placeholder="请输入问题"></textarea>
+          </div>
+        </div>
+
+        <div class="button-column">
+          <label class="upload-trigger" for="uploadInput">
+            <input id="uploadInput" type="file" accept=".pdf,application/pdf" multiple />
+            <span id="uploadFileLabel">上传</span>
+          </label>
+          <button id="uploadButton" type="button" class="action-button secondary-action">上传</button>
+          <button id="askButton" type="button" class="action-button">发送</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js?v=20260610-lightrag"></script>
+  </body>
+</html>

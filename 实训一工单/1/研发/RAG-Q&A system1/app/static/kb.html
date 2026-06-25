@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>知识库管理 - PDF文档问答系统</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <style>
+      .kb-shell {
+        width: min(1200px, calc(100vw - 28px));
+        margin: 12px auto;
+        padding: 24px;
+      }
+      .kb-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+      .kb-header h1 {
+        margin: 0;
+        font-size: 28px;
+        color: var(--text);
+      }
+      .kb-header a {
+        color: var(--brand);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .kb-header a:hover {
+        text-decoration: underline;
+      }
+      .kb-stats {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .stat-card {
+        flex: 1;
+        padding: 18px;
+        border-radius: 14px;
+        background: var(--panel-strong);
+        border: 1px solid var(--line);
+        text-align: center;
+      }
+      .stat-card .stat-num {
+        font-size: 32px;
+        font-weight: 800;
+        color: var(--brand);
+      }
+      .stat-card .stat-label {
+        font-size: 14px;
+        color: var(--muted);
+        margin-top: 4px;
+      }
+      .doc-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--panel-strong);
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+      }
+      .doc-table th, .doc-table td {
+        padding: 14px 18px;
+        text-align: left;
+        border-bottom: 1px solid var(--line);
+      }
+      .doc-table th {
+        background: rgba(170, 84, 31, 0.08);
+        font-weight: 700;
+        color: var(--brand-deep);
+        font-size: 14px;
+      }
+      .doc-table td {
+        font-size: 14px;
+        vertical-align: top;
+      }
+      .doc-table tr:last-child td {
+        border-bottom: none;
+      }
+      .doc-table tr:hover td {
+        background: rgba(170, 84, 31, 0.04);
+      }
+      .preview-text {
+        max-width: 360px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .action-btn {
+        padding: 6px 14px;
+        border-radius: 6px;
+        border: none;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-right: 6px;
+      }
+      .btn-view {
+        background: rgba(170, 84, 31, 0.1);
+        color: var(--brand);
+      }
+      .btn-view:hover {
+        background: rgba(170, 84, 31, 0.2);
+      }
+      .btn-delete {
+        background: rgba(220, 53, 69, 0.1);
+        color: #dc3545;
+      }
+      .btn-delete:hover {
+        background: rgba(220, 53, 69, 0.2);
+      }
+      .chunk-modal-overlay {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.45);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+      }
+      .chunk-modal-overlay.active {
+        display: flex;
+      }
+      .chunk-modal {
+        width: min(900px, 90vw);
+        max-height: 80vh;
+        background: var(--panel-strong);
+        border-radius: 18px;
+        padding: 24px;
+        overflow-y: auto;
+        box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+      }
+      .chunk-modal h2 {
+        margin: 0 0 16px;
+        font-size: 20px;
+      }
+      .chunk-item {
+        padding: 12px 16px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        margin-bottom: 10px;
+        background: rgba(255,255,255,0.6);
+      }
+      .chunk-meta {
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+      .chunk-text {
+        font-size: 14px;
+        line-height: 1.7;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+      .modal-close {
+        float: right;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--muted);
+        padding: 0 8px;
+      }
+      .modal-close:hover {
+        color: var(--text);
+      }
+      .empty-state {
+        text-align: center;
+        padding: 48px;
+        color: var(--muted);
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kb-shell panel">
+      <div class="kb-header">
+        <h1>📚 知识库管理</h1>
+        <a href="/">← 返回问答</a>
+      </div>
+
+      <div class="kb-stats" id="kbStats"></div>
+
+      <table class="doc-table" id="docTable">
+        <thead>
+          <tr>
+            <th>文档名称</th>
+            <th>分块数</th>
+            <th>页码范围</th>
+            <th>内容预览</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="docTableBody"></tbody>
+      </table>
+
+      <div class="empty-state" id="emptyState" style="display:none;">
+        暂无文档，请先上传 PDF 文件。
+      </div>
+    </div>
+
+    <!-- Chunk Detail Modal -->
+    <div class="chunk-modal-overlay" id="chunkModal">
+      <div class="chunk-modal">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <h2 id="modalTitle">文档分块详情</h2>
+        <div id="chunkList"></div>
+      </div>
+    </div>
+
+    <script>
+      // 通用的 JSON 请求封装函数，自动处理 HTTP 错误
+      async function fetchJSON(url, options = {}) {
+        const res = await fetch(url, options);
+        if (!res.ok) throw new Error(await res.text() || `HTTP ${res.status}`);
+        return res.json();
+      }
+
+      // 加载文档列表，渲染统计卡片和文档表格
+      async function loadDocuments() {
+        const data = await fetchJSON('/api/kb/documents');
+        const docs = data.documents || [];
+
+        // Stats
+        document.getElementById('kbStats').innerHTML = `
+          <div class="stat-card">
+            <div class="stat-num">${docs.length}</div>
+            <div class="stat-label">文档数量</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">${data.total_chunks}</div>
+            <div class="stat-label">总分块数</div>
+          </div>
+        `;
+
+        // Table
+        const tbody = document.getElementById('docTableBody');
+        const emptyState = document.getElementById('emptyState');
+
+        if (docs.length === 0) {
+          tbody.innerHTML = '';
+          emptyState.style.display = 'block';
+          document.getElementById('docTable').style.display = 'none';
+          return;
+        }
+
+        emptyState.style.display = 'none';
+        document.getElementById('docTable').style.display = '';
+
+        tbody.innerHTML = docs.map(doc => `
+          <tr>
+            <td><strong>${escapeHtml(doc.source_id)}</strong></td>
+            <td>${doc.chunk_count}</td>
+            <td>${escapeHtml(doc.page_range)}</td>
+            <td><div class="preview-text" title="${escapeHtml(doc.text_preview)}">${escapeHtml(doc.text_preview)}</div></td>
+            <td>
+              <button class="action-btn btn-view" onclick="viewChunks('${escapeAttr(doc.source_id)}')">查看分块</button>
+              <button class="action-btn btn-delete" onclick="deleteDoc('${escapeAttr(doc.source_id)}')">删除</button>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      // 查看指定文档的所有分块详情，弹出模态框展示
+      async function viewChunks(sourceId) {
+        const data = await fetchJSON(`/api/kb/documents/${encodeURIComponent(sourceId)}/chunks`);
+        document.getElementById('modalTitle').textContent = `${sourceId} — ${data.total_chunks} 个分块`;
+        document.getElementById('chunkList').innerHTML = (data.chunks || []).map((c, i) => `
+          <div class="chunk-item">
+            <div class="chunk-meta">#${i + 1} | ${c.chunk_id} | 页码: ${c.page_number || 'N/A'} | ${c.char_count} 字符</div>
+            <div class="chunk-text">${escapeHtml(c.text)}</div>
+          </div>
+        `).join('');
+        document.getElementById('chunkModal').classList.add('active');
+      }
+
+      // 关闭分块详情弹窗
+      function closeModal() {
+        document.getElementById('chunkModal').classList.remove('active');
+      }
+
+      // 删除指定文档，操作前需用户确认
+      async function deleteDoc(sourceId) {
+        if (!confirm(`确定删除 "${sourceId}"？此操作不可恢复。`)) return;
+        try {
+          const result = await fetchJSON(`/api/kb/documents/${encodeURIComponent(sourceId)}`, { method: 'DELETE' });
+          alert(result.message);
+          await loadDocuments();
+        } catch (e) {
+          alert(`删除失败: ${e.message}`);
+        }
+      }
+
+      // 对字符串进行 HTML 转义，防止 XSS 注入
+      function escapeHtml(s) {
+        const d = document.createElement('div');
+        d.textContent = s || '';
+        return d.innerHTML;
+      }
+
+      // 对字符串进行 HTML 属性值转义，防止属性注入
+      function escapeAttr(s) {
+        return (s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+      }
+
+      // Click overlay to close modal
+      document.getElementById('chunkModal').addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) closeModal();
+      });
+
+      loadDocuments().catch(err => {
+        document.getElementById('emptyState').textContent = `加载失败: ${err.message}`;
+        document.getElementById('emptyState').style.display = 'block';
+      });
+    </script>
+  </body>
+</html>

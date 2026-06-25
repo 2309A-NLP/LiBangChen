@@ -1,0 +1,223 @@
+D:\Anaconda\envs\python_3_10\lib\site-packages\jieba\_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+INFO:     Started server process [15764]
+INFO:     Waiting for application startup.
+2026-05-07 15:11:28 | INFO | api.services | System startup completed
+2026-05-07 15:11:28 | INFO | api.services | Knowledge sync scheduler started with 10080-minute interval
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-05-07 15:12:44 | INFO | api.app_factory | HTTP request completed: method=GET path=/docs status_code=200 client_ip=127.0.0.1 duration_ms=0.38
+2026-05-07 15:24:43 | INFO | api.routes.auth | User logged in: username=123456
+2026-05-07 15:24:43 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/users/login status_code=200 client_ip=127.0.0.1 duration_ms=107.42
+2026-05-07 15:24:43 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/roles status_code=200 client_ip=127.0.0.1 duration_ms=30.5
+2026-05-07 15:24:43 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=31.81
+2026-05-07 15:24:50 | INFO | api.routes.conversations | Conversation created: conversation_id=172 user_id=6 role_type=custom_persona
+2026-05-07 15:24:50 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/conversations/create status_code=200 client_ip=127.0.0.1 duration_ms=19.28
+2026-05-07 15:24:50 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=17.82
+2026-05-07 15:26:50 | INFO | openai._base_client | Retrying request to /responses in 0.477653 seconds
+2026-05-07 15:27:35 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/v1/responses "HTTP/1.1 200 OK"
+2026-05-07 15:27:36 | WARNING | file_service | Multimodal PDF parsing returned invalid short/noisy text: ''
+2026-05-07 15:27:44 | INFO | datasets | PyTorch version 2.11.0 available.
+2026-05-07 15:27:45 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cpu
+2026-05-07 15:27:45 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: E:\Role_playing system\Role_playing system\models\bge-m3
+2026-05-07 15:27:56 | INFO | api.routes.files | File uploaded: conversation_id=172 user_id=6 filename=国电电力.pdf bytes=333331
+2026-05-07 15:27:56 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/files/upload status_code=200 client_ip=127.0.0.1 duration_ms=186151.44
+2026-05-07 15:27:56 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/conversations/172/files status_code=200 client_ip=127.0.0.1 duration_ms=9.77
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.16s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.16s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 12.99it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.86s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.86s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.93it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.91it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.23it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.23it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.20it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.20it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.13it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.13it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.60it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.60it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.21s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.21s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.85it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.85it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.65s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.65s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.45s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.45s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.95it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.95it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.37s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.37s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.61it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.61it/s]
+Building prefix dict from the default dictionary ...
+2026-05-07 15:29:06 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+Loading model from cache C:\Users\26332\AppData\Local\Temp\jieba.cache
+2026-05-07 15:29:06 | DEBUG | jieba | Loading model from cache C:\Users\26332\AppData\Local\Temp\jieba.cache
+Loading model cost 0.425 seconds.
+2026-05-07 15:29:06 | DEBUG | jieba | Loading model cost 0.425 seconds.
+Prefix dict has been built successfully.
+2026-05-07 15:29:06 | DEBUG | jieba | Prefix dict has been built successfully.
+2026-05-07 15:29:23 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-07 15:29:23 | INFO | api.routes.conversations | Chat completed: conversation_id=172 user_id=6 client_request_id=af93ff29-5c28-4977-8ee8-264b9ba6e089
+2026-05-07 15:29:23 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/chat status_code=200 client_ip=127.0.0.1 duration_ms=41769.79
+2026-05-07 15:29:23 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=20.95
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 13.71it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 18.27it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.69s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.83it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.77it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.27it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.25it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.23it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.19it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.23it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.22it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.35it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.31it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.17s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.17s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.39it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.34it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.61s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.61s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.39s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.40s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.18it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.11it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.34s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.34s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.69it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.66it/s]
+2026-05-07 15:30:10 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-07 15:30:10 | INFO | api.routes.conversations | Chat completed: conversation_id=172 user_id=6 client_request_id=41d68836-2891-4663-9ab8-95633ccc58f3
+2026-05-07 15:30:10 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/chat status_code=200 client_ip=127.0.0.1 duration_ms=36730.9
+2026-05-07 15:30:10 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=26.0
+2026-05-07 15:33:32 | INFO | api.routes.auth | User logged in: username=123456
+2026-05-07 15:33:32 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/users/login status_code=200 client_ip=127.0.0.1 duration_ms=25.61
+2026-05-07 15:33:32 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/roles status_code=200 client_ip=127.0.0.1 duration_ms=20.42
+2026-05-07 15:33:32 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=21.37
+2026-05-07 15:33:37 | INFO | api.routes.conversations | Conversation created: conversation_id=173 user_id=6 role_type=custom_persona
+2026-05-07 15:33:37 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/conversations/create status_code=200 client_ip=127.0.0.1 duration_ms=14.8
+2026-05-07 15:33:37 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=20.44
+2026-05-07 15:35:38 | INFO | openai._base_client | Retrying request to /responses in 0.437998 seconds
+2026-05-07 15:35:40 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/v1/responses "HTTP/1.1 200 OK"
+2026-05-07 15:35:40 | WARNING | file_service | Multimodal PDF parsing returned invalid short/noisy text: 'imstart\nimstart'
+2026-05-07 15:35:52 | INFO | api.routes.files | File uploaded: conversation_id=173 user_id=6 filename=国电电力.pdf bytes=333331
+2026-05-07 15:35:52 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/files/upload status_code=200 client_ip=127.0.0.1 duration_ms=134414.27
+2026-05-07 15:35:52 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/conversations/173/files status_code=200 client_ip=127.0.0.1 duration_ms=20.0
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.25s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.26s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.99it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.98it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.95s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.95s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.99it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.94it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.21it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.21it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.25it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.25it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.18it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.18it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.05it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.02it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.15s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.15s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.27it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.21it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.67s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.67s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.41s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.41s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.85it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.85it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.36s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.36s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.67it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.66it/s]
+2026-05-07 15:36:38 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-07 15:36:38 | INFO | api.routes.conversations | Chat completed: conversation_id=173 user_id=6 client_request_id=7772f021-5fba-4d93-afc7-cac085841df7
+2026-05-07 15:36:38 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/chat status_code=200 client_ip=127.0.0.1 duration_ms=44064.6
+2026-05-07 15:36:38 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=36.1
+2026-05-07 15:40:27 | INFO | api.routes.auth | User logged in: username=123456
+2026-05-07 15:40:27 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/users/login status_code=200 client_ip=127.0.0.1 duration_ms=26.28
+2026-05-07 15:40:27 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/roles status_code=200 client_ip=127.0.0.1 duration_ms=0.9
+2026-05-07 15:40:27 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=17.67
+2026-05-07 15:40:34 | INFO | api.routes.conversations | Conversation created: conversation_id=174 user_id=6 role_type=custom_persona
+2026-05-07 15:40:34 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/conversations/create status_code=200 client_ip=127.0.0.1 duration_ms=14.24
+2026-05-07 15:40:34 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=21.74
+2026-05-07 15:42:31 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/v1/responses "HTTP/1.1 200 OK"
+2026-05-07 15:42:31 | WARNING | file_service | Multimodal PDF parsing returned invalid short/noisy text: 'imstart\nimstart'
+2026-05-07 15:42:42 | INFO | api.routes.files | File uploaded: conversation_id=174 user_id=6 filename=国电电力.pdf bytes=333331
+2026-05-07 15:42:42 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/files/upload status_code=200 client_ip=127.0.0.1 duration_ms=128106.59
+2026-05-07 15:42:42 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/conversations/174/files status_code=200 client_ip=127.0.0.1 duration_ms=4.76
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.11it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.10it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.71it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.71it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.91s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.92s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.86it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.83it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.27it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.27it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.29it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.25it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.21it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.20it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.02it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  5.99it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.13s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.13s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.52it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.46it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.66s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.66s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.46s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.46s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.32it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.22it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.38s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.38s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.68it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.66it/s]
+2026-05-07 15:43:51 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-07 15:43:51 | INFO | api.routes.conversations | Chat completed: conversation_id=174 user_id=6 client_request_id=1ab80bd9-ad5f-4d2e-a91f-28f9b06dabd6
+2026-05-07 15:43:51 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/chat status_code=200 client_ip=127.0.0.1 duration_ms=46496.85
+2026-05-07 15:43:51 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=29.36
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.98it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.96it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 17.99it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.45it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.45it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.29it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.29it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.31it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.31it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.24it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.24it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.77it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.72it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.11s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.11s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.08it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.95it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.62s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.62s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.42s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.43s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.22it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.22it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.32s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.32s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.66it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.64it/s]
+2026-05-07 15:44:41 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-07 15:44:41 | INFO | api.routes.conversations | Chat completed: conversation_id=174 user_id=6 client_request_id=86ea61c9-2457-4698-9264-ac1cc3a7b689
+2026-05-07 15:44:41 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/chat status_code=200 client_ip=127.0.0.1 duration_ms=38258.17
+2026-05-07 15:44:41 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=24.8
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.40it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.38it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 17.14it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.66s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.66s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.50it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.50it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.31it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.31it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.60it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.60it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.27it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.27it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.72it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.67it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.12s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.12s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.67it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.67it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.63s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.64s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.40s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.40s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  9.00it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.92it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.73it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.73it/s]
+2026-05-07 15:45:49 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-07 15:45:49 | INFO | api.routes.conversations | Chat completed: conversation_id=174 user_id=6 client_request_id=ff9bc3c3-b042-4daa-8793-eb2bf857f944
+2026-05-07 15:45:49 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/chat status_code=200 client_ip=127.0.0.1 duration_ms=39639.04
+2026-05-07 15:45:49 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=28.63
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.27it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.27it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 16.23it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.78s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.78s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.11it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.06it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.28it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.28it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.53it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.49it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.23it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.23it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.36it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.32it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.14s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.14s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.56it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.50it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.63s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.63s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.42s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.42s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.32it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.18it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.31s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.32s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.65it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.65it/s]
+2026-05-07 15:47:46 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-07 15:47:46 | INFO | api.routes.conversations | Chat completed: conversation_id=174 user_id=6 client_request_id=a1a7ac97-ef32-496a-b612-6b1fab46564d
+2026-05-07 15:47:46 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/chat status_code=200 client_ip=127.0.0.1 duration_ms=46846.9
+2026-05-07 15:47:47 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=991.86
+2026-05-07 15:48:58 | INFO | api.routes.auth | User logged in: username=123456
+2026-05-07 15:48:58 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/users/login status_code=200 client_ip=127.0.0.1 duration_ms=22.32
+2026-05-07 15:48:58 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/roles status_code=200 client_ip=127.0.0.1 duration_ms=18.01
+2026-05-07 15:48:58 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=18.47
+2026-05-07 15:49:06 | INFO | api.routes.conversations | Conversation created: conversation_id=175 user_id=6 role_type=custom_persona
+2026-05-07 15:49:06 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/conversations/create status_code=200 client_ip=127.0.0.1 duration_ms=13.93
+2026-05-07 15:49:06 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=26.02
+2026-05-07 15:51:07 | INFO | openai._base_client | Retrying request to /responses in 0.392809 seconds
+2026-05-07 15:51:09 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/v1/responses "HTTP/1.1 200 OK"
+2026-05-07 15:51:09 | WARNING | file_service | Multimodal PDF parsing returned invalid short/noisy text: 'imstart\nimstart'
+2026-05-07 15:51:21 | INFO | api.routes.files | File uploaded: conversation_id=175 user_id=6 filename=国电电力.pdf bytes=333331
+2026-05-07 15:51:21 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/files/upload status_code=200 client_ip=127.0.0.1 duration_ms=134793.57
+2026-05-07 15:51:21 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/conversations/175/files status_code=200 client_ip=127.0.0.1 duration_ms=13.52
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.17it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.17it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 13.46it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.87s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.87s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.40it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.34it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.28it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.27it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.31it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.27it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.22it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.22it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.56it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  6.52it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.12s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.12s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.62it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  7.56it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.69s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.69s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.41s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.41s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.27it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  8.27it/s]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.32s/it]Batches: 100%|██████████| 1/1 [00:01<00:00,  1.32s/it]
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.71it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.71it/s]
+2026-05-07 15:52:23 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-07 15:52:23 | INFO | api.routes.conversations | Chat completed: conversation_id=175 user_id=6 client_request_id=fd8246be-e586-4b20-be88-60af06b19211
+2026-05-07 15:52:23 | INFO | api.app_factory | HTTP request completed: method=POST path=/api/chat status_code=200 client_ip=127.0.0.1 duration_ms=43543.31
+2026-05-07 15:52:23 | INFO | api.app_factory | HTTP request completed: method=GET path=/api/users/6/conversations status_code=200 client_ip=127.0.0.1 duration_ms=39.49

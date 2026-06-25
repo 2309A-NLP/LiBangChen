@@ -1,0 +1,214 @@
+{
+  "work_ids": [
+    "https://openalex.org/W3125469707",
+    "https://openalex.org/W3121522673",
+    "https://openalex.org/W2075288496",
+    "https://openalex.org/W3121401171",
+    "https://openalex.org/W2981863007",
+    "https://openalex.org/W4323655724",
+    "https://openalex.org/W2065970781",
+    "https://openalex.org/W4213436352",
+    "https://openalex.org/W2981731882",
+    "https://openalex.org/W3016555942",
+    "https://openalex.org/W3003257820",
+    "https://openalex.org/W2120145199"
+  ],
+  "hashes": [
+    "1d0bb774cd3ecba1d27d44ef1ef2a70275646e9ee2379cf59760e7706e3bae08",
+    "a05b5cceda99173d023225035e8841807f111fbdc38829573514a32e61378f15",
+    "1e26de12f9a528985aa4e49e6711b0db0e8cf2c6d64ad6874ca17c733ea36703",
+    "786d7cd7d055789a696f3707e9efd8f5770cd159b5b8c031a28c6ff59025028b",
+    "741e8a2c1dc305e548571d6852496e294c166b01862869d2707fa4bf42369e26",
+    "3431b50680acf7cb7830c2138b060da2fc9eb3743ed47a49fa998caaa2ed80eb",
+    "a825b54421ac0bdca723cec6d9bebed894c77337c774af69b0da7b7663d17dc3",
+    "44933a53b96443ae44ec25994113636aa686aa521a57a8029fa5ca0184e3a730",
+    "02482b1fd9666ce16e6f488d7f0419307c795037e8d3e546082735b48b0c17ed",
+    "f755fbba816c009540acdb61d1872fed0f1a04af607c468b14ef8b9d98758f00",
+    "941bfc3edcf91c40e96c028b4f4c46f13361727a30e7767c935ba0d509318131",
+    "ef4d58088ab681af8f9342102ed5462486dcd5bc98232f666651b3aa35d746d9"
+  ],
+  "files": [
+    {
+      "role_type": "lawyer",
+      "path": "E:\\角色扮演系统\\knowledge_sources\\lawyer\\the-law-and-economics-of-self-dealing-936fee4ada.pdf",
+      "work_id": "https://openalex.org/W3125469707"
+    },
+    {
+      "role_type": "lawyer",
+      "path": "E:\\角色扮演系统\\knowledge_sources\\lawyer\\the-economic-consequences-of-legal-origins-79c0163b47.pdf",
+      "work_id": "https://openalex.org/W3121522673"
+    },
+    {
+      "role_type": "stock_analyst",
+      "path": "E:\\角色扮演系统\\knowledge_sources\\stock_analyst\\audit-committee-board-of-director-characteristics-and-earnings-management-183911b8c0.pdf",
+      "work_id": "https://openalex.org/W2075288496"
+    },
+    {
+      "role_type": "stock_analyst",
+      "path": "E:\\角色扮演系统\\knowledge_sources\\stock_analyst\\illiquidity-and-stock-returns-cross-section-and-time-series-effects-42ce22e421.pdf",
+      "work_id": "https://openalex.org/W3121401171"
+    },
+    {
+      "role_type": "teacher",
+      "path": "E:\\角色扮演系统\\knowledge_sources\\teacher\\systematic-review-of-research-on-artificial-intelligence-applications-in-higher--6d4291dd97.pdf",
+      "work_id": "https://openalex.org/W2981863007"
+    },
+    {
+      "role_type": "teacher",
+      "path": "E:\\角色扮演系统\\knowledge_sources\\teacher\\chatgpt-for-good-on-opportunities-and-challenges-of-large-language-models-for-ed-aaa0508f78.pdf",
+      "work_id": "https://openalex.org/W4323655724"
+    },
+    {
+      "role_type": "psychological_counselor",
+      "path": "E:\\角色扮演系统\\knowledge_sources\\psychological_counselor\\on-psychological-growth-and-vulnerability-basic-psychological-need-satisfaction--99ab6c3fbd.pdf",
+      "work_id": "https://openalex.org/W2065970781"
+    },
+    {
+      "role_type": "psychological_counselor",
+      "path": "E:\\角色扮演系统\\knowledge_sources\\psychological_counselor\\mental-health-surveillance-among-children-united-states-2013-2019-097425a36e.pdf",
+      "work_id": "https://openalex.org/W4213436352"
+    },
+    {
+      "role_type": "doctor",
+      "path": "E:\\角色扮演系统\\knowledge_sources\\doctor\\explainable-artificial-intelligence-xai-concepts-taxonomies-opportunities-and-ch-825af17331.pdf",
+      "work_id": "https://openalex.org/W2981731882"
+    },
+    {
+      "role_type": "doctor",
+      "path": "E:\\角色扮演系统\\knowledge_sources\\doctor\\surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and--4bfc8458c6.pdf",
+      "work_id": "https://openalex.org/W3016555942"
+    },
+    {
+      "role_type": "scientist",
+      "path": "E:\\角色扮演系统\\knowledge_sources\\scientist\\scipy-1-0-fundamental-algorithms-for-scientific-computing-in-python-afb61d2476.pdf",
+      "work_id": "https://openalex.org/W3003257820"
+    },
+    {
+      "role_type": "scientist",
+      "path": "E:\\角色扮演系统\\knowledge_sources\\scientist\\quantum-espresso-a-modular-and-open-source-software-project-for-quantum-simulati-cd1066ab23.pdf",
+      "work_id": "https://openalex.org/W2120145199"
+    }
+  ],
+  "errors": [
+    {
+      "role_type": "lawyer",
+      "pdf_url": "https://academic.oup.com/jpart/article-pdf/22/1/1/2781333/mur011.pdf",
+      "error": "403 Client Error: Forbidden for url: https://academic.oup.com/jpart/article-pdf/22/1/1/2781333/mur011.pdf"
+    },
+    {
+      "role_type": "stock_analyst",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1540-6261.1992.tb04398.x",
+      "error": "403 Client Error: Forbidden for url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1540-6261.1992.tb04398.x"
+    },
+    {
+      "role_type": "stock_analyst",
+      "pdf_url": "http://deepblue.lib.umich.edu/bitstream/2027.42/73431/1/0022-1082.00077.pdf",
+      "error": "403 Client Error: Forbidden for url: http://deepblue.lib.umich.edu/bitstream/2027.42/73431/1/0022-1082.00077.pdf"
+    },
+    {
+      "role_type": "stock_analyst",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s10551-015-2693-2.pdf",
+      "error": "not a pdf response"
+    },
+    {
+      "role_type": "stock_analyst",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1540-6261.1992.tb04398.x",
+      "error": "403 Client Error: Forbidden for url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1540-6261.1992.tb04398.x"
+    },
+    {
+      "role_type": "teacher",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1365-2648.2007.04569.x",
+      "error": "403 Client Error: Forbidden for url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1365-2648.2007.04569.x"
+    },
+    {
+      "role_type": "psychological_counselor",
+      "pdf_url": "https://bjsm.bmj.com/content/bjsports/54/24/1451.full.pdf",
+      "error": "403 Client Error: Forbidden for url: https://bjsm.bmj.com/content/bjsports/54/24/1451.full.pdf"
+    },
+    {
+      "role_type": "psychological_counselor",
+      "pdf_url": "https://academic.oup.com/eurheartj/article-pdf/33/13/1635/17893548/ehs092.pdf",
+      "error": "403 Client Error: Forbidden for url: https://academic.oup.com/eurheartj/article-pdf/33/13/1635/17893548/ehs092.pdf"
+    },
+    {
+      "role_type": "psychological_counselor",
+      "pdf_url": "https://www.bmj.com/content/bmj/346/bmj.e7586.full.pdf",
+      "error": "403 Client Error: Forbidden for url: https://www.bmj.com/content/bmj/346/bmj.e7586.full.pdf"
+    },
+    {
+      "role_type": "psychological_counselor",
+      "pdf_url": "https://academic.oup.com/eurheartj/article-pdf/37/29/2315/23748850/ehw106.pdf",
+      "error": "403 Client Error: Forbidden for url: https://academic.oup.com/eurheartj/article-pdf/37/29/2315/23748850/ehw106.pdf"
+    },
+    {
+      "role_type": "psychological_counselor",
+      "pdf_url": "https://academic.oup.com/eurheartj/article-pdf/42/34/3227/45752329/ehab484.pdf",
+      "error": "403 Client Error: Forbidden for url: https://academic.oup.com/eurheartj/article-pdf/42/34/3227/45752329/ehab484.pdf"
+    },
+    {
+      "role_type": "psychological_counselor",
+      "pdf_url": "https://escholarship.org/uc/item/8544f7w2",
+      "error": "not a pdf response"
+    },
+    {
+      "role_type": "psychological_counselor",
+      "pdf_url": "https://escholarship.org/uc/item/8544f7w2",
+      "error": "not a pdf response"
+    },
+    {
+      "role_type": "psychological_counselor",
+      "pdf_url": "https://downloads.hindawi.com/archive/2012/278730.pdf",
+      "error": "403 Client Error: Forbidden for url: https://onlinelibrary.wiley.com/doi/epdf/10.5402/2012/278730"
+    },
+    {
+      "role_type": "psychological_counselor",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/bdi.12609",
+      "error": "403 Client Error: Forbidden for url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/bdi.12609"
+    },
+    {
+      "role_type": "doctor",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.3322/caac.20107",
+      "error": "403 Client Error: Forbidden for url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.3322/caac.20107"
+    },
+    {
+      "role_type": "doctor",
+      "pdf_url": "https://jamanetwork.com/journals/jama/articlepdf/2761044/jama_wang_2020_oi_200019.pdf",
+      "error": "403 Client Error: Forbidden for url: https://jamanetwork.com/journals/jama/articlepdf/2761044/jama_wang_2020_oi_200019.pdf"
+    },
+    {
+      "role_type": "doctor",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.3322/caac.21551",
+      "error": "403 Client Error: Forbidden for url: https://onlinelibrary.wiley.com/doi/pdfdirect/10.3322/caac.21551"
+    },
+    {
+      "role_type": "doctor",
+      "pdf_url": "https://academic.oup.com/eurheartj/article-pdf/42/36/3599/40594787/ehab368.pdf",
+      "error": "403 Client Error: Forbidden for url: https://academic.oup.com/eurheartj/article-pdf/42/36/3599/40594787/ehab368.pdf"
+    },
+    {
+      "role_type": "doctor",
+      "pdf_url": "https://researchonline.lse.ac.uk/id/eprint/102659/1/Womens_Cancers_Paper_Accepted_05.08.16.pdf",
+      "error": "404 Client Error: Not Found for url: https://researchonline.lse.ac.uk/id/eprint/102659/1/Womens_Cancers_Paper_Accepted_05.08.16.pdf"
+    },
+    {
+      "role_type": "doctor",
+      "pdf_url": "https://academic.oup.com/eurheartj/article-pdf/37/27/2129/23748755/ehw128.pdf",
+      "error": "403 Client Error: Forbidden for url: https://academic.oup.com/eurheartj/article-pdf/37/27/2129/23748755/ehw128.pdf"
+    },
+    {
+      "role_type": "doctor",
+      "pdf_url": "https://www.bmj.com/content/bmj/372/bmj.n160.full.pdf",
+      "error": "403 Client Error: Forbidden for url: https://www.bmj.com/content/bmj/372/bmj.n160.full.pdf"
+    },
+    {
+      "role_type": "doctor",
+      "pdf_url": "https://www.bmj.com/content/bmj/346/bmj.e7586.full.pdf",
+      "error": "403 Client Error: Forbidden for url: https://www.bmj.com/content/bmj/346/bmj.e7586.full.pdf"
+    },
+    {
+      "role_type": "scientist",
+      "pdf_url": "http://dl.acm.org/ft_gateway.cfm?id=2939785&type=pdf",
+      "error": "403 Client Error: Forbidden for url: https://dl.acm.org/ft_gateway.cfm?id=2939785&type=pdf"
+    }
+  ]
+}
